@@ -1,17 +1,77 @@
 \chapter*[Introduction]{Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
 
-The research and advancement of scientific knowledge can be very daunting, especially without a scientific background. In the past, an individual willing to contribute may have had difficulties, but nowadays the technology advancement and connectivity made
+\pgfplotstableread[row sep=\\,col sep=&]{
+    year & publications \\
+    2010 & 2810 \\
+    2011 & 2750 \\
+    2012 & 5220 \\
+    2013 & 6990 \\
+    2014 & 9330 \\
+    2015 & 11900 \\
+    2016 & 14500 \\
+    2017 & 15800 \\
+    2018 & 20200 \\
+    2019 & 18300 \\
+}\publicationdata
 
-However, even for these individuals, there are some ways in which they can help: Citizen Science provides a gateway to contribution
+The research and advancement of scientific knowledge can be very daunting, especially without a scientific background. Requirements such as a well defined methodology, high data quality and a strict revision process may very well present some barriers to a common citizen. However, with the recent advancement in technology (Newman et al. 2012), connectivity (Newman et al. 2012) and interest in science by the public (Silvertown 2009), there has been a rising trend in the general populace contributing to a new kind of science: Citizen Science (Mkinley).
 
-research that engages nonprofessionals in the process of creating new scientific knowledge \cite{asd}.
+Citizen Science refers to research that engages nonprofessionals in the process of creating new scientific knowledge (Bonney et al. 2014). This area of interest is not entirely new, as it has existed for more than one century now. However, at that time, its reach was reduced, since it was mostly focused on ecological and environmental sciences. Some initiatives date back to 1980, such as the Cooperative Weather Service; and 1966, the North American Breeding Bird Survey with more than 670 publications referencing it. This practice has shown a rise in (1) the number of citizen science projects \footnote{Extraction from \href{citizenscience.gov}{citizenscience.gov} and Zooniverse.} (figure \ref{fig:growth-citizen-science-projects}) as well as (2) articles published on the topic \footnote{Query String: "citizen science" in Scholar Google, filtered by one year intervals} (as seen in figure \ref{fig:growth-publications}).
 
-One century ago, Citizen Science was mostly related to ecological and enviromental sciences. Cooperative Weather Service (started in 1890), the National Audubon Society’s Christmas Bird Count (1900;), the North American Breeding Bird Survey (1966;), and the Butterfly Monitoring Scheme (1976).
+\begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+                ybar,
+                bar width=.5cm,
+                width=\textwidth,
+                height=.5\textwidth,
+                legend style={at={(0, 10)}, anchor=north,legend columns=-1},
+                symbolic x coords={2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020},
+                xtick=data,
+                nodes near coords,
+                nodes near coords align={vertical},
+                ymin=0,ymax=25000,
+                ylabel={publications},
+                xlabel={years},
+            ]
+            \addplot table[x=year,y=publications]{\publicationdata};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Growth of citizen science initiatives over time}
+    \label{fig:growth-citizen-science-projects}
+\end{figure}
 
-These and other successful citizen science projects have increased ecological and environmental knowledge at large geographic scales and at high temporal resolution (McKinley et al. 2015).
+\begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+                ybar,
+                bar width=.5cm,
+                width=\textwidth,
+                height=.5\textwidth,
+                legend style={at={(0, 10)}, anchor=north,legend columns=-1},
+                symbolic x coords={2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020},
+                xtick=data,
+                nodes near coords,
+                nodes near coords align={vertical},
+                ymin=0,ymax=25000,
+                ylabel={publications},
+                xlabel={years},
+            ]
+            \addplot table[x=year,y=publications]{\publicationdata};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Growth of published peer-reviewed articles on citizen science}
+    \label{fig:growth-publications}
+\end{figure}
 
-Citizen Science refers to research that engages nonprofessionals in the process of creating new scientific knowledge (Bonney et al. 2014)
+This growth in interest also caused an increase in the variety of citizen science projects. Once focused on ecological and environmental sciences, this practice has a much larger range now, covering topics such as linguistics \cite{svendsen2018dynamics}, astronomy \cite{marshall2015ideas}, hydrology \cite{buytaert2014citizen} etc. One topic in which  
+
+Zooniverse, a platform in which scientists include  citizen science projects and ask for the help of the public to collect and classify data.
+
+As to some common features of citizen science practice: (a) anyone can participate, (b) participants use the same protocol so data can be combined and be high quality, (c) data can help real scientists come to real conclusions and (d) a wide community of scientists and volunteers work together and share data to which the public, as well as scientists, have access. 
 
 To advance our knowledge of science, 
 For scientists, the process of data gathei
@@ -30,9 +90,6 @@ To contribute to science, nonprofessionals have
 How do you contribute to science?
 When done correctly, simple tasks such as data gathering and labeling can be done by
 Citizen science is 
-
-
-Here are four common features of citizen science practice: (a) anyone can participate, (b) participants use the same protocol so data can be combined and be high quality, (c) data can help real scientists come to real conclusions and (d) a wide community of scientists and volunteers work together and share data to which the public, as well as scientists, have access. 
 
 
 Citizen science – research that engages non- professionals in the process of creating new scientific knowledge (Bonney et al. 2014) – has expanded greatly in the past decade (Figure 1; McKinley et al. 2015). Rising interest in this approach has been fueled in part by rapid technological developments (Newman et al. 2012), by policy and management needs for large- scale and long-term monitoring datasets (Conrad and Hilchey 2011), and by increased emphasis on science outreach and education (Silvertown 2009). While citizen-science projects vary widely in their subject mat- ter, objectives, activities, and scale (Figures 2–4; Wiggins and Crowston 2015), one common goal is the produc- tion of reliable data that can be used for scientific purposes.
@@ -65,3 +122,11 @@ To fill this gap, this work presents a systematic literature review of speech co
 The main focus of this article lies in defining what characterizes a good and robust speech dataset.
 
 The secondary focus of this work applies what was defined as a robust dataset to generate one in Brazilian Portuguese, uploading it to a public repository. 
+
+\chapter{Related Work}
+
+
+
+\chapter{Background}
+
+This work has many  

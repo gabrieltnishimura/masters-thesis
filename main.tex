@@ -12,9 +12,8 @@
 	a4paper,			% tamanho do papel.
 	hyphens,			% url longa nas referencias
 	english,			% idioma adicional para hifenização
-	brazil				% o último idioma é o principal do documento
+	english				% o último idioma é o principal do documento
 ]{abntex2}
-
 % ---
 %  PACOTES
 % ---
@@ -33,6 +32,7 @@
 \usepackage{listings}			% para listagem de código %
 \usepackage{amsmath}			% para construção de sistemas lineares%
 \usepackage{graphicx}
+\usepackage{pgfplots}
 \graphicspath{ {images/} }
 
 % Pacotes de citações
@@ -54,10 +54,10 @@
 % ---
 % Configurações do pacote float
 \newfloat{chart}{tbhp}{loc} %section
-\floatname{chart}{Gráfico}
+\floatname{chart}{Charts}
 \floatstyle{plaintop}
 \restylefloat{chart}
-\newcommand{\listofcharts}{\listof{chart}{Lista de Gráficos}}
+\newcommand{\listofcharts}{\listof{chart}{Charts List}}
 % ---
 % Configurações do pacote backref
 \renewcommand{\backrefpagesname}{Citation(s) on page(s):~}
@@ -71,7 +71,6 @@
 	Cited #1 times in pages #2.%
 	\fi}%
 % ---
-
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
@@ -84,7 +83,7 @@
 			Polytechnic School \par
 			Computer Engineering with emphasys on Computer}
 \tipotrabalho{Mestrado}
-\preambulo{Research Paper presented to the Polytechnic School of the University of São Paulo}
+\preambulo{Research Proposal presented to the Polytechnic School of the University of São Paulo}
 % ---
 
 % ---
@@ -128,7 +127,7 @@
 \begin{document}
 
 	% Seleciona o idioma do documento
-	\selectlanguage{brazil}
+	\selectlanguage{english}
 
 	% Retira espaço extra obsoleto entre as frases.
 	\frenchspacing
