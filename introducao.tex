@@ -3,19 +3,20 @@
 
 The research and advancement of scientific knowledge can be very daunting, especially without a scientific background. Requirements such as a well defined methodology, high data quality and a strict revision process may very well present some barriers to a common citizen. However, with the recent advancement in technology \cite{newman2012future}, connectivity \cite{newman2012future} and interest in science by the public \cite{silvertown2009new}, there has been a rising trend in the general populace contributing to a new kind of science: Citizen Science \cite{mckinley2017citizen}.
 
-Citizen Science refers to research that engages nonprofessionals in the process of creating new scientific knowledge \cite{bonney2014next}. Referred to as citizen scientists, these nonprofessionals may participate in a variety of tasks ranging in complexity; from simple tasks such as data gathering or classification \cite{barker2013pascal}, to even complex ones such as solving algorithms \cite{cooper2010predicting}. They may act as contributors and collaborators, but can also have a more proactive role as a project leader \cite{robinson2018ten}. As to why would a "citizen" collaborate, there could be several reasons depending on the project itself: contribution to the advancement of science or the project, desire to learn, personal interests, entertainment, among others \cite{tinati2016because}. 
+Citizen Science refers to research that engages nonprofessionals in the process of creating new scientific knowledge \cite{bonney2014next}. Referred to as citizen scientists, these nonprofessionals may participate in a variety of tasks ranging in complexity; from simple tasks such as data gathering or classification \cite{barker2013pascal}, to even complex ones such as solving algorithms \cite{cooper2010predicting}. They may act as contributors and collaborators, but can also have a more proactive role as a project leader \cite{robinson2018ten}. As to why a "citizen" would collaborate, there could be several reasons depending on the project itself: contribution to the advancement of science or the project, desire to learn, personal interests, entertainment, among others \cite{tinati2016because}. 
 
-On the other end of the spectrum, there are scientists enlisting amateurs to contribute on Citizen Science initiatives. With the rise in interest from the public, they are able to achieve otherwise impossible results. % give some examples
-This comes with the realization that the public represents a free source of labor, skills, computational power and even finance \cite{silvertown2009new}. With this perception and other concerns, Citizen Science 
+On the other end of the spectrum, there are the scientists, enlisting amateurs to contribute on Citizen Science initiatives. With the rise in interest from the public, they are able to achieve otherwise impossible results. According to \cite{theobald2015global}, in 2014, 1.3 million volunteers participated in 388 research projects related to biodiversity alone, contributing up to \$2.5 billion of in-kind labor annually.
 
-% what about online
+This comes with the realization that the public represents a free source of labor, skills, computational power and even finance \cite{silvertown2009new}. This perception could implicate in ethical concerns depending on the role of the contributor. With these among other concerns, the European Citizen Science Association conceived the "Ten principles of citizen science". They establish some key principles to follow as good practice when applying citizen science concepts to research. Many of the principles focus on the citizen scientists itself, since they deserve feedback, acknowledgment and participation rights to the research.
+
 % what about computer automation
-% motivations
 % potential of citizen science
 
-This area of interest is not entirely new, as it has existed for more than one century now. However, its reach was reduced, since it was mostly focused on ecological and environmental sciences. Some initiatives date back to 1890, such as the Cooperative Weather Service, where amateurs send collected weather data to the National Weather Service; and 1966, the North American Breeding Bird Survey with more than 670 publications referencing it, where nonprofessionals   . This practice has shown a rise in (1) the number of citizen science projects \footnote{Extraction from \href{citizenscience.gov}{citizenscience.gov} and Zooniverse.} (figure \ref{fig:growth-citizen-science-projects}) as well as (2) articles published on the topic \footnote{Query String: "citizen science" in Scholar Google, filtered by one year intervals} (as seen in figure \ref{fig:growth-publications}).
+Citizen science is not new, as it has existed for more than one century now. However, its reach was reduced, since it was mostly focused on ecological and environmental sciences. Some initiatives date back to 1890, such as the Cooperative Weather Service, where amateurs send collected weather data to the National Weather Service; and 1966, the North American Breeding Bird Survey with more than 670 publications referencing it, where nonprofessionals   . This practice has shown a rise in (1) the number of citizen science projects \footnote{Extraction from \href{citizenscience.gov}{citizenscience.gov} and Zooniverse.} (figure \ref{fig:growth-citizen-science-projects}) as well as (2) articles published on the topic \footnote{Query String: "citizen science" in Scholar Google, filtered by one year intervals} (as seen in figure \ref{fig:growth-publications}).
 
-This growth can be justified
+One significant factor justifying this growth is the availability of technical tools for disseminating information about projects and gathering data from the public \cite{silvertown2009new}. The widespread use of smartphones allows scientists to develop platforms easily accessible to everyone. This is combined with advancements in software usability on these platforms, supporting first time users and recurring contributors. Many of the citizen science initiatives are practiced online and do not require specialized hardware, letting anyone with access to a computer or smartphone help.
+
+% Foldit, designed by researchers at University of Washington, is a game
 
 \pgfplotstableread[row sep=\\,col sep=&]{
     year & publications \\
@@ -86,18 +87,21 @@ Out of these interest areas, one that could see further development with initiat
 Natural language processing is a vast field that explores how computers can understand and manipulate human language in text or speech format. Researches in this area include (but are not limited to) sentiment analysis, sentence prediction, text translation, text-to-speech conversion and voice recognition. Voice recognition in particular is a class of machine learning that can be stochastically modelled - using Hidden Markov Models \cite{gales2008application} -, Neural Networks \cite{graves2013speech} or even non-stochastically \cite{burget2003nonrandomattr}.
 
 % add more emphasys on STT
-However, these voice modeling strategies are highly dependant on the quality and quantity of data provided. Factors such as noisy speech data, nonhomogeneous recordings, different microphones within the same dataset and even speech disorders could limit proper analysis, affect accuracy and even change speech predictions \cite{}. 
+However, these voice modeling strategies are highly dependant on the quality and quantity of data provided. Factors such as noisy speech data, nonhomogeneous recordings, different microphones within the same dataset and even speech disorders could limit proper analysis, affect accuracy and even change speech predictions \cite{wrong}. 
 
-These voice datasets, also known as Speech Corpus (or Speech Corpora in plural), 
+%These voice datasets, also known as Speech Corpus (or Speech Corpora in plural), curate a collection of audio recordings of a spoken language. Some of them also have additional text files with transcriptions of the words spoken.
 
-are widely found in the literature. 
+%Although they are widely found in the literature
 
-There are many robust datasets available in the literature, such as TIMIT \cite{Lamel1992timmit}, DIRHA \cite{Ravanelli2016dirha} and the more recent \cite{chanchaochai2018globaltimit}. These data sets are called Speech Corpora and have a collection of audio recordings of spoken language. Some of them also have additional text files containing transcriptions of the words spoken. Unfortunately, most speech corpora are for the English language \cite{LeRouxVincent2014TRdatasets} and they 
+There are many robust datasets available in the literature, such as TIMIT \cite{Lamel1992timmit}, DIRHA \cite{Ravanelli2016dirha} and the more recent \cite{chanchaochai2018globaltimit}. These data sets are called Speech Corpora and have a collection of audio recordings of spoken language. Some of them also have additional text files containing transcriptions of the words spoken.
+%talk corpus construction here
+Unfortunately, most speech corpora are for the English language \cite{LeRouxVincent2014TRdatasets} and they have no formality as to how the corpus was created.
+% talk formality here
 
-There are also online datasets that could be constantly updated with user input. These are Vox Forge \cite{asd} and Common Voice \cite{mozilla}. But the former has poor user interface and little usage over time and the latter has no analysis whether the data could be used as a voice recognition system
+There are also online datasets that could be constantly updated with user input. These are Vox Forge \cite{asd} and Common Voice \cite{mozilla}. But the former has poor user interface and little usage over time and the latter has no formal analysis whether the data could be used as a voice recognition system.
 
-This work identifies the Citizen Science practice as a potential candidate to create a robust Speech Corpus through 
-
+This work identifies the Citizen Science practice as a potential candidate to create a robust Speech Corpus.
+% talk robustness here
 This work will focus the creation of a Speech Corpus for the Brazilian Portuguese language harnessing the potential use of the Citizen Science practice.
 
 To fill this gap, this work presents a systematic literature review of speech corpora to define its characteristics and requirements when creating this kind of data set.
