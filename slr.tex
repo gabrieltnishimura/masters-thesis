@@ -1,0 +1,254 @@
+\chapter{Systematic Literature Review}
+\label{chap:slr}
+
+To identify the characteristics of a speech corpus, a systematic literature was performed \cite{kitchenham2009systematic}.
+
+The search was executed on August 1st, 2019 and the electronic database used was Web of Science. Since corpora are also presented at conferences, all article types were considered in the search, not limited by publication date. The whole process to choose relevant papers is defined below:
+
+\section{Search in papers database}
+
+The first step in the process is searching for papers in the specified database. To allow reproducibility, the search query is presented in table \ref{tab:search-terms}. No criteria were applied in the search, therefore considering the title, abstract, keywords, and the entire paper for indexing. It is also noted that conference proceedings are also included in this search. In this step, 157 results were yielded. This result was further filtered to 23, which contained the terms in the title.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline Digital Library & Search terms \\ \hline
+        Web of Science & TOPIC: ("speech corpus" OR "speech corpora")  \\ \hline
+    \end{tabular}
+    \caption{Search terms used in the SLR}
+    \label{tab:search-terms}
+\end{table}
+
+\section{Inclusions and exclusions}
+
+To filter relevant results, we define the criteria to include or exclude the articles based on each abstract read:
+
+\subsection{Inclusion Criteria}
+
+\begin{itemize}
+    \item Creates a speech corpus
+    \item Define or discuss speech corpus creation
+\end{itemize}
+
+\subsection{Exclusion Criteria}
+
+\begin{itemize}
+    \item Full text not available in the electronic document
+    \item Does not contain "speech corpus" or "speech corpora" strings in title, abstract, or keywords.
+\end{itemize}
+
+This step reduced the number of articles to 14.
+
+\section{Article Analysis}
+
+After applying the proper filtering as defined in the previous section, the remaining articles can be fully read to find the results. The whole filtering process is summarized in \ref{tab:filtering}.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline Step & Results \\ \hline
+        Initial search & 157 \\ \hline
+        Title filtering & 23 \\ \hline
+        Abstract reading & 14 \\ \hline
+    \end{tabular}
+    \caption{SLR - Filtering of results}
+    \label{tab:filtering}
+\end{table}
+
+\section{Findings}
+
+To analytically organize our findings, a content-analysis approach was used. To choose the categories in which the content analysis is applied, we adapted the work from \cite{queiroz2019blockchain}, resulting in table \ref{tab:content-analysis}. As for the corpus categories, we sought a comparison work from  \cite{LeRouxVincent2014TRdatasets}, in which a comprehensive table was provided and adapted to fit our categorization needs.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{4cm}|p{11cm}|}
+        \hline Category & Explanation/Example \\ \hline
+        Total number of papers published & Number of publications by year \\ \hline
+        Application area & Speech Corpus, Learning English Pronunciation, Automatic Speech Recognition, Crowdsourcing \\ \hline
+        Application context & Speech Corpus Creation, Speech Corpus Automated Analysis, Dialect Analysis \\ \hline
+        Corpus Language & English (Dialect), Arabic, Multilingual, etc \\ \hline
+    \end{tabular}
+    \caption{Categories for content analysis}
+    \label{tab:content-analysis}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{4cm}|p{11cm}|}
+        \hline Category & Explanation/Example \\ \hline
+        General attributes & scenario, total duration, sampling rate, number of distant or noisy microphones, demographics, transcription and time alignment and open access \\ \hline
+        Speech attributes & duration of speech, speaking style, speakers in the room, speaker overlap\\ \hline
+        Channel attributes & channel type, speaker location, speaker movements \\ \hline
+        Noise attributes & stationary background noise, car noise, meeting noises, domestic noises, outdoor noises \\ \hline
+        Available ground truth & reference speech signal, speaker location and orientation, paralinguistic attributes, noise events \\ \hline
+    \end{tabular}
+    \caption{Categories for speech corpus construction}
+    \label{tab:speech-analysis}
+\end{table}
+
+\subsection{Publication by country and year}
+
+Table \ref{tab:country-analysis} reports the number of papers, published by country and year, resulting from the research protocol application.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline Country & 2005-2015 & 2016 & 2017 & 2018 & (\%) \\ \hline
+        United States & - & 3 & 2 & - & 33\% \\ \hline 
+        Japan & 3 & - & - & - & 20\% \\ \hline
+        Emirates Arabs & - & - & 1 & 1 & 13\% \\ \hline
+        India & - & - & 1 & - & 6.7\% \\ \hline
+        Malasya & - & - & 1 & - & 6.7\% \\ \hline
+        Sweden & - & - & 1 & - & 6.7\% \\ \hline
+        China & - & 1 & - & - & 6.7\% \\ \hline
+        Poland & 1 & - & - & - & 6.7\% \\ \hline
+    \end{tabular}
+    \caption{Countries for content analysis}
+    \label{tab:country-analysis}
+\end{table}
+
+\subsection{Publication by type}
+
+As for publication types, they have almost been equally divided: 46.7\% for articles and 53.3\% for proceedings papers.
+
+\subsection{Speech Corpus studies' categorization}
+
+In table \ref{tab:results-categorization}, each article is categorized according to table \ref{tab:content-analysis} definitions. The analysis is done afterwards in section \ref{sec:discussion}.
+
+\begin{landscape}
+\begin{longtable}{|p{3.5cm}|p{4.5cm}|p{9cm}|p{4.5cm}|}
+\caption{Findings organized by speech corpus categorization as per table \ref{tab:content-analysis}}
+\label{tab:results-categorization}
+    \hline Authors & Application area & Context & Language \\ \hline
+    \cite{almeman2018building} & Read Corpus & Multi-dialect Arabic corpora is scarce and not generated on mobile & Arabic \\ \hline
+    \cite{dwivedi2017documenting} & Language Documentation & Revitalization of endangered languages through corpus creation & Kanauji of Kanpur \\ \hline
+    \cite{bougrine2017altruistic} & Crowdsourcing & Crowdsourcing is a emerging and collaborative approach and can be effectively used to annotate linguistic resources & Arabic Algerian Dialects \\ \hline
+    \cite{ng2017shefce} & Automatic syllable and phoneme detection & Pronunciation assessment studies in a bilingual context & Billingual (Cantonese, English) \\ \hline
+    \cite{moore2017sheffield} & Read Speech & Goal oriented conversation & British English with a southern accent \\ \hline
+    \cite{ramli2017first} & Storytelling Speech & Under-resourced language corpus creation for humanoid robot storyteller & Malay \\ \hline
+    \cite{mansikkaniemi2017automatic} & Automatic speech alignment & Transcribed speech is a scarce and expensive resource & Finish \\ \hline
+    \cite{goldman2016siwis} & Cross language speaker adaptation & Cross-lingual studies have no speech corpus from the same speakers & Bilingual and Trilingual from (English, French, German and Italian) \\ \hline
+    \cite{liu2016sheffield} & Spontaneous Speech & Distant speech recognition with multi-channel speech corpus & English \\ \hline
+    \cite{ruilan2016improving} & Read Corpus & Pronunciation characteristics in non-native English speakers & Dialectal English \\ \hline
+    \cite{klessa2013paralingua} & Read Corpus & Paralinguistic features detection for forensics & Paralinguistic \\ \hline
+    \cite{nagino2008building} & Corpus Enhancement & Low cost speech corpus creation with statistical multidimensional scaling method & Japanese \\ \hline
+    \cite{zhang2008improved} & Phonetic words selection & Phonetically rich word selection from larger corpus & Chinese \\ \hline
+    \cite{clopper2006nationwide} & Read Corpus & Large amount of speech by male and female from six dialect regions & Multiple-dialect English \\ \hline
+\end{longtable}
+\end{landscape}
+
+\begin{landscape}
+\begin{longtable}{|p{4cm}|p{3cm}|p{12cm}|p{3.5cm}|}
+\caption{Speech corpora characteristics defined in table \ref{tab:speech-analysis}}
+\label{tab:results-attributes}
+\hline Category & Characteristic & Work(s) & Quantity (out of 14) \\ \hline
+\multirow{7}{*}{General attributes} 
+    & Scenario & 
+    \cite{almeman2018building}, \cite{dwivedi2017documenting}, \cite{bougrine2017altruistic}, \cite{bougrine2017altruistic}, \cite{moore2017sheffield}, \cite{ramli2017first}, \cite{goldman2016siwis}, \cite{liu2016sheffield}, \cite{ruilan2016improving}, \cite{klessa2013paralingua}, \cite{nagino2008building},  \cite{clopper2006nationwide}, \cite{zhang2008improved} & 13
+    \\ \cline{2-4} & Total duration &
+    \cite{dwivedi2017documenting}, \cite{bougrine2017altruistic}, \cite{bougrine2017altruistic}, \cite{moore2017sheffield}, \cite{ramli2017first}, \cite{goldman2016siwis}, \cite{liu2016sheffield}, \cite{ruilan2016improving}, \cite{klessa2013paralingua}, \cite{nagino2008building}, \cite{clopper2006nationwide}, \cite{zhang2008improved} & 12
+    \\ \cline{2-4} & Sampling Rate &
+    \cite{almeman2018building}, \cite{dwivedi2017documenting}, \cite{bougrine2017altruistic}, \cite{ng2017shefce}, \cite{moore2017sheffield}, \cite{ramli2017first}, \cite{goldman2016siwis}, \cite{liu2016sheffield}, \cite{ruilan2016improving}, \cite{klessa2013paralingua}, \cite{clopper2006nationwide} & 11
+    \\ \cline{2-4}& Distant or noisy microphones & 
+    \cite{moore2017sheffield}, \cite{ramli2017first}, \cite{liu2016sheffield} & 3
+    \\ \cline{2-4} & Demographics &
+    \cite{dwivedi2017documenting}, \cite{bougrine2017altruistic}, \cite{ng2017shefce}, \cite{goldman2016siwis}, \cite{ruilan2016improving}, \cite{klessa2013paralingua}, \cite{clopper2006nationwide} & 7
+    \\ \cline{2-4} & Transcription and time alignment & % manual?
+    \cite{dwivedi2017documenting}, \cite{bougrine2017altruistic}, \cite{bougrine2017altruistic}, \cite{ng2017shefce}, \cite{moore2017sheffield}, \cite{ramli2017first}, \cite{goldman2016siwis}, \cite{liu2016sheffield}, \cite{ruilan2016improving}, \cite{klessa2013paralingua}, \cite{nagino2008building}, \cite{clopper2006nationwide} & 12
+    \\ \cline{2-4} & Open access &
+    \cite{almeman2018building}, \cite{moore2017sheffield}, \cite{liu2016sheffield} & 3
+\\ \hline \multirow{3}{*}{Speech attributes}
+    & Unique words & 
+    \cite{bougrine2017altruistic}, \cite{bougrine2017altruistic}, \cite{ng2017shefce}, \cite{moore2017sheffield}, \cite{ramli2017first}, \cite{goldman2016siwis}, \cite{liu2016sheffield}, \cite{ruilan2016improving}, \cite{klessa2013paralingua}, \cite{nagino2008building}, \cite{clopper2006nationwide} & 11
+    \\ \cline{2-4} & Speaking style &
+    \cite{dwivedi2017documenting}, \cite{bougrine2017altruistic}, \cite{ng2017shefce}, \cite{moore2017sheffield}, \cite{ramli2017first}, \cite{goldman2016siwis}, \cite{nagino2008building}, \cite{clopper2006nationwide} & 8
+    \\ \cline{2-4} & Number of speakers & 
+    \cite{dwivedi2017documenting}, \cite{bougrine2017altruistic}, \cite{bougrine2017altruistic}, \cite{ng2017shefce}, \cite{moore2017sheffield}, \cite{ramli2017first}, \cite{goldman2016siwis},, \cite{ruilan2016improving} \cite{liu2016sheffield}, \cite{klessa2013paralingua}, \cite{nagino2008building}, \cite{clopper2006nationwide} & 14
+\\ \hline \multirow{3}{*}{Channel attributes}
+    & Channel type & 
+    \cite{dwivedi2017documenting}, \cite{bougrine2017altruistic}, \cite{ng2017shefce}, \cite{moore2017sheffield}, \cite{ramli2017first}, \cite{goldman2016siwis}, \cite{liu2016sheffield}, \cite{ruilan2016improving}, \cite{nagino2008building}, \cite{clopper2006nationwide} & 10
+    \\ \cline{2-4} & Speaker location & 
+    \cite{dwivedi2017documenting}, \cite{ng2017shefce}, \cite{liu2016sheffield} & 3
+    \\ \cline{2-4} & Speaker movements & 
+    \cite{dwivedi2017documenting}, \cite{moore2017sheffield}, \cite{liu2016sheffield} & 3
+\\ \hline \multirow{1}{*}{Noise attributes}
+    & Noise type & N/A &
+    0
+\\ \hline \multirow{4}{*}{Available ground truth} 
+    & Reference speech signal & 
+    \cite{ng2017shefce}, \cite{moore2017sheffield}, \cite{ramli2017first}, \cite{liu2016sheffield} & 4
+    \\ \cline{2-4} & Speaker location and orientation &
+    \cite{bougrine2017altruistic}, \cite{moore2017sheffield}, \cite{ramli2017first}, \cite{liu2016sheffield} & 4
+    \\ \cline{2-4} & Paralinguistic attributes &
+    \cite{klessa2013paralingua} & 1
+    \\ \cline{2-4} & Noise events & 
+    \cite{ramli2017first} & 1
+    \\ \hline
+\end{longtable}
+\end{landscape}
+
+\section{Discussion}
+\label{sec:discussion}
+
+Each of our findings is discussed in the following subsections.
+
+\subsection{Publications by country and year}
+
+A simple analysis on table \ref{tab:country-analysis} infers that the research on speech corpus creation was stable until 2018, which had its last article published. This can be explained by the limited number of "Open Access" articles found and the small number of databases searched (Web Of Science only). A more permissive literature review should be able to better understand the conditions on which non-open articles are being released, as well as enhance coverage of the state-of-the-art in this field.
+
+The table also categorizes the countries research quota. More developed countries such as United States and Japan have created more corpora over the years.
+
+\subsection{Publications by type}
+
+In the search executed, the remaining articles were almost equally separated by type. A great number of conference proceedings may indicate that the corpus creation process is not properly defined, as works vary in content and structure. Again, the main limitation of this work is the only database searched, therefore skewing analysis.
+
+\subsection{Speech corpus categorization}
+
+Table \ref{tab:content-analysis} contains the content-analysis for the works in the systematic literature review. Two of the columns - Application Area (1), and Language (2) - are be discussed below:
+
+\subsubsection{Application Area}
+
+Most of the corpora found in the articles were a Read Speech Corpus (\cite{almeman2018building}, \cite{ruilan2016improving}, \cite{klessa2013paralingua}, \cite{clopper2006nationwide}), revealing the lack of structured language documentation in the current research. This can be explained by the type of its content: a scripted content, with less bias from the speakers when compared to spontaneous corpora. Three of these works (\cite{ng2017shefce}, \cite{mansikkaniemi2017automatic} and \cite{nagino2008building}) worked on automating corpus creation by automatically aligning words, detecting syllables and phonemes, and even enhancing corpora, as currently most recording and alignment work is done manually.
+
+\subsubsection{Languages}
+
+There is a significant number of dialect and multilingual corpora research in the analyzed works. These variations of the same language - in different regions, or by different pronunciation by non-native speakers -, suggest that speech technology could become more personalized as computers understand less traditional utterances of the same language.
+
+\subsection{Works by speech corpus characteristics}
+
+Our findings condensed in table \ref{tab:results-categorization} illustrate the
+current speech corpus creation characteristics used in the literature, each discussed below:
+
+\subsubsection{Scenario}
+
+Almost all corpora specified the scenario at which the recordings were executed. A meeting room (\cite{liu2016sheffield}, \cite{moore2017sheffield}); a anechoic booth (\cite{goldman2016siwis}); a quiet room inside a laboratory (\cite{ramli2017first}), etc. Although, each corpus is not limited to one scenario. For instance, \cite{almeman2018building} recorded in four different scenarios: inside the home, in a moving car, in a public place, and in a quiet place. Such characteristic is critical to corpus creation.
+
+\subsubsection{Total duration}
+
+12 out of the 14 studies analyzed described the total duration of the recordings. This illustrates the importance of being descriptive in the corpus.
+
+\subsubsection{Sampling Rate}
+
+The sampling rate is major to the corpus creation. It is cited in 11 out of the 14 works read. The reason it has so much importance lies on the corpus main usage: automatic speech recognition software. Knowing the frequency at which the recordings are done, the computer is able to better recognize subtleties in a more sampled audio, as well as simplify processing in a lower frequency sample rate.
+
+\subsubsection{Noisy microphones}
+
+Non-optimal recording conditions are normal. For instance, speaking on the phone in a public space generates a very high noisy background \cite{moore2017sheffield}). Moreover, speaking far from the microphone is also a common occurrence. The presence of works in this category emphasizes the need of noisy corpora to ensure automatic speech recognition software takes these factors into account.
+
+\subsubsection{Demographics}
+
+When recording accent (\cite{moore2017sheffield}), dialect (\cite{almeman2018building}) and pronunciation (\cite{ng2017shefce}), the definition of speaker demographics supports the understanding of the variations between the same language through research.
+
+\subsubsection{Transcription and time alignment}
+
+In the context of automatic speech recognition, a speech corpus containing  transcription and time alignment (additional to the recordings) enable computers and speech recognition specialists a more faithful analysis. Its importance can be verified by 85\% of the works evaluated.
+
+%\subsubsection{Open access}
+
+%Most corpora are closed to the public viewer. 
+
+%\subsubsection{Unique words}
+%\subsubsection{Speaking style}
+\subsubsection{Number of speakers}
+
+As well as the total duration, the number of speakers is a major characteristic of the corpus. More speakers lead to more representativeness, but also affect the corpus recording time. It is an important parameter and every paper analyzed describes it.
