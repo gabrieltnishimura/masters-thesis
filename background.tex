@@ -45,15 +45,15 @@ An additional way of classifying citizen science projects is based on the topic 
 
 If these classifications are to be applied in this work, it should be categorized as a \textbf{contributory virtual speech corpus} citizen science project.
 
-\subsection{Relevant Virtual Projects}
+\section{Citizen Science Projects}
 
-With the recent growth of citizen science, various breakthroughs were made possible. Below are some of the most relevant projects in the virtual space.
+With the recent growth of citizen science, various breakthroughs were made possible. Below are some of the most relevant projects in the virtual space, some of which apply gamification to engage contributors.
 
-\subsubsection{Foldit}
+\subsection{Foldit}
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\linewidth]{images/background/foldit-problem.png}
+    \includegraphics[width=0.8\linewidth]{images/background/foldit-problem.png}
     \caption{Foldit - Unfolded (and unstable) Streptococcal Protein Puzzle \\ Source: \cite{foldit-protein-problem}}
     \label{fig:foldit-problem}
 \end{figure}
@@ -62,42 +62,88 @@ Foldit, designed by researchers at the University of Washington, is a game in wh
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\linewidth]{images/background/foldit-solution.png}
+    \includegraphics[width=0.8\linewidth]{images/background/foldit-solution.png}
     \caption{Foldit - Folded up Streptococcal Protein Puzzle \\ Source: \cite{foldit-protein-solution}}
     \label{fig:foldit-solution}
 \end{figure}
 
-As the moment of this article, Foldit has had 20 peer-reviewed articles in a number of journals and conferences \cite{foldit-publications}. Some relevant breakthroughs are a potential target for HIV drug development \cite{khatib2011crystal}, redesign of the catalyst for the Diels-Alder reaction \cite{eiben2012increased}, and improvement of cryo-electron microscopy atomic model building and refinement \cite{khatib2019building}.
+As the moment of this article, Foldit has had 20 peer-reviewed articles in a number of journals and conferences \cite{foldit2021publications}. Some relevant breakthroughs are a potential target for HIV drug development \cite{khatib2011crystal}, redesign of the catalyst for the Diels-Alder reaction \cite{eiben2012increased}, and improvement of cryo-electron microscopy atomic model building and refinement \cite{khatib2019building}.
 
-\begin{table}[h]
+\subsubsection{Gamification in Foldit}
+
+To appeal to the general public, Foldit applies gamification in many different elements. The main objective of the game is to obtain the most stable and folded protein. To encourage this optimization, the user interface assigns a score to the protein, relative to how well it is folded. The best solutions to these puzzles are displayed in a ranking system, to promote competition between users. Another element to aid engagement is social gamification. Users create and join groups, and members of groups can share puzzle solutions. These groups have been found to be useful in training new players.
+
+\subsection{EyeWire}
+
+\begin{figure}[ht]
     \centering
-    \begin{tabular}{|c|c|c|}
-        \hline Project & Contributors & Contributions \\
-        \hline Foldit & access & access \\ 
-        \hline EyeWire & access & access \\ 
-        \hline Galaxy Zoo & access & access \\ 
-        \hline Christmas Audubom Birdwatch & access & access \\ \hline 
-    \end{tabular}
-    \caption{Contribution for online citizen science projects}
-    \label{tab:cs-contributions}
-\end{table}
+    \caption{EyeWire game interface}
+    \includegraphics[width=0.8\linewidth]{images/background/eyewire.jpg}
+    \caption{Source: \cite{eyewire2014how}}
+    \label{fig:eyewire-game-interface}
+\end{figure}
+
+EyeWire is a Web-based citizen science game that aims to create a detailed atlas of the human brain \cite{tinati2016because}. Nonprofessionals are asked to identify connected areas in 3D-transformed fMRI images, whist offering players the chance to compete against each other.   
+
+\subsubsection{Gamification in EyeWire}
+
+\subsection{Old Weather}
+
+\begin{figure}[ht]
+    \centering
+    \caption{Old Weather Report Example - Log book of USS Jeannette}
+    \includegraphics[width=0.8\linewidth]{images/background/oldweather.jpg}
+    \caption{Source: \cite{oldweather2015jeannette}}
+    \label{fig:oldweather-logbook}
+\end{figure}
+
+\subsubsection{Gamification in Old Weather}
+
+\subsection{Galaxy Zoo}
+
+\begin{figure}[ht]
+    \centering
+    \caption{Hubble's Galaxy Classification Schema to help new players classify galaxies}
+    \includegraphics[width=0.8\linewidth]{images/background/galaxyzoo-training.jpg}
+    \caption{Source: \cite{galaxyzoo2010hubble}}
+    \label{fig:galaxyzoo-hubble}
+\end{figure}
+
+GalaxyZoo 
+https://www.zooniverse.org/projects/zookeeper/galaxy-zoo
+
+\subsubsection{Gamification in Galaxy Zoo}
 
 \subsubsection{Zooniverse}
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\linewidth]{images/background/zooniverse.jpg}
+    \includegraphics[width=0.7\linewidth]{images/background/zooniverse.jpg}
     \caption{Zooniverse Platform, connecting volunteers with scientists \\ Source: \cite{zooniverse-logo}}
     \label{fig:foldit-solution}
 \end{figure}
 
 Zooniverse is a platform for citizen science projects. It connects more than a million volunteers around the world to assist professional researchers. The platform has a simple interface for input and classification of data, as well as the creation and management of projects.
 
-This collaborative platform has enabled over 300 of scientific publications, with publications from the (1) discovery and classification of stars, planets, supernovas; humanities, animal identification, classification of whale calls, datasets etc.
+This collaborative platform has enabled over 300 of scientific publications, with publications on the discovery and classification of stars, planets, supernovas; humanities, animal identification, classification of whale calls, datasets, etc.
 
-\subsubsection{Galaxy Zoo}
+\subsection{Contributions}
 
-https://www.zooniverse.org/projects/zookeeper/galaxy-zoo
+The table \ref{tab:cs-contributions} contains an aggregated list of contributors and contributions from the projects described above.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline Project & Contributors & Publications \\
+        \hline Foldit & 855,350 \cite{foldit2021players} & 20 \cite{foldit2021publications} \\ 
+        \hline EyeWire & 300,000 \cite{eyewire2017players} & 3 \cite{eyewire2021publications} \\ 
+        \hline Old Weather & 61,149 \cite{galaxyzoo2021players} & 64 \cite{galaxyzoo2021publications} \\ 
+        \hline Galaxy Zoo & 61,149 \cite{galaxyzoo2021players} & 64 \cite{galaxyzoo2021publications} \\ 
+        \hline 
+    \end{tabular}
+    \caption{Contribution for online citizen science projects}
+    \label{tab:cs-contributions}
+\end{table}
 
 \section{Gamification}
 
