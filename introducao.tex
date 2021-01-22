@@ -23,6 +23,7 @@ Citizen science is not new, as it has formally existed for more than one century
 
 \begin{figure}[!h]
     \centering
+    \caption{Growth of citizen science initiatives over time}
     \begin{tikzpicture}
         \begin{axis}[
                 ybar,
@@ -41,12 +42,13 @@ Citizen science is not new, as it has formally existed for more than one century
             \addplot table[x=year,y=publications]{\publicationdata};
         \end{axis}
     \end{tikzpicture}
-    \caption{Growth of citizen science initiatives over time}
+    \caption*{Source: Author}
     \label{fig:growth-citizen-science-projects}
 \end{figure}
 
 \begin{figure}[!h]
     \centering
+    \caption{Growth of published peer-reviewed articles on citizen science}
     \begin{tikzpicture}
         \begin{axis}[
                 ybar,
@@ -65,7 +67,7 @@ Citizen science is not new, as it has formally existed for more than one century
             \addplot table[x=year,y=publications]{\publicationdata};
         \end{axis}
     \end{tikzpicture}
-    \caption{Growth of published peer-reviewed articles on citizen science}
+    \caption*{Source: Author}
     \label{fig:growth-publications}
 \end{figure}
 
@@ -87,8 +89,9 @@ One of the many techniques to overcome these engagement obstacles is throughout 
 
 \begin{figure}[ht]
     \centering
+    \caption{2020 Report on Entertainment Category Engagement; 79\% of the population is taken by gamers.}
     \includegraphics[width=\linewidth]{images/game.png}
-    \caption{2020 Report on Entertainment Category Engagement; 79\% of the population is taken by gamers.\\ Source: 2020 Evolution of Entertainment / NPD Group}
+    \caption*{Source: 2020 Evolution of Entertainment / NPD Group}
     \label{fig:entertainment-report}
 \end{figure}
 
@@ -120,8 +123,8 @@ To achieve the aforementioned objective, this project will:
 
 \begin{itemize}
     \item Research what characterizes a speech corpus in the literature;
-    \item Create a list of phrases from which the public will read;
     \item Construct a application to record anonymized speech data;
+    \item Create a list of phrases from which the public will read;
     \item Add gamification elements to enhance public engagement;
     \item Validate recorded data and apply statistical methods to ensure data quality
     \item Publish dataset on open source platform

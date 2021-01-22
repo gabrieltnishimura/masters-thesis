@@ -53,8 +53,9 @@ With the recent growth of citizen science, various breakthroughs were made possi
 
 \begin{figure}[ht]
     \centering
+    \caption{Foldit - Unfolded (and unstable) Streptococcal Protein Puzzle}
     \includegraphics[width=0.8\linewidth]{images/background/foldit-problem.png}
-    \caption{Foldit - Unfolded (and unstable) Streptococcal Protein Puzzle \\ Source: \cite{foldit-protein-problem}}
+    \caption*{Source: \cite{foldit-protein-problem}}
     \label{fig:foldit-problem}
 \end{figure}
 
@@ -62,8 +63,9 @@ Foldit, designed by researchers at the University of Washington, is a game in wh
 
 \begin{figure}[ht]
     \centering
+    \caption{Foldit - Folded up Streptococcal Protein Puzzle}
     \includegraphics[width=0.8\linewidth]{images/background/foldit-solution.png}
-    \caption{Foldit - Folded up Streptococcal Protein Puzzle \\ Source: \cite{foldit-protein-solution}}
+    \caption*{Source: \cite{foldit-protein-solution}}
     \label{fig:foldit-solution}
 \end{figure}
 
@@ -79,47 +81,23 @@ To appeal to the general public, Foldit applies gamification in many different e
     \centering
     \caption{EyeWire game interface}
     \includegraphics[width=0.8\linewidth]{images/background/eyewire.jpg}
-    \caption{Source: \cite{eyewire2014how}}
+    \caption*{Source: \cite{eyewire2014how}}
     \label{fig:eyewire-game-interface}
 \end{figure}
 
-EyeWire is a Web-based citizen science game that aims to create a detailed atlas of the human brain \cite{tinati2016because}. Nonprofessionals are asked to identify connected areas in 3D-transformed fMRI images, whist offering players the chance to compete against each other.   
+EyeWire is a Web-based citizen science game that aims to create a detailed atlas of the human brain. Nonprofessionals are asked to map connections of neurons which reside in the back of the human eye. This mapping is done through 3D-transformed functional magnetic resonance images (fMRI), and combines crowd contributions with machine learning algorithms to help neuroscientists to achieve a better understanding of visual stimuli processing by humans.
 
 \subsubsection{Gamification in EyeWire}
 
-\subsection{Old Weather}
+EyeWire transforms the complex task of brain mapping into smaller (micro) tasks via a gaming interface with several elements associated \cite{seaborn2015gamification}. This has been identified as a positive motivation for a player's participation \cite{tinati2016because}. Other elements such as music, sound effects, interactive tutorials, leaderboard, and a chat interface add to the overall experience, creating a fun experience - according to a survey on EyeWire motivation \cite{tinati2016because}, out of 349 respondents, 57\% considered the the game entertaining.
+
+\subsection{Zooniverse}
 
 \begin{figure}[ht]
     \centering
-    \caption{Old Weather Report Example - Log book of USS Jeannette}
-    \includegraphics[width=0.8\linewidth]{images/background/oldweather.jpg}
-    \caption{Source: \cite{oldweather2015jeannette}}
-    \label{fig:oldweather-logbook}
-\end{figure}
-
-\subsubsection{Gamification in Old Weather}
-
-\subsection{Galaxy Zoo}
-
-\begin{figure}[ht]
-    \centering
-    \caption{Hubble's Galaxy Classification Schema to help new players classify galaxies}
-    \includegraphics[width=0.8\linewidth]{images/background/galaxyzoo-training.jpg}
-    \caption{Source: \cite{galaxyzoo2010hubble}}
-    \label{fig:galaxyzoo-hubble}
-\end{figure}
-
-GalaxyZoo 
-https://www.zooniverse.org/projects/zookeeper/galaxy-zoo
-
-\subsubsection{Gamification in Galaxy Zoo}
-
-\subsubsection{Zooniverse}
-
-\begin{figure}[ht]
-    \centering
+    \caption{Zooniverse Platform, connecting volunteers with scientists}
     \includegraphics[width=0.7\linewidth]{images/background/zooniverse.jpg}
-    \caption{Zooniverse Platform, connecting volunteers with scientists \\ Source: \cite{zooniverse-logo}}
+    \caption*{Source: \cite{zooniverse-logo}}
     \label{fig:foldit-solution}
 \end{figure}
 
@@ -127,21 +105,53 @@ Zooniverse is a platform for citizen science projects. It connects more than a m
 
 This collaborative platform has enabled over 300 of scientific publications, with publications on the discovery and classification of stars, planets, supernovas; humanities, animal identification, classification of whale calls, datasets, etc.
 
+\subsection{Galaxy Zoo}
+
+\begin{figure}[ht]
+    \centering
+    \caption{Hubble's Galaxy Classification Schema to help new players classify galaxies}
+    \includegraphics[width=0.8\linewidth]{images/background/galaxyzoo-training.jpg}
+    \caption*{Source: \cite{galaxyzoo2010hubble}}
+    \label{fig:galaxyzoo-hubble}
+\end{figure}
+
+Part of the Zooniverse platform, GalaxyZoo 
+https://www.zooniverse.org/projects/zookeeper/galaxy-zoo
+
+\subsubsection{Gamification in Galaxy Zoo}
+
+\subsection{Penguin Watch}
+
+\begin{figure}[ht]
+    \centering
+    \caption{Penguin Watch interface - Penguins are marked as adults and chicks}
+    \includegraphics[width=0.8\linewidth]{images/background/penguinwatch.jpg}
+    \caption*{Source: \cite{penguin2015watch}}
+    \label{fig:oldweather-logbook}
+\end{figure}
+
+The Penguin Watch citizen science project states that by monitoring the population change in seabirds like penguins, it is possible to identify changes occurring in the wider ecosystem. These changes can help create health indicators of the marine environment, but the lack of the ability to collect and analyze such amounts of data made a team of researchers create the Penguin Watch initiative. Contributors help identify penguins in images of various sites over the world by using a web interface in Zooniverse.
+
+\subsubsection{Gamification in Penguin Watch}
+
+Like with GalaxyZoo, Penguin Watch runs their contribution platform over Zooniverse. On one hand, Zooniverse is responsible for the infrastructure and service management, while the team at Penguin Watch only analyzes the data. However, since Zooniverse platform has limitations, the use of gamification is limited to social interaction of players.
+
 \subsection{Contributions}
 
 The table \ref{tab:cs-contributions} contains an aggregated list of contributors and contributions from the projects described above.
 
 \begin{table}[h]
     \centering
+    \caption{Contribution for online citizen science projects}
     \begin{tabular}{|c|c|c|}
         \hline Project & Contributors & Publications \\
         \hline Foldit & 855,350 \cite{foldit2021players} & 20 \cite{foldit2021publications} \\ 
         \hline EyeWire & 300,000 \cite{eyewire2017players} & 3 \cite{eyewire2021publications} \\ 
-        \hline Old Weather & 61,149 \cite{galaxyzoo2021players} & 64 \cite{galaxyzoo2021publications} \\ 
+        \hline Penguin Watch & 28,500 \cite{penguin2021players} & 10 \cite{penguin2021publications} \\ 
         \hline Galaxy Zoo & 61,149 \cite{galaxyzoo2021players} & 64 \cite{galaxyzoo2021publications} \\ 
         \hline 
     \end{tabular}
-    \caption{Contribution for online citizen science projects}
+    \caption*{Source: Author}
     \label{tab:cs-contributions}
 \end{table}
 
