@@ -11,11 +11,12 @@ The first step in the process is searching for papers in the specified database.
 
 \begin{table}[h]
     \centering
+    \caption{Search terms used in the SLR}
     \begin{tabular}{|c|c|}
         \hline Digital Library & Search terms \\ \hline
         Web of Science & TOPIC: ("speech corpus" OR "speech corpora")  \\ \hline
     \end{tabular}
-    \caption{Search terms used in the SLR}
+    \caption*{Source: Author}
     \label{tab:search-terms}
 \end{table}
 
@@ -45,13 +46,14 @@ After applying the proper filtering as defined in the previous section, the rema
 
 \begin{table}[h]
     \centering
+    \caption{SLR - Filtering of results}
     \begin{tabular}{|c|c|}
         \hline Step & Results \\ \hline
         Initial search & 157 \\ \hline
         Title filtering & 23 \\ \hline
         Abstract reading & 14 \\ \hline
     \end{tabular}
-    \caption{SLR - Filtering of results}
+    \caption*{Source: Author}
     \label{tab:filtering}
 \end{table}
 
@@ -61,6 +63,7 @@ To analytically organize our findings, a content-analysis approach was used. To 
 
 \begin{table}[h]
     \centering
+    \caption{Categories for content analysis}
     \begin{tabular}{|p{4cm}|p{11cm}|}
         \hline Category & Explanation/Example \\ \hline
         Total number of papers published & Number of publications by year \\ \hline
@@ -68,12 +71,13 @@ To analytically organize our findings, a content-analysis approach was used. To 
         Application context & Speech Corpus Creation, Speech Corpus Automated Analysis, Dialect Analysis \\ \hline
         Corpus Language & English (Dialect), Arabic, Multilingual, etc \\ \hline
     \end{tabular}
-    \caption{Categories for content analysis}
+    \caption*{Source: Author}
     \label{tab:content-analysis}
 \end{table}
 
 \begin{table}[h]
     \centering
+    \caption{Categories for speech corpus construction}
     \begin{tabular}{|p{4cm}|p{11cm}|}
         \hline Category & Explanation/Example \\ \hline
         General attributes & scenario, total duration, sampling rate, number of distant or noisy microphones, demographics, transcription and time alignment and open access \\ \hline
@@ -82,7 +86,7 @@ To analytically organize our findings, a content-analysis approach was used. To 
         Noise attributes & stationary background noise, car noise, meeting noises, domestic noises, outdoor noises \\ \hline
         Available ground truth & reference speech signal, speaker location and orientation, paralinguistic attributes, noise events \\ \hline
     \end{tabular}
-    \caption{Categories for speech corpus construction}
+    \caption*{Source: Author}
     \label{tab:speech-analysis}
 \end{table}
 
@@ -92,6 +96,7 @@ Table \ref{tab:country-analysis} reports the number of papers, published by coun
 
 \begin{table}[h]
     \centering
+    \caption{Countries for content analysis}
     \begin{tabular}{|c|c|c|c|c|c|}
         \hline Country & 2005-2015 & 2016 & 2017 & 2018 & (\%) \\ \hline
         United States & - & 3 & 2 & - & 33\% \\ \hline 
@@ -103,7 +108,7 @@ Table \ref{tab:country-analysis} reports the number of papers, published by coun
         China & - & 1 & - & - & 6.7\% \\ \hline
         Poland & 1 & - & - & - & 6.7\% \\ \hline
     \end{tabular}
-    \caption{Countries for content analysis}
+    \caption*{Source: Author}
     \label{tab:country-analysis}
 \end{table}
 
@@ -116,7 +121,7 @@ As for publication types, they have almost been equally divided: 46.7\% for arti
 In table \ref{tab:results-categorization}, each article is categorized according to table \ref{tab:content-analysis} definitions. The analysis is done afterwards in section \ref{sec:discussion}.
 
 \begin{landscape}
-\begin{longtable}{|p{3.5cm}|p{4.5cm}|p{9cm}|p{4.5cm}|}
+\begin{longtable}{|p{2cm}|p{4.5cm}|p{10cm}|p{4.5cm}|}
 \caption{Findings organized by speech corpus categorization as per table \ref{tab:content-analysis}}
 \label{tab:results-categorization}
     \hline Authors & Application area & Context & Language \\ \hline
@@ -134,14 +139,18 @@ In table \ref{tab:results-categorization}, each article is categorized according
     \cite{nagino2008building} & Corpus Enhancement & Low cost speech corpus creation with statistical multidimensional scaling method & Japanese \\ \hline
     \cite{zhang2008improved} & Phonetic words selection & Phonetically rich word selection from larger corpus & Chinese \\ \hline
     \cite{clopper2006nationwide} & Read Corpus & Large amount of speech by male and female from six dialect regions & Multiple-dialect English \\ \hline
+\caption*{Source: Author}
 \end{longtable}
 \end{landscape}
 
 \begin{landscape}
-\begin{longtable}{|p{4cm}|p{3cm}|p{12cm}|p{3.5cm}|}
+
+\begin{table*}[h]
+\centering
 \caption{Speech corpora characteristics defined in table \ref{tab:speech-analysis}}
-\label{tab:results-attributes}
-\hline Category & Characteristic & Work(s) & Quantity (out of 14) \\ \hline
+\begin{tabular}{|p{4cm}|p{5cm}|p{7cm}|p{3.5cm}|}
+\hline
+Category & Characteristic & Work(s) & Quantity (out of 14)  \\ \hline
 \multirow{7}{*}{General attributes} 
     & Scenario & 
     \cite{almeman2018building}, \cite{dwivedi2017documenting}, \cite{bougrine2017altruistic}, \cite{bougrine2017altruistic}, \cite{moore2017sheffield}, \cite{ramli2017first}, \cite{goldman2016siwis}, \cite{liu2016sheffield}, \cite{ruilan2016improving}, \cite{klessa2013paralingua}, \cite{nagino2008building},  \cite{clopper2006nationwide}, \cite{zhang2008improved} & 13
@@ -184,7 +193,10 @@ In table \ref{tab:results-categorization}, each article is categorized according
     \\ \cline{2-4} & Noise events & 
     \cite{ramli2017first} & 1
     \\ \hline
-\end{longtable}
+\end{tabular}
+\caption*{Source: Author}
+\label{tab:results-attributes}
+\end{table*}
 \end{landscape}
 
 \section{Discussion}
