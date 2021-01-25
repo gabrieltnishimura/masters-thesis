@@ -15,3 +15,86 @@
     \item Citizen science programmes are evaluated for their scientific output, data quality, participant experience and wider societal or policy impact.
     \item The leaders of citizen science projects take into consideration legal and ethical issues surrounding copyright, intellectual property, data-sharing agreements, confidentiality, attribution and the environmental impact of any activities.
 \end{itemize}
+
+\chapter{Software Requirements Specification}
+\label{appendix:srs}
+
+\section{Introduction}
+\subsection{Purpose}
+
+The purpose of this Requirements Specification is to document the software requirements of Fale Alguma Coisa, a citizen science voice recording app. It should be used by anyone with the intent of understanding what are the capabilities of the system. This document will not focus on how the system will be built, but serves as the basis for the design and implementation. The design is documented within the Design Model in appendix \ref{appendix:design-model}. Details on implementation are documented in the corresponding Software Design Description (SDD) document in the appendix \ref{appendix:software-design-description}.
+
+\subsection{Scope}
+
+\subsubsection{Objectives}
+
+Towards contributing \textbf{nonprofessional scientists}, the Fale Alguma Coisa app should provide an easy gateway for the user to contribute his voice while having fun and learning various science facts and curiosities.
+
+Towards researching \textbf{scientists}, the Fale Alguma Coisa app should provide a database of anonymized voice recordings, for scientists to extract and create speech corpus.
+
+\subsubsection{Outside scope}
+
+However, some elements are outside of the scope of this system. Fale Alguma Coisa should \textbf{not}:
+\begin{itemize}
+    \item Allow for association of recording data and personal identification data (name, email);
+    \item Support internationalization in the WebApp;
+    \item Convert audio data into another format
+    \item Support offline recording
+\end{itemize}
+
+\subsubsection{Artifacts}
+
+This document identifies the following artifacts to be produced:
+
+\begin{itemize}
+    \item Context
+    \item Domain Model
+    \item Use Case Requirements (Actors, Diagrams, Specifications)
+    \item Activity Diagrams
+    \item Non-Functional Requirements
+    \item Interface Requirements
+    \item WebApp for user recordings
+    \item Backend with database
+\end{itemize}
+
+\subsection{Overview of Document}
+
+This overview provides a summary of the contents of each section of this document.
+
+\begin{itemize}
+    \item Introduction
+    \item System Overview
+    \item Domain Model
+    \item Requirements
+\end{itemize}
+
+\subsection{References}
+
+\begin{itemize}
+    \item Based on: \cite{naoufel2014requirements}
+    \item Supporting literature: \cite{pressman2014software}
+\end{itemize}
+
+\section{System Overview}
+
+The System Overview section presents the system context and design, and also discusses the background of the Fale Alguma Coisa project.
+
+\subsection{Name}
+
+This system is called "Fale Alguma Coisa". This is a phrase in brazillian portuguese to order someone to "say something". It is also common to hear "fala alguma coisa", but this was changed to remove the alliteration effect, providing easier spelling.
+
+\subsection{System Context}
+
+This system is originated from the need of recording anonymized user voices throughout the use of gamification and citizen science.
+
+\subsection{General Constraints}
+
+This system is mainly impacted by constraints in data privacy. Recordings should never be associated with the users personal data (such as email), but should have metadata to aid in corpus construction, such as age interval, gender, and dialect.
+
+\subsection{Assumptions and Dependencies}
+
+The system heavily depends on the phrases that will be spoken. Therefore it is necessary to provide this application with a comprehensive list of phrases before the application general publication.
+
+\section{Domain Model}
+
+
