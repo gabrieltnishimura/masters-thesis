@@ -6,9 +6,9 @@ This proposal focuses on detailing the necessary steps to the creation and publi
 \section{Application}
 \label{sec:proposal-app}
 
-This section details the conception, documentation, and development process of the voice recording application, coined "Fale Alguma Coisa". Below, it will at times be referenced as "app", short for application. The main purpose of this app is to be able to record predetermined phrases from users. All other features support the engagement and usability through authentication, gamification, and explanatory elements. 
+This section details the conception, documentation, and development process of the voice recording application, coined "Fale Alguma Coisa". Below, it will at times be referenced as "app", short for application, or "WebApp", short for Web Application. The main purpose of this app is to be able to record predetermined phrases from users. All other features support the engagement and usability through authentication, gamification, and explanatory elements. The following documentation structure is based on Pressman's book "Software Engineering: A Practitioner's Approach" \cite{pressman2014software}, and generated a proper Software Requirements Specification. Hence, some detail will be omitted to provide simplicity and overall understanding of the design process. Refer to appendix \ref{appendix:srs} to more details.
 
-Hence, the concept will be detailed, followed by the target audience (\ref{sec:app-concept} and \ref{sec:app-audience}). Secondly, the functionality of the entire application will be documented using user stories (\ref{sec:app-stories}), based on the concept and target audience. Thirdly, the design will be elaborated by documenting the layouts (in \ref{sec:app-design}) based on the user stories listed. One key factor in the app is the ability to teach science facts and trivia, which entails the need of proper phrase selection methods. These methods will be explained in \ref{sec:app-phrase-selection}. Lastly, the development process will be described, with additional details on the tools selected (\ref{sec:app-development}).
+In this simplified section, the scope will be detailed \ref{sec:app-scope}, followed by the artefacts produced \ref{sec:app-artefacts}. Secondly, the functionality of the entire application will be documented using use cases (\ref{sec:simplified-use-cases}). Thirdly, the user interface will be elaborated by documenting the layouts (in \ref{sec:app-user-interface}) based on the use cases listed. One key factor in the app is the ability to teach science facts and trivia, which entails the need of proper phrase selection methods. These methods will be explained in the section \ref{sec:app-phrase-selection}. Lastly, the development process will be described, with additional details on the tools selected (\ref{sec:app-development}).
 
 \begin{figure}[ht]
     \centering
@@ -18,33 +18,65 @@ Hence, the concept will be detailed, followed by the target audience (\ref{sec:a
     \label{fig:falealgumacoisa-logo}
 \end{figure}
 
-\subsection{Concept}
-\label{sec:app-concept}
+\subsection{Scope}
+\label{sec:app-scope}
 
-The Fale Alguma Coisa app should provide an easy gateway for you to contribute your voice while having fun and learning various science facts and curiosities.
+Towards contributing \textbf{nonprofessional scientists}, the Fale Alguma Coisa app should provide an easy gateway for the user to contribute his voice while having fun and learning various science facts and curiosities.
 
-\subsection{Target Audience}
-\label{sec:app-audience}
+Towards researching \textbf{scientists}, the Fale Alguma Coisa app should provide a database of anonymized voice recordings, for scientists to extract and create speech corpus.
 
 Directed towards anyone interested in learning and contributing to science.
 
-\subsection{User Stories}
-\label{sec:app-stories}
+\subsubsection{Outside scope}
 
-The development of most software starts with its documentation. This work chose a user story approach to project documentation and lists them below, categorized by epic.
-
-\subsubsection{Usability}
-
-The usability epic details user stories related to the user experience with the app.
-
+However, some elements are outside of the scope of this system. Fale Alguma Coisa should \textbf{not}:
 \begin{itemize}
-    \item I, as a citizen, would like to contribute my voice using my mobile devices and desktop computer.
+    \item Allow for association of recording data and personal identification data (name, email);
+    \item Support internationalization in the WebApp;
+    \item Convert audio data into another format
+    \item Support offline recording
 \end{itemize}
 
+\subsection{Artifacts}
+\label{sec:app-artefacts}
+
+This table presents the artefacts to be produced, and their respective location in this work.
+
+\begin{table}[h]
+\centering
+\caption{Artefacts produced by the specification and their respective locations}
+\label{tab:artifact-locations}
+\begin{tabular}{|p{3.5cm}|p{2.5cm}|p{9cm}|}
+    \hline 
+    Artefact & Location & Description \\ \hline 
+    Purpose & Appendix \ref{appendix:purpose} & Defines the purpose of the Software Requirements Specification documentation \\ \hline
+    Scope & Appendix \ref{appendix:scope} & Artefacts, Objectives, Out of Scope \\ \hline
+    System Overview & Appendix \ref{appendix:system-overview} & Project perspective, System Context, General Constraints, Assumptions and Dependencies \\ \hline
+    Actor List & Appendix \ref{appendix:actor-list} & List of actors involved with the system \\ \hline 
+    Simplified Requirements & Section \ref{sec-simplified-use-cases} & Simplified use cases \\ \hline
+    Scenario-based Models & Appendix \ref{appendix:scenario-based-model} & Detailed use cases \\ \hline
+    Class Models & Appendix \ref{appendix:domain-model} & Class diagrams to model the domain of the system, mapping relationship and collaboration \\ \hline
+    Behavior Models & Appendix \ref{appendix:behavior-model} & State and sequence diagrams to fully document specific and more complex behavior \\ \hline
+    Non-Function Requirements & Appendix \ref{appendix:non-fuctional-requirements} & i.e.: Usability, Performance, Security, Legal, Requirements, etc. \\ \hline
+    Interface Requirements & Appendix \ref{appendix:interface-requirements} & Machine and External Systems interfaces \\ \hline
+    Navigation Design & Appendix \ref{appendix:navigation-design} & Navigation Semantic Units \\ \hline
+    User Interface Design & Appendix \ref{appendix:user-interface-design} & For each use case, a user interface will be developed and documented \\ \hline
+    Application Architecture & Appendix \ref{appendix:architecture} & Before WebApp must have  \\ \hline
+    Tools and Frameworks Selection & Appendix \ref{appendix:tools-selection} & To develop the documented application, a set of tools and frameworks shall be selected \\ \hline
+    FaleAlgumaCoisa WebApp & Appendix \ref{appendix:webapp} & Description of developed web application \\ \hline
+    FaleAlgumaCoisa Backend & Appendix \ref{appendix:backend} & Description of developed backend application \\ \hline
+\end{tabular}
+\caption*{Source: Author}
+\end{table}
+
+\subsection{Use Cases}
+\label{sec:simplified-use-cases}
+
+A simplified list of use cases is reproduced in tables \ref{tab:use-cases} below, separated by feature set. To a more complete specification, refer to section \ref{appendix:use-cases} in the Appendix.
 
 \clearpage
-\subsection{Design}
-\label{sec:app-design}
+\subsection{User Interface}
+\label{sec:app-user-interface}
 
 To ensure the development of the application is effective, an iterative design approach was taken. First, ideas for the app shaped a conceptual user journey. Second, this journey allowed the creation of layouts, which then passed through a validation process. Then, if aligned with the application concept, the layouts were developed. Otherwise, another design implementation occurred, undergoing further validation. The sections below detail the finalized artifacts.
 
