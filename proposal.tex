@@ -1,14 +1,14 @@
 \chapter[Proposal]{Proposal}
 \label{chap:proposal}
 
-This proposal focuses on detailing the necessary steps to the creation and publication of a crowdfunding speech corpus in Brazilian Portuguese. To this end, a virtual voice recording application will be developed (section \ref{sec:proposal-app}), focusing on adding gamification elements to enhance user engagement. Additionally, this application will also extract some relevant characteristics found in the systematic literature review in chapter \ref{chap:slr}, such as speaker demographics. Once the construction is finished, the application will be released, allowing general public submission (in section \ref{sec:proposal-public-submission}). After the submission period, the collected data will be analyzed and compiled to a speech corpus (\ref{sec:proposal-data-analysis}), which will be publicized to an open-source repository in section \ref{sec:proposal-data-publication}.
+This proposal focuses on detailing the necessary steps to the creation and publication of a crowdfunding speech corpus in Brazilian Portuguese. To this end, a virtual voice recording application will be developed (section \ref{sec:proposal-app}), focusing on adding gamification elements to enhance user engagement. Additionally, this application will also extract some relevant speaker characteristics found in the systematic literature review in chapter \ref{chap:slr}, such as speaker demographics. Once the construction is finished, the application will be released, allowing general public submission (in section \ref{sec:proposal-public-submission}). After the submission period, the collected data will be analyzed and compiled to a speech corpus (\ref{sec:proposal-data-analysis}), which will be publicized to an open-source repository in section \ref{sec:proposal-data-publication}.
 
 \section{Application}
 \label{sec:proposal-app}
 
-This section details the conception, documentation, and development process of the voice recording application, coined "Fale Alguma Coisa". Below, it will at times be referenced as "app", short for application, or "WebApp", short for Web Application. The main purpose of this app is to be able to record predetermined phrases from users. All other features support the engagement and usability through authentication, gamification, and explanatory elements. The following documentation structure is based on Pressman's book "Software Engineering: A Practitioner's Approach" \cite{pressman2014software}, and generated a proper Software Requirements Specification. Hence, some detail will be omitted to provide simplicity and overall understanding of the design process. Refer to appendix \ref{appendix:srs} to more details.
+This section details the conception, documentation, and development process of the voice recording application, coined "Fale Alguma Coisa". Below, it will at times be referenced as "app", or "WebApp", short for Application and Web Application, respectively. The main purpose of this app is to be able to record predetermined phrases from users. All other features support the engagement and usability through authentication, gamification, and explanatory elements. The following documentation structure is based on Pressman's book "Software Engineering: A Practitioner's Approach" \cite{pressman2014software}, and generated a proper Software Requirements Specification in the Appendix \ref{appendix:srs}. Hence, some detail will be omitted to provide simplicity and overall understanding of the design process.
 
-In this simplified section, the scope will be detailed \ref{sec:app-scope}, followed by the artefacts produced \ref{sec:app-artefacts}. Secondly, the functionality of the entire application will be documented using use cases (\ref{sec:simplified-use-cases}). Thirdly, the user interface will be elaborated by documenting the layouts (in \ref{sec:app-user-interface}) based on the use cases listed. One key factor in the app is the ability to teach science facts and trivia, which entails the need of proper phrase selection methods. These methods will be explained in the section \ref{sec:app-phrase-selection}. Lastly, the development process will be described, with additional details on the tools selected (\ref{sec:app-development}).
+In this simplified explanation, the scope will be detailed \ref{sec:app-scope}, followed by the artefacts produced \ref{sec:app-artefacts}. Secondly, the functionality of the entire application will be documented using use cases (\ref{sec:simplified-use-cases}). Next, the navigation structure of some use cases will be documented (\ref{sec:navigation-structure}), followed by the aesthetic design (in \ref{sec:aesthetic-design}). Then, the user interface will be elaborated by documenting the layouts (in \ref{sec:app-user-interface}), based on the use cases listed and previous decisions. One key factor in the app is the ability to teach science facts and trivia, which entails the need of proper phrase selection methods. These methods will be explained in the section \ref{sec:app-phrase-selection}. Lastly, the development process will be described, with additional details on the tools selected (\ref{sec:app-development}). Again, many steps of the software design process were skipped in this proposal, but a thorough description can be referred to in Appendix \ref{appendix:srs}.
 
 \begin{figure}[ht]
     \centering
@@ -29,15 +29,15 @@ Directed towards anyone interested in learning and contributing to science.
 
 \subsubsection{Outside scope}
 
-However, some elements are outside of the scope of this system. Fale Alguma Coisa should \textbf{not}:
+However, some elements are outside of the scope of this system. These elements are clarified in this section, as Fale Alguma Coisa should \textbf{not}:
 \begin{itemize}
-    \item Allow for association of recording data and personal identification data (name, email);
-    \item Support internationalization in the WebApp;
-    \item Convert audio data into another format
-    \item Support offline recording
+    \item allow for association of recording data and personal identification data (name, email);
+    \item support internationalization in the WebApp;
+    \item convert audio data into another format;
+    \item support offline recording.
 \end{itemize}
 
-\subsection{Artifacts}
+\subsection{Artefacts}
 \label{sec:app-artefacts}
 
 This table presents the artefacts to be produced, and their respective location in this work.
@@ -69,20 +69,157 @@ This table presents the artefacts to be produced, and their respective location 
 \caption*{Source: Author}
 \end{table}
 
+\clearpage
 \subsection{Use Cases}
 \label{sec:simplified-use-cases}
 
-A simplified list of use cases is reproduced in tables \ref{tab:use-cases} below, separated by feature set. To a more complete specification, refer to section \ref{appendix:use-cases} in the Appendix.
+A simplified list of use cases is reproduced in the following tables (\ref{tab:falealgumacoisa-simplified-home}, \ref{tab:falealgumacoisa-simplified-recording}, \ref{tab:falealgumacoisa-simplified-dashboard}, \ref{tab:falealgumacoisa-simplified-social}, \ref{tab:falealgumacoisa-simplified-gamification}, \ref{tab:falealgumacoisa-simplified-login-and-registration}) below, separated by feature set. To a more complete specification, refer to section \ref{appendix:use-cases} in the Appendix.
+
+\subsubsection{Home}
+
+In table \ref{tab:falealgumacoisa-simplified-home}, use cases affecting the homepage are listed, such as the splash screen, project description, navigation, and terms of service.
+
+\begin{table}[h]
+\caption{Simplified Home Use Cases for the Fale Alguma Coisa WebApp}
+\label{tab:falealgumacoisa-simplified-home}
+\centering
+\begin{tabular}{|p{1cm}|p{3cm}|p{10cm}|}
+\hline
+    Code & Use Case Name & Description \\ \hline
+    UC01 & View Home Splash & An unregistered citizen wants to view an animated introductory screen (splash) when entering the application, so that he feels more inside a native app. \\ \hline
+    UC02 & View Home Description & An unregistered citizen wants to check the initiative description, so that he understands more about the Fale Alguma Coisa citizen science project. \\ \hline
+    UC03 & Navigate Home Login & A registered citizen wants to navigates from the homepage to the sign-in page, so that he logins (or register) to his account. \\ \hline
+    UC04 & Navigate Home Recording & An unregistered citizen wants to easily navigate from the homepage to the recording page, so that he can contribute his voice. \\ \hline
+    UC05 & Read Home Terms & An unregistered citizen wants to reads the terms of service (and privacy policy) of Fale Alguma Coisa, so that he understands better what the service has to offer and what kind of data will be recorded. \\ \hline
+\end{tabular}
+\caption*{Source: Author}
+\end{table}
 
 \clearpage
-\subsection{User Interface}
-\label{sec:app-user-interface}
+\subsubsection{Recording}
 
-To ensure the development of the application is effective, an iterative design approach was taken. First, ideas for the app shaped a conceptual user journey. Second, this journey allowed the creation of layouts, which then passed through a validation process. Then, if aligned with the application concept, the layouts were developed. Otherwise, another design implementation occurred, undergoing further validation. The sections below detail the finalized artifacts.
+Represents the most important feature in the application, as the citizen will use it to record his voice. It also provides supporting features, such as skipping phrases and resuming the recording session. The list of simplified use cases is listed in table \ref{tab:falealgumacoisa-simplified-recording}; with the complete version available in the Appendix \ref{appendix:scenario-based-model}
+
+\begin{table}[h]
+\caption{Simplified Recording Use Cases for the Fale Alguma Coisa WebApp}
+\label{tab:falealgumacoisa-simplified-recording}
+\centering
+\begin{tabular}{|p{1cm}|p{3cm}|p{10cm}|}
+\hline
+    Code & Use Case Name & Description \\ \hline
+    UC10 & Accept Terms & An unregistered citizen would like to view and accept the terms of service before recording, so that he understands how his data is being used. \\ \hline
+    UC11 & Configure Microphone & An unregistered citizen would like to properly configure my microphone before recording, so that he can record without interruption. \\ \hline
+    UC12 & Record Phrases & A citizen would like to read science phrases with definitions and curiosities, so that he learns about subjects as he is contributing. \\ \hline
+    UC13 & Group Phrases & A citizen would like to read phrases grouped by theme, so that he can learn more from each subject as he is contributing. \\ \hline
+    UC14 & Read Tutorial & A citizen would like to read a tutorial explaining how to record, so that he learns how to properly record phrases. \\ \hline
+    UC15 & Watch Recording Animations & A citizen would like to see animations on each step of the recording (enter the page, start the recording, stop the recording), so that he feels more engaged with the application. \\ \hline
+    UC16 & Skip Phrase & A citizen would like to skip a phrase when he (1) does not know how to pronounce, or (2) finds a foreign word, or (3) finds another specified reason, so that he only speaks the correct phrases. \\ \hline
+    UC17 & Stop Recording Session & A citizen would like to stop this recording session by clicking the logo and confirming the exit, so that he can resume it afterwards. \\ \hline
+\end{tabular}
+\caption*{Source: Author}
+\end{table}
+
+\clearpage
+\subsubsection{Dashboard}
+
+Table \ref{tab:falealgumacoisa-simplified-dashboard} lists all user stories related to the dashboard page, such as where the user will be able to choose themes to record, open the menu, check his level, etc.
+
+\begin{table}[h]
+\caption{Simplified Dashboard Use Cases for the Fale Alguma Coisa WebApp}
+\label{tab:falealgumacoisa-simplified-dashboard}
+\centering
+\begin{tabular}{|p{1cm}|p{3cm}|p{10cm}|}
+\hline
+    Code & Use Case Name & Description \\ \hline
+    US20 & Navigate Register & An unregistered citizen would like to easily register his data through a button click, so that he can enjoy all features of the logged area. \\ \hline
+    US21 & View Actions & A registered citizen would like to see his actions in a dashboard after logging in, so that he can better contribute to the project. \\ \hline
+    US22 & Recommend Themes & A registered citizen would like to see a list of recommended themes to speak, so that he can choose one from the list. \\ \hline
+    US23 & View Progress Level & A registered citizen would like to view my progress level, so that he know how far have he  progressed in my contributions. \\ \hline
+    US24 & Open Menu & A registered citizen would like to open the menu, so that he knows which are his possible actions in the app. \\ \hline
+    US25 & View Notifications & A registered citizen would like to check notifications, so that he understands what happened while he was gone. \\ \hline
+\end{tabular}
+\caption*{Source: Author}
+\end{table}
+
+\subsubsection{Social}
+
+To allow the social interaction with other users, the table \ref{tab:falealgumacoisa-simplified-social} lists social use cases to be added to the application. Not all social interaction is listed in this feature, as there are some elements in gamification, such as competition.
+
+\begin{table}[h]
+\caption{Simplified Social Use Cases for the Fale Alguma Coisa WebApp}
+\label{tab:falealgumacoisa-simplified-social}
+\centering
+\begin{tabular}{|p{1cm}|p{3cm}|p{10cm}|}
+\hline
+    Code & Use Case Name & Description \\ \hline
+    US30 & Add Friend & A registered citizen would like to add a friend, so that he can check them in the friends leaderboard afterwards. \\ \hline
+    US31 & View Notifications & A registered citizen would like to check notifications, so that he can know what happened when he was away. \\ \hline
+    US32 & Receive Notifications & A registered citizen would like to know when someone added him through notifications, so that he can add them back later. \\ \hline
+    US33 & Refer Friends & A registered citizen would like to refer friends to the application, so that he can play with them afterwards. \\ \hline
+\end{tabular}
+\caption*{Source: Author}
+\end{table}
+
+\subsubsection{Gamification}
+
+Table \ref{tab:falealgumacoisa-simplified-gamification} details the engagement component of the application. Elements such as leaderboards, points and levels are described. They add competition and a sense of progress to the user experience, supporting the core need of this system, which is phrase recording.
+
+\begin{table}[h]
+\caption{Simplified Gamification Use Cases for the Fale Alguma Coisa WebApp}
+\label{tab:falealgumacoisa-simplified-gamification}
+\centering
+\begin{tabular}{|p{1cm}|p{3cm}|p{10cm}|}
+\hline
+    Code & Use Case Name & Description \\ \hline
+    US40 & Earn First Recording & A registered citizen would like to get 100 points when he records his first phrase, so that he can engage better in the application. \\ \hline
+    US41 & Earn First Theme & A registered citizen would like to get 400 points when he records his first theme, so that he can engage better in the application. \\ \hline
+    US42 & Earn Theme & A registered citizen would like to get 300 points when he records subsequent themes, so that he can engage better in the application. \\ \hline
+    US43 & Earn Registration & A registered citizen would like to get 500 points when he registers his speaker data, so that he can better engage with the application. \\ \hline
+    US44 & Calculate Level & A registered citizen would like to measure his points through a level, so that he can more easily compare himself with other users. \\ \hline
+    US45 & Compete Top Players & A registered citizen would like to know who are the top contributors in the space and where he is in the list, so that he can compete against them. \\ \hline
+    US46 & Compete Friends & A registered citizen would like to know where his friends are in the friends leaderboard, so that he can compete against them. \\ \hline
+\end{tabular}
+\caption*{Source: Author}
+\end{table}
+
+\subsubsection{Login and Registration}
+
+The application should provide user authentication to enable data management and progress saving. Table \ref{tab:falealgumacoisa-simplified-login-and-registration} lists all use cases referring to this feature, and is the key to generating recordings with speaker metadata.
+
+\begin{table}[h]
+\caption{User Stories categorized to the login and registration epic for the Fale Alguma Coisa WebApp}
+\label{tab:falealgumacoisa-simplified-login-and-registration}
+\centering
+\begin{tabular}{|p{1cm}|p{3cm}|p{10cm}|}
+\hline
+    Code & Use Case Name & Description \\ \hline
+    US50 & Login Social & An unregistered citizen would like to login (using social login - Facebook / Google) on the app, so that he can login later and save my progress. \\ \hline
+    US51 & Register Metadata & A unregistered citizen would like to register his anonymous data on his first login, so that he can provide better metadata to my recordings afterwards. \\ \hline
+    US52 & Update Account & A registered citizen would like to update his account data, so that he can provide accurate metadata on the recordings. \\ \hline
+    US53 & Delete Account & A registered citizen would like to remove his account data (and his recordings, if necessary), so that he can remove my metadata from this application. \\ \hline
+\end{tabular}
+\caption*{Source: Author}
+\end{table}
+
+\subsection{Navigation Structure}
+\label{sec:navigation-structure}
+
+\subsection{Aesthetic Design}
+\label{sec:aesthetic-design}
+
+To reference some aesthetic design guidelines from \cite{pressman2014software}:
+
+\begin{itemize}
+    \item Emphasize content;
+    \item Organize layout elements from top left to bottom right;
+    \item Group navigation, content, and function geographically within the page;
+    \item Do not extend your real state with the scrolling bar;
+    \item Consider resolution and browser window size when designing layout.
+\end{itemize}
 
 \subsubsection{Color Scheme}
 
-In color theory, colors are used to communicate meaning, but also affect mood, and perception \cite{agoston2013color}. The design color scheme defines a color palette to choose from when designing new visual elements. Applying the concept, a more colorful color scheme was chosen to lighten the mood of the application, as shown in figure \ref{fig:falealgumacoisa-color-scheme}.
+In color theory, colors are used to communicate meaning, but also affect mood, and perception \cite{agoston2013color}. The design color scheme defines a color palette to choose from when designing new visual elements. Applying this concept, a colorful color scheme was chosen to lighten the mood of the application, as shown in figure \ref{fig:falealgumacoisa-color-scheme}.
 
 \begin{figure}[ht]
     \centering
@@ -91,6 +228,19 @@ In color theory, colors are used to communicate meaning, but also affect mood, a
     \caption*{Source: Author}
     \label{fig:falealgumacoisa-color-scheme}
 \end{figure}
+
+\subsection{User Interface}
+\label{sec:app-user-interface}
+
+\begin{figure}[h]
+    \centering
+    \caption{The user interface design process}
+    \label{fig:user-interface-design-process}
+    \includegraphics[width=.8\linewidth]{images/sw-req-spec/user-interface-design-process.jpg}
+    \caption*{Source: \cite{pressman2014software}}
+\end{figure}
+
+To ensure an effective development of the user interface, an iterative analysis and design approach was taken \cite{pressman2014software}. This design process is illustrated in figure \ref{fig:user-interface-design-process}, and emcompasses four distinct framework activities: (1) interface analysis and modeling, (2) interface design, (3) interface construction, and (4) interface validation. The spire implies that each of these tasks will occur more than once, with each pass around the spiral representing an additional elaboration of requirements and the resultant design. The user interface hereby implemented is the outcome of many of these iterations, with each major use case implemented into a finalized artefact. For an extensive list, refer to the Appendix \ref{appendix:user-interface-design}.
 
 \clearpage
 \subsubsection{Splash Screen}
