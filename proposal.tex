@@ -8,7 +8,7 @@ This proposal focuses on detailing the necessary steps to the creation and publi
 
 This section details the conception, documentation, and development process of the voice recording application, coined "Fale Alguma Coisa". Below, it will at times be referenced as "app", or "WebApp", short for Application and Web Application, respectively. The main purpose of this app is to be able to record predetermined phrases from users. All other features support the engagement and usability through authentication, gamification, and explanatory elements. The following documentation structure is based on Pressman's book "Software Engineering: A Practitioner's Approach" \cite{pressman2014software}, and generated a proper Software Requirements Specification in the Appendix \ref{appendix:srs}. Hence, some detail will be omitted to provide simplicity and overall understanding of the design process.
 
-In this simplified explanation, the scope will be detailed \ref{sec:app-scope}, followed by the artefacts produced \ref{sec:app-artefacts}. Secondly, the functionality of the entire application will be documented using use cases (\ref{sec:simplified-use-cases}). Next, the navigation structure of some use cases will be documented (\ref{sec:navigation-structure}), followed by the aesthetic design (in \ref{sec:aesthetic-design}). Then, the user interface will be elaborated by documenting the layouts (in \ref{sec:app-user-interface}), based on the use cases listed and previous decisions. One key factor in the app is the ability to teach science facts and trivia, which entails the need of proper phrase selection methods. These methods will be explained in the section \ref{sec:app-phrase-selection}. Lastly, the development process will be described, with additional details on the tools selected (\ref{sec:app-development}). Again, many steps of the software design process were skipped in this proposal, but a thorough description can be referred to in Appendix \ref{appendix:srs}.
+In this simplified explanation, the scope will be detailed \ref{sec:app-scope}, followed by the artefacts produced \ref{sec:app-artefacts}. Secondly, the functionality of the entire application will be documented using use cases (\ref{sec:simplified-use-cases}). Next, the navigation structure of some use cases will be documented (\ref{sec:navigation-design}), followed by the aesthetic design (in \ref{sec:aesthetic-design}). Then, the user interface will be elaborated by documenting the layouts (in \ref{sec:app-user-interface}), based on the use cases listed and previous decisions. One key factor in the app is the ability to teach science facts and trivia, which entails the need of proper phrase selection methods. These methods will be explained in the section \ref{sec:app-phrase-selection}. Lastly, the development process will be described, with additional details on the tools selected (\ref{sec:app-development}). Again, many steps of the software design process were skipped in this proposal, but a thorough description can be referred to in Appendix \ref{appendix:srs}.
 
 \begin{figure}[ht]
     \centering
@@ -201,8 +201,40 @@ The application should provide user authentication to enable data management and
 \caption*{Source: Author}
 \end{table}
 
-\subsection{Navigation Structure}
-\label{sec:navigation-structure}
+\clearpage
+\subsection{Navigation Design}
+\label{sec:navigation-design}
+
+Ensuring a robust navigation design for the user enables him to access the WebApp contents and functions. To accomplish this, it is necessary to: (1) identify the semantics of navigation for different users, and (2) define the mechanics of achieving the navigation. They are defined by a series of \textit{navigation semantic units} (NSUs), a set of information and related navigation structures that collaborate in the fulfillment of a subset of related user requirements \cite{conallen2003building}.
+
+\subsubsection{Navigational Semantics}
+
+A NSU is composed of a set of navigation elements called \textit{ways of navigating} (WoN). A WoN represents the the best navigation pathway to achieve a navigational goal for a specific type of users. Each WoN is organized as a set of \textit{navigational nodes} (NN) that are connected by navigational links. An example of NSU is given below in figure \ref{fig:app-nsu-example}.
+
+\begin{figure}[h]
+    \centering
+    \caption{Navigation Semantic Unit for an Unregistered User Recording}
+    \label{fig:app-nsu-example}
+    \includegraphics[width=\linewidth]{images/sw-req-spec/nsu-unregistered.png}
+    \caption*{Source: Author}
+\end{figure}
+
+In the figure \ref{fig:app-nsu-example}, the navigation behavior to record a phrase of a unregistered user is illustrated. As the unregistered user enters the homepage, he clicks the start recording button. However, since he has neither accepted the terms of service nor enabled his microphone permissions, he must go through these pages. If he denies the terms or the microphone permissions, he is redirected to the homepage. If the user allows both, he will enter the recording page, where he is able to record phrases and donate his voice.
+
+This is only one example of the more complex user Ways of Navigations. Refer to appendix \ref{appendix:navigation-design} to a more complete list of NSUs.
+
+\subsubsection{Navigation Syntax}
+
+The mechanics of navigation are defined by elements such as:
+
+\begin{itemize}
+    \item Buttons
+    \item Menus
+    \item Modals
+    \item Simple links
+\end{itemize}
+
+Refer to the implementation of these elements on the user interface section \ref{sec:app-user-interface}.
 
 \subsection{Aesthetic Design}
 \label{sec:aesthetic-design}
@@ -221,16 +253,18 @@ To reference some aesthetic design guidelines from \cite{pressman2014software}:
 
 In color theory, colors are used to communicate meaning, but also affect mood, and perception \cite{agoston2013color}. The design color scheme defines a color palette to choose from when designing new visual elements. Applying this concept, a colorful color scheme was chosen to lighten the mood of the application, as shown in figure \ref{fig:falealgumacoisa-color-scheme}.
 
-\begin{figure}[ht]
+\begin{figure}[h]
     \centering
     \caption{Fale Alguma Coisa color scheme}
-     \includegraphics[width=.8\linewidth]{images/app/colors.png}
+     \includegraphics[width=.5\linewidth]{images/app/colors.png}
     \caption*{Source: Author}
     \label{fig:falealgumacoisa-color-scheme}
 \end{figure}
 
 \subsection{User Interface}
 \label{sec:app-user-interface}
+
+To ensure an effective development of the user interface, an iterative analysis and design approach was taken \cite{pressman2014software}. This design process is illustrated in figure \ref{fig:user-interface-design-process}, and emcompasses four distinct framework activities: (1) interface analysis and modeling, (2) interface design, (3) interface construction, and (4) interface validation. The spire implies that each of these tasks will occur more than once, with each pass around the spiral representing an additional elaboration of requirements and the resultant design. The user interface hereby implemented is the outcome of many of these iterations, with each major use case implemented into a finalized artefact. For an extensive list, refer to the Appendix \ref{appendix:user-interface-design}.
 
 \begin{figure}[h]
     \centering
@@ -239,8 +273,6 @@ In color theory, colors are used to communicate meaning, but also affect mood, a
     \includegraphics[width=.8\linewidth]{images/sw-req-spec/user-interface-design-process.jpg}
     \caption*{Source: \cite{pressman2014software}}
 \end{figure}
-
-To ensure an effective development of the user interface, an iterative analysis and design approach was taken \cite{pressman2014software}. This design process is illustrated in figure \ref{fig:user-interface-design-process}, and emcompasses four distinct framework activities: (1) interface analysis and modeling, (2) interface design, (3) interface construction, and (4) interface validation. The spire implies that each of these tasks will occur more than once, with each pass around the spiral representing an additional elaboration of requirements and the resultant design. The user interface hereby implemented is the outcome of many of these iterations, with each major use case implemented into a finalized artefact. For an extensive list, refer to the Appendix \ref{appendix:user-interface-design}.
 
 \clearpage
 \subsubsection{Splash Screen}
@@ -339,7 +371,7 @@ The leaderboard layouts feature two visualizations, depending on the desired sco
 
 \subsubsection{Friends}
 
-The ability to add and track (follow) friends is possible with the layouts described below. If he knows the name of the user, the contributor can search for his friends using the Search Friends page (seen in figure \ref{fig:falealgumacoisa-friends-page-design-search}). The results return in the same page below the search input field (figure \ref{fig:falealgumacoisa-friends-page-design-results}), as a list of users. To add a friend, it is as simple as clicking the "Seguir" button in the right corner of the result list. This click toggles the button with a "Seguindo" text. If this new state is clicked, the friend is removed.
+The ability to add and track (follow) friends is possible with the layouts described below. If the contributor knows the nickname of his friend, he can search for his friends using the Search Friends page (seen in figure \ref{fig:falealgumacoisa-friends-page-design-search}). The results return in the same page below the search input field (figure \ref{fig:falealgumacoisa-friends-page-design-results}), as a list of users. To add a friend, it is as simple as clicking the "Seguir" button in the right corner of the result list. This click toggles the button with a "Seguindo" text. If this new state is clicked, the friend is removed.
 
 \begin{figure}[ht]
     \centering
@@ -444,6 +476,10 @@ If necessary, the user should be able to delete its user data, while still contr
     \label{fig:falealgumacoisa-delete-user-data-page-design}
 \end{figure}
 
+\subsubsection{Remaining Implementations}
+
+Refer to Appendix \ref{appendix:user-interface-design} for the remaining implemented user interfaces.
+
 \clearpage
 \subsection{Phrase Selection}
 \label{sec:app-phrase-selection}
@@ -470,12 +506,12 @@ To develop the application, a selection of tools was made. The table \ref{tab:to
     \begin{tabular}{|c|c|c|}
         \hline Category & Selection & Explanation \\
         \hline Design & Zeplin & Easy sharing  \\ 
-        \hline Desig &  & access \\ 
-        \hline Galaxy Zoo & access & access \\ 
+        \hline Design &  & access \\ 
+        \hline  & access & access \\ 
         \hline Christmas Audubom Birdwatch & access & access \\ \hline 
     \end{tabular}
     \caption{Contribution for online citizen science projects}
-    \label{tab:cs-contributions}
+    \label{tab:tools-selection}
 \end{table}
 
 

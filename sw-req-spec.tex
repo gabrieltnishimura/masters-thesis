@@ -77,9 +77,28 @@ This system is mainly impacted by constraints in data privacy. Recordings should
 
 The system heavily depends on the phrases that will be spoken. Therefore it is necessary to provide this application with a comprehensive list of phrases before the application general publication.
 
-\section{Analysis Model}
+\section{Domain Model}
 
-To accurately describe the software requirements of a project, it is important to understand the requirements from many different perspectives. The analysis model proposed by \cite{pressman2014software} encompasses four different modeling elements (perspectives) that can be used to provide the most effective bridge to software design. They are listed in the subsections below as (1) scenario based models, (2) class-based elements model, (3) behavioral elements, and (4) flow-oriented elements. The analysis can lead to the derivation of one or more of these modeling elements, since one model may not completely describe certain functionalities of the app.
+
+
+\section{Requirements}
+
+To accurately describe the software requirements of a project, it is important to understand the requirements from many different perspectives. The analysis model proposed by \cite{pressman2014software} encompasses four different modeling elements (perspectives) that can be used to provide the most effective bridge to software design. They are listed in the subsections below as (1) scenario based models, (2) class-based elements model, (3) behavioral elements, and (4) flow-oriented elements. The analysis can lead to the derivation of one or more of these modeling elements, since one model may not completely describe certain functionalities of the app. Additionally, the actor list will be provided in the table \ref{tab:actor-list} below:
+
+\begin{table}[h]
+\centering
+\caption{WebApp Fale Alguma Coisa Actor List}
+\label{tab:actor-list}
+\begin{tabular}{|p{2.5cm}|p{3.5cm}|p{7cm}|}
+    \hline 
+    Actor & Responsibilities & Description  \\ \hline
+    Unregistered Citizen & Record phrases & User that has not logged on in the WebApp, and has not added his metadata \\ \hline
+    Registered Citizen & Record phrases with metadata & User that has added his metadata on the WebApp \\ \hline 
+    Validation Scientist & Validate recorded phrases & Download and validate recordings \\ \hline
+    Corpus User & Download validated phrases & Access the open speech corpus and download it \\ \hline
+\end{tabular}
+\caption*{Source: Author}
+\end{table}
 
 \subsection{Scenario-based models}
 
@@ -102,6 +121,165 @@ This model depicts how the user interacts with the system and the specific seque
     \caption*{Source: Author}
 \end{table}
 
+\subsubsection{UC01 - View Home Splash}
+
+\begin{table}[h]
+    \centering
+    \caption{WebApp Fale Alguma Coisa Features}
+    \label{tab:falealgumacoisa-features}
+    \begin{tabular}{|p{3cm}|p{10cm}|}
+        \hline Use Case ID & View Home Splash \\
+        \hline Home & Represents the use cases affecting the homepage, such as the splash screen, call to action button, terms of service, etc. \\
+        \hline Recording & Represents the most important feature in the application, as the citizen will use it to record his voice. It also provides supporting features, such as skipping phrases and resuming the recording session.\\ 
+        \hline Dashboard & Lists all user stories related to the dashboard page, such as where the user will be able to choose themes to record, open the menu, check his level, etc. \\
+        \hline Gamification & Details the engagement component of the application. Elements such as leaderboards, points and levels are described. They add a sense of progress to the user experience. \\
+        \hline Social & To allow social interaction with other users, this feature lists social features to be added to the application. \\
+        \hline Login and Registration & The application should provide user authentication to enable data management and progress saving. \\
+        \hline
+    \end{tabular}
+    \caption*{Source: Author}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+\begin{table}[h]
+\caption{Simplified Home Use Cases for the Fale Alguma Coisa WebApp}
+\label{tab:falealgumacoisa-simplified-home}
+\centering
+\begin{tabular}{|p{1cm}|p{3cm}|p{10cm}|}
+\hline
+    Code & Use Case Name & Description \\ \hline
+    UC01 & View Home Splash & An unregistered citizen wants to view an animated introductory screen (splash) when entering the application, so that he feels more inside a native app. \\ \hline
+    UC02 & View Home Description & An unregistered citizen wants to check the initiative description, so that he understands more about the Fale Alguma Coisa citizen science project. \\ \hline
+    UC03 & Navigate Home Login & A registered citizen wants to navigates from the homepage to the sign-in page, so that he logins (or register) to his account. \\ \hline
+    UC04 & Navigate Home Recording & An unregistered citizen wants to easily navigate from the homepage to the recording page, so that he can contribute his voice. \\ \hline
+    UC05 & Read Home Terms & An unregistered citizen wants to reads the terms of service (and privacy policy) of Fale Alguma Coisa, so that he understands better what the service has to offer and what kind of data will be recorded. \\ \hline
+\end{tabular}
+\caption*{Source: Author}
+\end{table}
+
+\clearpage
+\subsubsection{Recording}
+
+Represents the most important feature in the application, as the citizen will use it to record his voice. It also provides supporting features, such as skipping phrases and resuming the recording session. The list of simplified use cases is listed in table \ref{tab:falealgumacoisa-simplified-recording}; with the complete version available in the Appendix \ref{appendix:scenario-based-model}
+
+\begin{table}[h]
+\caption{Simplified Recording Use Cases for the Fale Alguma Coisa WebApp}
+\label{tab:falealgumacoisa-simplified-recording}
+\centering
+\begin{tabular}{|p{1cm}|p{3cm}|p{10cm}|}
+\hline
+    Code & Use Case Name & Description \\ \hline
+    UC10 & Accept Terms & An unregistered citizen would like to view and accept the terms of service before recording, so that he understands how his data is being used. \\ \hline
+    UC11 & Configure Microphone & An unregistered citizen would like to properly configure my microphone before recording, so that he can record without interruption. \\ \hline
+    UC12 & Record Phrases & A citizen would like to read science phrases with definitions and curiosities, so that he learns about subjects as he is contributing. \\ \hline
+    UC13 & Group Phrases & A citizen would like to read phrases grouped by theme, so that he can learn more from each subject as he is contributing. \\ \hline
+    UC14 & Read Tutorial & A citizen would like to read a tutorial explaining how to record, so that he learns how to properly record phrases. \\ \hline
+    UC15 & Watch Recording Animations & A citizen would like to see animations on each step of the recording (enter the page, start the recording, stop the recording), so that he feels more engaged with the application. \\ \hline
+    UC16 & Skip Phrase & A citizen would like to skip a phrase when he (1) does not know how to pronounce, or (2) finds a foreign word, or (3) finds another specified reason, so that he only speaks the correct phrases. \\ \hline
+    UC17 & Stop Recording Session & A citizen would like to stop this recording session by clicking the logo and confirming the exit, so that he can resume it afterwards. \\ \hline
+\end{tabular}
+\caption*{Source: Author}
+\end{table}
+
+\clearpage
+\subsubsection{Dashboard}
+
+Table \ref{tab:falealgumacoisa-simplified-dashboard} lists all user stories related to the dashboard page, such as where the user will be able to choose themes to record, open the menu, check his level, etc.
+
+\begin{table}[h]
+\caption{Simplified Dashboard Use Cases for the Fale Alguma Coisa WebApp}
+\label{tab:falealgumacoisa-simplified-dashboard}
+\centering
+\begin{tabular}{|p{1cm}|p{3cm}|p{10cm}|}
+\hline
+    Code & Use Case Name & Description \\ \hline
+    US20 & Navigate Register & An unregistered citizen would like to easily register his data through a button click, so that he can enjoy all features of the logged area. \\ \hline
+    US21 & View Actions & A registered citizen would like to see his actions in a dashboard after logging in, so that he can better contribute to the project. \\ \hline
+    US22 & Recommend Themes & A registered citizen would like to see a list of recommended themes to speak, so that he can choose one from the list. \\ \hline
+    US23 & View Progress Level & A registered citizen would like to view my progress level, so that he know how far have he  progressed in my contributions. \\ \hline
+    US24 & Open Menu & A registered citizen would like to open the menu, so that he knows which are his possible actions in the app. \\ \hline
+    US25 & View Notifications & A registered citizen would like to check notifications, so that he understands what happened while he was gone. \\ \hline
+\end{tabular}
+\caption*{Source: Author}
+\end{table}
+
+\subsubsection{Social}
+
+To allow the social interaction with other users, the table \ref{tab:falealgumacoisa-simplified-social} lists social use cases to be added to the application. Not all social interaction is listed in this feature, as there are some elements in gamification, such as competition.
+
+\begin{table}[h]
+\caption{Simplified Social Use Cases for the Fale Alguma Coisa WebApp}
+\label{tab:falealgumacoisa-simplified-social}
+\centering
+\begin{tabular}{|p{1cm}|p{3cm}|p{10cm}|}
+\hline
+    Code & Use Case Name & Description \\ \hline
+    US30 & Add Friend & A registered citizen would like to add a friend, so that he can check them in the friends leaderboard afterwards. \\ \hline
+    US31 & View Notifications & A registered citizen would like to check notifications, so that he can know what happened when he was away. \\ \hline
+    US32 & Receive Notifications & A registered citizen would like to know when someone added him through notifications, so that he can add them back later. \\ \hline
+    US33 & Refer Friends & A registered citizen would like to refer friends to the application, so that he can play with them afterwards. \\ \hline
+\end{tabular}
+\caption*{Source: Author}
+\end{table}
+
+\subsubsection{Gamification}
+
+Table \ref{tab:falealgumacoisa-simplified-gamification} details the engagement component of the application. Elements such as leaderboards, points and levels are described. They add competition and a sense of progress to the user experience, supporting the core need of this system, which is phrase recording.
+
+\begin{table}[h]
+\caption{Simplified Gamification Use Cases for the Fale Alguma Coisa WebApp}
+\label{tab:falealgumacoisa-simplified-gamification}
+\centering
+\begin{tabular}{|p{1cm}|p{3cm}|p{10cm}|}
+\hline
+    Code & Use Case Name & Description \\ \hline
+    US40 & Earn First Recording & A registered citizen would like to get 100 points when he records his first phrase, so that he can engage better in the application. \\ \hline
+    US41 & Earn First Theme & A registered citizen would like to get 400 points when he records his first theme, so that he can engage better in the application. \\ \hline
+    US42 & Earn Theme & A registered citizen would like to get 300 points when he records subsequent themes, so that he can engage better in the application. \\ \hline
+    US43 & Earn Registration & A registered citizen would like to get 500 points when he registers his speaker data, so that he can better engage with the application. \\ \hline
+    US44 & Calculate Level & A registered citizen would like to measure his points through a level, so that he can more easily compare himself with other users. \\ \hline
+    US45 & Compete Top Players & A registered citizen would like to know who are the top contributors in the space and where he is in the list, so that he can compete against them. \\ \hline
+    US46 & Compete Friends & A registered citizen would like to know where his friends are in the friends leaderboard, so that he can compete against them. \\ \hline
+\end{tabular}
+\caption*{Source: Author}
+\end{table}
+
+\subsubsection{Login and Registration}
+
+The application should provide user authentication to enable data management and progress saving. Table \ref{tab:falealgumacoisa-simplified-login-and-registration} lists all use cases referring to this feature, and is the key to generating recordings with speaker metadata.
+
+\begin{table}[h]
+\caption{User Stories categorized to the login and registration epic for the Fale Alguma Coisa WebApp}
+\label{tab:falealgumacoisa-simplified-login-and-registration}
+\centering
+\begin{tabular}{|p{1cm}|p{3cm}|p{10cm}|}
+\hline
+    Code & Use Case Name & Description \\ \hline
+    US50 & Login Social & An unregistered citizen would like to login (using social login - Facebook / Google) on the app, so that he can login later and save my progress. \\ \hline
+    US51 & Register Metadata & A unregistered citizen would like to register his anonymous data on his first login, so that he can provide better metadata to my recordings afterwards. \\ \hline
+    US52 & Update Account & A registered citizen would like to update his account data, so that he can provide accurate metadata on the recordings. \\ \hline
+    US53 & Delete Account & A registered citizen would like to remove his account data (and his recordings, if necessary), so that he can remove my metadata from this application. \\ \hline
+\end{tabular}
+\caption*{Source: Author}
+\end{table}
+
+
+
+
+
+
+
+
+
 
 \subsubsection{Usability}
 
@@ -117,4 +295,5 @@ The usability epic details user stories related to the user experience with the 
 
 \subsection{Flow models}
 
- 
+\section{Design Model}
+
