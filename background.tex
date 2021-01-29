@@ -83,9 +83,17 @@ A literature review of empirical studies on gamification by \cite{hamari2014does
 
 A gamified service can have both psychological outcomes and behavioral outcomes. The former focuses on the ramifications of the contributor having "gameful" experiences. Aspects such as motivation, attitude and enjoyment. The latter generally refers to the behavior of the contributor as a result to the use of the service. Statistical analyses of contributions in a gamified environment serves as one example, aiding in concluding whether the research have had positive effects on some of the motivational affordances of the gamification implementations.
 
+\subsection{This work}
+
+One of the main elements of this work is the addition of gamification elements to a voice recording application, thereby laying the foundations for user engagement necessary in a citizen science application.
+
 \subsection{Crowdsourcing}
 
 Refers to the practice of outsourcing a task originally performed by its employees to an undefined and generally large network of people \cite{howe2006rise}. Its purpose lies in taking advantage of "wisdom of the crowd", whereby multiple people may be better at solving a given problem than a single individual, or simply to spread the workload across a large number of people, in particular, when the work does not lend itself to automation \cite{kreitmair2019citizen}. Many citizen science initiatives are by design a crowdsourcing project, utilizing the workforce of many to accomplish an objective.
+
+\subsection{This work}
+
+This work is also one crowdfunding citizen science project, relying in the contribution of many towards the construction of a speech corpus.
 
 \section{Citizen Science Projects}
 
@@ -212,9 +220,37 @@ The table \ref{tab:cs-contributions} contains an aggregated list of contributors
 
 \section{Natural Language Processing}
 
-\subsection{Speech Recognition}
+The field of natural language processing encompasses a variety of topics, which involves the computational processing and understanding of human language \cite{otter2020survey}. Formats in which this understanding can occur include (but are not limited to) sentiment analysis, sentence prediction, text translation, text-to-speech conversion, and speech recognition \cite{chowdhury2003natural}. Natural language processing is based on both a set of theories and a set of technologies. Its foundations lie in a number of disciplines, namely, computer and information sciences, linguistics, mathematics, electrical and electronic engineering, artificial intelligence and robotics, and psychology \cite{chowdhury2003natural}. Three key disciplines to the practice are: Linguistics - focusing on formal, structural models of language and the discovery of language universals - in fact, the field of NLP was originally referred to as Computational Linguistics; Computer Science - concerning itself with developing interal representations of data and efficient processing of these structures and; Cognitive Psychology - looking at language as a window into human cognitive process, and has the goal of modeling the use of language in a psychologically plausible way  \cite{liddy2001natural}.
+
+Nonetheless, to use the aforementioned applications (such as text translations, and speech recognition), it is necessary to analyze and decipher the core fundamentals of language understanding \cite{otter2020survey}. These core fundamentals come in many forms, such as (1) language modeling, which emphasyzes the associations among naturally occurring words \cite{DBLP:journals/corr/cs-CL-0108005}; morphological processing, dealing with decomposition of words and identification of relevant parts of speech; syntactic processing, or parsing, which builds sentence diagrams to understand the structure of phrases \cite{woolf2010building}; and semantic processing, which attempts to distill meaning of words, phrases and higher level components in text \cite{otter2020survey}.
+
+With more research and advancement in technology, many of the core fundamentals have been studied, allowing for more practical applications surging within a mobile environment \cite{yu2016automatic}, with virtual assistants such as Alexa, Siri, and Google Now; language translation now suffers minor changes in meaning across languages \cite{de2018no}, offered by companies such as Google, IBM, and Microsoft.
+
+\subsection{Automatic Speech Recognition}
+
+Automatic Speech recognition is aimed to enable natural human-machine translation and has been an intensive research area for decades \cite{yu2016automatic}. Enhancements and optimizations of core technologies such as Gaussian mixture models (GMMs), hidden Markov models (HMMs), mel-frequency cepstral coeffients (MFCCs), n-gram language models (LMs), discriminative training and various adaptation techniques have been developed, mostly prior the new millennium. These core fundamentals, akin to the ones in natural language processing, greatly advance the state of the art in the related fields.
+
+Yet, in the past several years, there has been a surge of interest in automatic speech recognition \cite{jurafsky2016speech}. This change was led by its increased demands on mobile devices, with new speech applications such as voice search, short message dictation and virtual speech assistants. The means to achieve these demands have also been developed, with (1) more computing power available \cite{ECONOMOU2004279}, (2) advanced deep learning techniques \cite{graves2013speech}. However, these tools emphasize on the ever-growing need for data.
 
 \section{Speech Corpus}
+
+In the context of automatic speech recognition, data to enable the training and testing of a ASR system is called a speech corpus. They are voice datasets, that curate a collection of audio recordings of a spoken language. Data labeling is one feature they may have, characterizing additional text files with transcriptions of the words spoken, sometimes even aligning the texts with the time they are spoken in the recording.
+
+\begin{figure}[h]
+    \centering
+    \caption{Example of annotated utterance from the German-Polish speech corpus (male speaker). The text was: Zróbcie proszę prace domowe (Eng. Please do you homework)}
+    \includegraphics[width=0.8\linewidth]{images/background/annotated-speech-corpus.png}
+    \caption*{Source: \cite{demenko2009applying}}
+    \label{fig:annotated-speech-corpus}
+\end{figure}
+
+Figure \ref{fig:annotated-speech-corpus} shows a annotated utterance for speech corpus for the Euronounce project \cite{demenko2009applying}. The process of creating a corpus consists 
+
+...
+
+\subsubsection{This work}
+
+This section outlines the overall characteristics of the main objective of this work: the construction and validation of a speech corpus.
 
 \section{Noisy data}
 
