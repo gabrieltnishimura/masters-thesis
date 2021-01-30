@@ -110,10 +110,10 @@ Represents the most important feature in the application, as the citizen will us
     UC10 & Accept Terms & An unregistered citizen would like to view and accept the terms of service before recording, so that he understands how his data is being used. \\ \hline
     UC11 & Configure Microphone & An unregistered citizen would like to properly configure my microphone before recording, so that he can record without interruption. \\ \hline
     UC12 & Record Phrases & A citizen would like to read science phrases with definitions and curiosities, so that he learns about subjects as he is contributing. \\ \hline
-    UC13 & Group Phrases & A citizen would like to read phrases grouped by theme, so that he can learn more from each subject as he is contributing. \\ \hline
+    UC13 & Group Phrases & A citizen would like to read phrases grouped by theme, so that he can learn more from each subject as he is contributing. To finish a theme, the citizen must read 6 phrases. \\ \hline
     UC14 & Read Tutorial & A citizen would like to read a tutorial explaining how to record, so that he learns how to properly record phrases. \\ \hline
     UC15 & Watch Recording Animations & A citizen would like to see animations on each step of the recording (enter the page, start the recording, stop the recording), so that he feels more engaged with the application. \\ \hline
-    UC16 & Skip Phrase & A citizen would like to skip a phrase when he (1) does not know how to pronounce, or (2) finds a foreign word, or (3) finds another specified reason, so that he only speaks the correct phrases. \\ \hline
+    UC16 & Skip Phrase & A citizen would like to skip a phrase when he (1) does not know how to pronounce, or (2) finds a foreign word, or (3) finds another specified reason, so that he only speaks the correct phrases. A maximum of 2 skips are allowed. \\ \hline
     UC17 & Stop Recording Session & A citizen would like to stop this recording session by clicking the logo and confirming the exit, so that he can resume it afterwards. \\ \hline
 \end{tabular}
 \caption*{Source: Author}
@@ -222,19 +222,6 @@ A NSU is composed of a set of navigation elements called \textit{ways of navigat
 In the figure \ref{fig:app-nsu-example}, the navigation behavior to record a phrase of a unregistered user is illustrated. As the unregistered user enters the homepage, he clicks the start recording button. However, since he has neither accepted the terms of service nor enabled his microphone permissions, he must go through these pages. If he denies the terms or the microphone permissions, he is redirected to the homepage. If the user allows both, he will enter the recording page, where he is able to record phrases and donate his voice.
 
 This is only one example of the more complex user Ways of Navigations. Refer to appendix \ref{appendix:navigation-design} to a more complete list of NSUs.
-
-\subsubsection{Navigation Syntax}
-
-The mechanics of navigation are defined by elements such as:
-
-\begin{itemize}
-    \item Buttons
-    \item Menus
-    \item Modals
-    \item Simple links
-\end{itemize}
-
-Refer to the implementation of these elements on the user interface section \ref{sec:app-user-interface}.
 
 \subsection{Aesthetic Design}
 \label{sec:aesthetic-design}
@@ -483,6 +470,62 @@ Refer to Appendix \ref{appendix:user-interface-design} for the remaining impleme
 \clearpage
 \subsection{Phrase Selection}
 \label{sec:app-phrase-selection}
+
+One of the key aspects of the Fale Alguma Coisa application is the ability of explaining science-related trivia. In the process of recording, the contributor may learn small facts about the chosen topic by reading a group of scientific phrases. The following sections will detail the anatomy of a theme, the requirements for selecting a phrase, the phrases source, along with the filtering process.
+
+\subsubsection{Theme Anatomy}
+
+Each group of phrases is entitled "theme". By specification (\ref{srs:uc12} and \ref{srs:uc16}), a theme is composed of 8 phrases: 6 of which must be recorded to finish a theme; allowing up to 2 skips. Figure \ref{fig:falealgumacoisa-phrase-all} illustrates the anatomy of a theme and figure \ref{phrase-skip} displays what happens to a recording group when a phrase is skipped.
+
+\begin{figure}[h]
+    \centering
+    \caption{Selected phrases of a theme. Out of 8, only 6 are shown to the user.}
+    \includegraphics[width=\linewidth]{images/sw-req-spec/phrase-all.png}
+    \caption*{Source: Author}
+    \label{fig:falealgumacoisa-phrase-all}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \caption{Recorded theme example. The sixth phrase was skipped, thus allowing the recording of the seventh phrase.}
+    \includegraphics[width=\linewidth]{images/sw-req-spec/phrase-skip.png}
+    \caption*{Source: Author}
+    \label{fig:falealgumacoisa-phrase-skip}
+\end{figure}
+
+\subsubsection{Selection Process}
+
+In addition to the number of phrases per group, the selection process of each phrase must be detailed. This section details such process, therefore necessitating the phrases to adhere to some requirements: 
+
+\begin{enumerate}
+    \item the phrase must not contain more than 110 characters, so that it fits within the breakpoints specification of the recording page;
+    \item must be related to the theme chosen, to compound the knowledge of the other spoken phrases in the same theme;
+    \item must be a fact, or at least reviewed by one or more individuals, so that there is no spread of misinformation;
+    \item must be in Portuguese, since it is a Portuguese corpus;
+    \item must not use very uncommon words, to facilitate reading;
+    \item must be copyright free, for use in the application.
+\end{enumerate}
+
+\subsubsection{Phrases Source}
+
+To extract phrases with such requirements, a extensive Portuguese phrases list must be compiled.
+
+\subsubsection{Phrases Filtering}
+
+\begin{table}[h]
+    \centering
+    \caption{SLR - Filtering of results}
+    \begin{tabular}{|c|c|}
+        \hline Step & Results \\ \hline
+        Full extraction & 157 \\ \hline
+        Length limitation & 23 \\ \hline
+        Themes filtering & 14 \\ \hline
+        Reviews & 14 \\ \hline
+        Common words & 14 \\ \hline
+    \end{tabular}
+    \caption*{Source: Author}
+    \label{tab:filtering}
+\end{table}
 
 \subsection{Development}
 \label{sec:app-development}
