@@ -63,8 +63,8 @@ A literature review of empirical studies on gamification by \cite{hamari2014does
     \caption{Quantity of motivational affordances implemented in 24 gamification publications}
     \begin{tabular}{|c|c|}
         \hline Motivational Affordance & Publications (out of 24) \\
-        \hline Points & 9 \\
         \hline Leaderboard & 10\\ 
+        \hline Points & 9 \\
         \hline Achievements/Badges & 9 \\
         \hline Levels & 6 \\
         \hline Story/Theme & 6 \\
@@ -234,7 +234,7 @@ Yet, in the past several years, there has been a surge of interest in automatic 
 
 \section{Speech Corpus}
 
-In the context of automatic speech recognition, data to enable the training and testing of a ASR system is called a speech corpus. They are voice datasets, that curate a collection of audio recordings of a spoken language. Data labeling is one feature they may have, characterizing additional text files with transcriptions of the words spoken, sometimes even aligning the texts with the time they are spoken in the recording. Figure \ref{fig:annotated-speech-corpus} shows a annotated utterance for speech corpus for the Euronounce project \cite{demenko2009applying}.
+In the context of automatic speech recognition, the collection of data enabling the training and testing of a ASR system is called a speech corpus. They are voice datasets, that curate a collection of audio recordings of a spoken language. Data labeling is one feature they may have, characterizing additional text files with transcriptions of the words spoken, sometimes even aligning the texts with the time they are spoken in the recording. Figure \ref{fig:annotated-speech-corpus} shows a annotated utterance for speech corpus for the Euronounce project \cite{demenko2009applying}.
 
 \begin{figure}[h]
     \centering
@@ -244,20 +244,42 @@ In the context of automatic speech recognition, data to enable the training and 
     \label{fig:annotated-speech-corpus}
 \end{figure}
 
-Another feature to aid in speech recognition is speaker metadata. 
+These datasets are used by scientists to test and validate new techniques in speech recognition. One breakthrough in the field was developed by Graves \cite{graves2013speech} in 2013. In his paper on End-to-end speech recognition, Graves stated that the system was able to directly transcribe audio data with text, without requiring an intermediate phonetic representation. It was based on a combination of deep bidirectional LSTM recurrent neural network and the Connectionist Temporal Classification objective function. 
 
-...
+This was one of the first systems that did not require a fully phonetically labelled speech corpus as an input, and marked the start of End-to-end speech recognition systems, with Baidu Warp CTC (\cite{hannun2014deep}) ,\cite{collobert2016wav2letter}); Mozila Deep Speech, based on the same paper; Hybrid CTC/Attention Architectures \cite{8068205}, etc. These systems achieve greater accuracy when compared to older approaches, such as Hidden Markov Models, and allow for the construction of datasets without the complexity of annotating them with phonemes.
 
-\subsubsection{This work}
+\subsection{Speaker Metadata}
+
+Another feature to aid in speech recognition is speaker metadata. Enrichment of the recording with demographics may help build more specific applications, such as speaker age-group identification, dialect separation, denoising functions, for example. Each corpus defines its own group of collected characteristics, and with permission from the contributors, add them to the recordings. A detailed list of a peer-reviewed set of speech corpus is available in the related work chapter (\ref{chap:related-work}).
+
+\subsection{This work}
 
 This section outlines the overall characteristics of the main objective of this work: the construction and validation of a speech corpus.
 
 \section{Noisy data}
 
-A common issue with these croudsourced online datasets lies in data quality. Disparities in recorded noise, environment change, recording length variation, and general quality of the recording are intrinsically associated with these contributions, since volunteers have each their own devices and recording conditions. To mitigate these issues, work has been made in the post-processing of these recordings \cite{krishna2019speech}.
+A common issue with these croudsourced online datasets lies in data quality. Disparities in recorded noise, environment change, recording length variation, and general quality of the recording are intrinsically associated with these contributions, since volunteers have each their own devices and recording conditions. To mitigate these issues, work has been made in the postprocessing of these recordings \cite{krishna2019speech}.
 
-\section{Licencing}
+\section{Open-source Licenses}
 
-\subsection{GPL}
+One of the foundations on the advancement of scientific knowledge lies in compounding research done by other scientists. Work done previously can be reused to accelerate further research, and one common example is materialized in the form of citations. However, a more practical way of sharing knowledge is available to businesses and researchers alike: open-source code and/or data. These artifacts allow for a more accurate reproduction of the process used in the research.
 
-\subsection{CC0}
+Sharing code or data to third parties is done through licensing. Open Source Licences allow the source-code, blueprint or design to be used, modified and/or shared under defined terms and conditions \cite{perens1999open}. They allow end users and commercial companies to review and modify the source code, blueprint or design for their own customizations, curiosity or troubleshooting needs. Refer to appendix \ref{appendix:chap:open-source-definition} to read the full Open Source Definition, derived from the Debian Free Software Guidelines (DFSG).
+
+There are many types of open-source licenses, and some of them are directed to the sharing of data. The following sections detail commonly used licenses for data sharing, with examples of datasets distributed with these permissions.
+
+\subsection{Creative Commons CC0}
+
+Ensuring the widest reach in public, the Creative Commons CC0 Public Domain Dedication (CC0) waives copyright interest in the work created and dedicates it to the world-wide public domain \cite{licenses-cc0}. Users can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.
+
+\subsection{CC BY 4.0}
+
+The Creative Commons Attribution 4.0 International (CC BY 4.0) is also one open Creative Commons license, allowing users to copy, modify, and distribute data in any format for any purpose, including commercial use \cite{licenses-ccby40}. Users are only obligated to give appropriate credit (attribution) and indicate if they have made any changes, including translations.
+
+\subsection{CC BY-SA 4.0}
+
+Known as Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0), this license is similar to CC-BY-4.0 but requires derivatives be distributed under the same or a similar, compatible license \cite{licenses-ccby-sa40}. It is frequently used for media assets and educational materials.
+
+\subsection{This work}
+
+Licensing is core to data sharing, and this work is no exception to this rule. Since one of the main purposes established here is the distribution of the speech corpus, it is important to understand what license applies best. This decision is made in \cite{sec:proposal-data-publication}.

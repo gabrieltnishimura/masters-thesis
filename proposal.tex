@@ -6,7 +6,7 @@ This proposal focuses on detailing the necessary steps to the creation and publi
 \section{Application}
 \label{sec:proposal-app}
 
-This section details the conception, documentation, and development process of the voice recording application, coined "Fale Alguma Coisa". Below, it will at times be referenced as "app", or "WebApp", short for Application and Web Application, respectively. The main purpose of this app is to be able to record predetermined phrases from users. All other features support the engagement and usability through authentication, gamification, and explanatory elements. The following documentation structure is based on Pressman's book "Software Engineering: A Practitioner's Approach" \cite{pressman2014software}, and generated a proper Software Requirements Specification in the Appendix \ref{appendix:srs}. Hence, some detail will be omitted to provide simplicity and overall understanding of the design process.
+This section details the conception, documentation, and development process of the voice recording application, coined "Fale Alguma Coisa". Below, it will at times be referenced as "app", or "WebApp", short for Application and Web Application, respectively. The main purpose of this app is to be able to record predetermined phrases from users. All other features support the engagement and usability through authentication, gamification, and explanatory elements. The following documentation structure is based on Pressman's book "Software Engineering: A Practitioner's Approach" \cite{pressman2014software}, and generated a proper Software Requirements Specification in the Appendix \ref{appendix:srs}. Hence, some details will be omitted to provide simplicity and overall understanding of the design process.
 
 In this simplified explanation, the scope will be detailed \ref{sec:app-scope}, followed by the artefacts produced \ref{sec:app-artefacts}. Secondly, the functionality of the entire application will be documented using use cases (\ref{sec:simplified-use-cases}). Next, the navigation structure of some use cases will be documented (\ref{sec:navigation-design}), followed by the aesthetic design (in \ref{sec:aesthetic-design}). Then, the user interface will be elaborated by documenting the layouts (in \ref{sec:app-user-interface}), based on the use cases listed and previous decisions. One key factor in the app is the ability to teach science facts and trivia, which entails the need of proper phrase selection methods. These methods will be explained in the section \ref{sec:app-phrase-selection}. Lastly, the development process will be described, with additional details on the tools selected (\ref{sec:app-development}). Again, many steps of the software design process were skipped in this proposal, but a thorough description can be referred to in Appendix \ref{appendix:srs}.
 
@@ -23,7 +23,7 @@ In this simplified explanation, the scope will be detailed \ref{sec:app-scope}, 
 
 Towards contributing \textbf{nonprofessional scientists}, the Fale Alguma Coisa app should provide an easy gateway for the user to contribute his voice while having fun and learning various science facts and curiosities.
 
-Towards researching \textbf{scientists}, the Fale Alguma Coisa app should provide a database of anonymized voice recordings, for scientists to extract and create speech corpus.
+Towards researching \textbf{scientists}, the Fale Alguma Coisa app should provide a database of anonymized voice recordings for scientists to extract and create a speech corpus.
 
 Directed towards anyone interested in learning and contributing to science.
 
@@ -40,7 +40,7 @@ However, some elements are outside of the scope of this system. These elements a
 \subsection{Artefacts}
 \label{sec:app-artefacts}
 
-This table presents the artefacts to be produced, and their respective location in this work.
+This table presents the artefacts to be produced, and their respective locations in this work.
 
 \begin{table}[h]
 \centering
@@ -98,7 +98,7 @@ In table \ref{tab:falealgumacoisa-simplified-home}, use cases affecting the home
 \clearpage
 \subsubsection{Recording}
 
-Represents the most important feature in the application, as the citizen will use it to record his voice. It also provides supporting features, such as skipping phrases and resuming the recording session. The list of simplified use cases is listed in table \ref{tab:falealgumacoisa-simplified-recording}; with the complete version available in the Appendix \ref{appendix:scenario-based-model}
+Represents the most important feature in the application, as the citizen will use it to record his voice. It also provides supporting features, such as skipping phrases and resuming the recording session. The list of simplified use cases is listed in table \ref{tab:falealgumacoisa-simplified-recording}; with the complete version available in Appendix \ref{appendix:scenario-based-model}
 
 \begin{table}[h]
 \caption{Simplified Recording Use Cases for the Fale Alguma Coisa WebApp}
@@ -209,7 +209,7 @@ Ensuring a robust navigation design for the user enables him to access the WebAp
 
 \subsubsection{Navigational Semantics}
 
-A NSU is composed of a set of navigation elements called \textit{ways of navigating} (WoN). A WoN represents the the best navigation pathway to achieve a navigational goal for a specific type of users. Each WoN is organized as a set of \textit{navigational nodes} (NN) that are connected by navigational links. An example of NSU is given below in figure \ref{fig:app-nsu-example}.
+A NSU is composed of a set of navigation elements called \textit{ways of navigating} (WoN). A WoN represents the the best navigation pathway to achieve a navigational goal for a specific type of user. Each WoN is organized as a set of \textit{navigational nodes} (NN) that are connected by navigational links. An example of NSU is given below in figure \ref{fig:app-nsu-example}.
 
 \begin{figure}[h]
     \centering
@@ -219,7 +219,7 @@ A NSU is composed of a set of navigation elements called \textit{ways of navigat
     \caption*{Source: Author}
 \end{figure}
 
-In the figure \ref{fig:app-nsu-example}, the navigation behavior to record a phrase of a unregistered user is illustrated. As the unregistered user enters the homepage, he clicks the start recording button. However, since he has neither accepted the terms of service nor enabled his microphone permissions, he must go through these pages. If he denies the terms or the microphone permissions, he is redirected to the homepage. If the user allows both, he will enter the recording page, where he is able to record phrases and donate his voice.
+In figure \ref{fig:app-nsu-example}, the navigation behavior to record a phrase of an unregistered user is illustrated. As the unregistered user enters the homepage, he clicks the start recording button. However, since he has neither accepted the terms of service nor enabled his microphone permission, he must go through these pages. If he denies the terms or microphone permission, he is redirected to the homepage. If the user allows both, he will enter the recording page, where he is able to record phrases and donate his voice.
 
 This is only one example of the more complex user Ways of Navigations. Refer to appendix \ref{appendix:navigation-design} to a more complete list of NSUs.
 
