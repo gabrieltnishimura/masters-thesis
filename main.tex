@@ -49,6 +49,35 @@
 % CONFIGURAÇÕES DE PACOTES
 % ---
 
+% LISTING CAPTION POST
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  breaklines=true,
+}
+\makeatletter
+
+\lst@Key{source}{}{\def\lst@source{#1}}
+
+\let\orig@lst@MakeCaption=\lst@MakeCaption
+\def\lst@MakeCaption#1{%
+    \orig@lst@MakeCaption#1%
+    \ifx b#1%
+        \ifx\lst@source\@empty\else
+            \noindent
+            \expandafter\lst@makesourcebox\expandafter{\lst@source}%
+            \vskip\belowcaptionskip
+        \fi
+    \fi
+}
+
+\def\lst@makesourcebox#1{%
+    \makebox[\linewidth][c]{\textrm{Source: #1}}%
+}
+\makeatother
+\lstset{backgroundcolor=\color{lightgray}}
+
+
 % ---
 % Configurações do pacote
 \newenvironment{spmatrix}[1]{
@@ -155,7 +184,40 @@
 	% ---
 	\imprimirfolhaderosto*
 	% ---
+	
+    % ========== Dedicatória (opcional) ==========
+    % \dedicatoria{
+    
+    % }
+    
+    
+    % ========== Agradecimentos ==========
+    \begin{agradecimentos}
+    My supervisor Bruno Carvalho de Albertini. As he listened my confused pleas and despairing comments, I don't understand how he managed to not give up on me and even motivate me. Thank you for helping structure this whole mess, and for not reprimanding me (too much) on my sudden disappearances. I certainly did not imagine I would take this long to reach this point, but I most certainly thank you for all your hard work and dedication.
 
+    Ricardo Tiburcio Humaytá, for the stupendous work done in the implementation of the user interface of the Fale Alguma Coisa app. With you, this has turned into something else. All the discussions were worth all the time! Moreover, thank you for the CSS tips, aligning and layering is hard.
+    
+    Daniel Noriaki Kurosawa, for directly helping me develop some of the features, namely the home and login page! Sorry for the harsh code reviews...
+
+    My family (including our 4 dogs), for supporting me in these trying times. Helping me in ways I could not even fathom possible.
+    
+    My friends, for putting up with my shenanigans. I guess four years is a long time, but who would know?!
+    
+    My colleagues at work, for constantly and persistently asking me when would I finish. This sounds like it is bad, but really motivated me through and through. Thank you.
+
+    Without you all, this would not have been possible.
+    \end{agradecimentos}
+    
+    
+    % ========== Epígrafe (opcional) ==========
+    \begin{epigrafe}
+    \vspace*{\fill}
+    \begin{flushright}
+    {``Words are where most change begins.``} \\ Shallan Davar, Words of Radiance \\ Brandon Sanderson
+    \end{flushright}
+    \end{epigrafe}
+        
+        
 	% ---
 	% RESUMOS
 	% ---
@@ -191,6 +253,13 @@
 	% ---
 	
 	% ---
+	
+	% ---
+	% code listing
+	% ---
+	
+    \lstlistoflistings
+    \clearpage
 
 	% ---
 	% inserir o sumario

@@ -262,28 +262,27 @@ To ensure an effective development of the user interface, an iterative analysis 
 \end{figure}
 
 \clearpage
-\subsubsection{Splash Screen}
+\subsubsection{Splash and Home Screen}
 
-As the user first enter the application, a splash screen will be shown to welcome him (mobile version in figure \ref{fig:falealgumacoisa-splash-page-design}). It contains the logo and an animation to draw the user's attention. After the animation, the home will be shown.
-
-\begin{figure}[ht]
-    \centering
-    \caption{Fale Alguma Coisa Splash Page design}
-    \includegraphics[width=\linewidth/2]{images/app/m-splash.jpg}
-    \caption*{Source: Author}
-    \label{fig:falealgumacoisa-splash-page-design}
-\end{figure}
-
-\subsubsection{Homepage}
-
-After the splash animation, the homepage is shown. The mobile version can be seen below in figure \ref{fig:falealgumacoisa-home-page-design}. In this page, the call to action to start the recording is highlighted by the button at the center of the page, with text describing the project right below it. The login page is accessible through the link in the right upper corner. These few elements are placed to encourage the user to click on the recording, if he is a new user.
+As the user first enter the application, a splash screen will be shown to welcome him (mobile version in figure \ref{fig:falealgumacoisa-splash-page-design}). It contains the logo and an animation to draw the user's attention. After the animation, the home will be shown. After the splash animation, the homepage is shown. The mobile version can be seen below in figure \ref{fig:falealgumacoisa-home-page-design}. In this page, the call to action to start the recording is highlighted by the button at the center of the page, with text describing the project right below it. The login page is accessible through the link in the right upper corner. These few elements are placed to encourage the user to click on the recording, if he is a new user.
 
 \begin{figure}[ht]
     \centering
-    \caption{Fale Alguma Coisa Home Page design}
-    \frame{\includegraphics[width=\linewidth/2]{images/app/m-home.jpg}}
+    \caption{Fale Alguma Coisa Home Page designs}
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \frame{\includegraphics[width=.9\linewidth]{images/app/m-splash.jpg}}
+      \caption{Fale Alguma Coisa Home Page design}
+      \label{fig:falealgumacoisa-splash-page-design}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \frame{\includegraphics[width=.9\linewidth]{images/app/m-home.jpg}}
+      \caption{Fale Alguma Coisa Home Page design}
+      \label{fig:falealgumacoisa-home-page-design}
+    \end{subfigure}
     \caption*{Source: Author}
-    \label{fig:falealgumacoisa-home-page-design}
+    \label{fig:falealgumacoisa-home-page-designs}
 \end{figure}
 
 \subsubsection{Recording}
@@ -311,15 +310,7 @@ This page represents the core functionality of the website, allowing the user to
 
 \subsubsection{Terms of Service}
 
-To comply with Brazil's General Data Protection Act (Law 13,709/2018), the application has to clarify data usage of the visitor of the website. The figure \ref{fig:falealgumacoisa-tos-page-design} defines the layout of the page with a simplified terms of service, as well as a button to accept or deny such terms.
-
-\begin{figure}[ht]
-    \centering
-    \caption{Fale Alguma Coisa simplified terms of service page design}
-    \frame{\includegraphics[width=\linewidth/2]{images/app/register/tos.png}}
-    \caption*{Source: Author}
-    \label{fig:falealgumacoisa-tos-page-design}
-\end{figure}
+To comply with Brazil's General Data Protection Act (Law 13,709/2018), the application has to clarify the data usage of the visitor of the website. The layout just consists of text detailing the terms of service based on the law.
 
 \subsubsection{Dashboard}
 
@@ -328,11 +319,12 @@ When an unauthenticated user finishes recording its first theme, or when a user 
 \begin{figure}[ht]
     \centering
     \caption{Fale Alguma Coisa Dashboard Page design}
-    \frame{\includegraphics[width=\linewidth/2]{images/app/dashboard/Dashboard.png}}
+    \frame{\includegraphics[width=\linewidth/2]{images/app/dashboard/DashboardCropped.png}}
     \caption*{Source: Author}
     \label{fig:falealgumacoisa-dashboard-page-design}
 \end{figure}
 
+\clearpage
 \subsubsection{Leaderboard}
 
 The leaderboard layouts feature two visualizations, depending on the desired scope. Should the contributor want to see all top ranking users, the leaderboard (figure \ref{fig:falealgumacoisa-leaderboard-page-design-general}) is available. If the user only wants to check his friend rankings, the application displays a reduced list (figure \ref{fig:falealgumacoisa-leaderboard-page-design-friend}), based on the friends added to the platform. These layouts provide a way for users to compare their contributions, thus promoting competition. A social element is also included throughout the option to add friends.
@@ -471,11 +463,11 @@ Refer to Appendix \ref{appendix:user-interface-design} for the remaining impleme
 \subsection{Phrase Selection}
 \label{sec:app-phrase-selection}
 
-One of the key aspects of the Fale Alguma Coisa application is the ability of explaining science-related trivia. In the process of recording, the contributor may learn small facts about the chosen topic by reading a group of scientific phrases. The following sections will detail the anatomy of a theme, the requirements for selecting a phrase, the phrases source, along with the filtering process.
+One of the key aspects of the Fale Alguma Coisa application is the ability of explaining science-related trivia. In the process of recording, the contributor may learn small facts about the chosen topic by reading a group of scientific phrases. The following sections will detail (1) the anatomy of a theme, (2) the requirements for selecting a phrase, (3) the source for an initial list of phrases, along with (4) the filtering process.
 
 \subsubsection{Theme Anatomy}
 
-Each group of phrases is entitled "theme". By specification (\ref{srs:uc12} and \ref{srs:uc16}), a theme is composed of 8 phrases: 6 of which must be recorded to finish a theme; allowing up to 2 skips. Figure \ref{fig:falealgumacoisa-phrase-all} illustrates the anatomy of a theme and figure \ref{phrase-skip} displays what happens to a recording group when a phrase is skipped.
+Each group of phrases is entitled "theme". By specification (\ref{srs:uc12} and \ref{srs:uc16}), a theme is composed of 8 phrases, 6 of which must be recorded to finish a theme; allowing up to 2 skips. Figure \ref{fig:falealgumacoisa-phrase-all} illustrates this structure and figure \ref{phrase-skip} displays what happens to a recording group when a phrase is skipped.
 
 \begin{figure}[h]
     \centering
@@ -495,10 +487,11 @@ Each group of phrases is entitled "theme". By specification (\ref{srs:uc12} and 
 
 \subsubsection{Selection Process}
 
-In addition to the number of phrases per group, the selection process of each phrase must be detailed. This section details such process, therefore necessitating the phrases to adhere to some requirements: 
+In addition to the number of phrases per group, the selection process of each phrase must be further detailed. This section specifies such process, requiring the phrases to adhere to some criteria. Such phrase:
 
 \begin{enumerate}
-    \item the phrase must not contain more than 110 characters, so that it fits within the breakpoints specification of the recording page;
+    \item must start with a capital letter and end with a period, so that it is selfcontained;
+    \item must not contain more than 110 characters, so that it fits within the breakpoints specification of the recording page;
     \item must be related to the theme chosen, to compound the knowledge of the other spoken phrases in the same theme;
     \item must be a fact, or at least reviewed by one or more individuals, so that there is no spread of misinformation;
     \item must be in Portuguese, since it is a Portuguese corpus;
@@ -508,7 +501,14 @@ In addition to the number of phrases per group, the selection process of each ph
 
 \subsubsection{Phrases Source}
 
-To extract phrases with such requirements, a extensive Portuguese phrases list must be compiled.
+To extract phrases with such requirements, the source of phrases must be vast. Fortunately, Wikipedia has a monthly backup dump that contains all pages in text format. The latest version of the Portuguese backup is also available in \url{https://dumps.wikimedia.org/ptwiki/20210120/}, generated in 01/20/2021.
+
+To download this extraction use the following command:
+
+\begin{lstlisting} [language=Bash, caption={Download and extraction of the Portuguese Wikipedia latest extraction}, captionpos=t, source={Author}]
+wget https://dumps.wikimedia.org/ptwiki/20210120/ptwiki-20210120-pages-articles-multistream.xml.bz2 bzip2 -d
+ptwiki-20210120-pages-articles-multistream.xml.bz2
+\end{lstlisting}
 
 \subsubsection{Phrases Filtering}
 
@@ -517,11 +517,11 @@ To extract phrases with such requirements, a extensive Portuguese phrases list m
     \caption{SLR - Filtering of results}
     \begin{tabular}{|c|c|}
         \hline Step & Results \\ \hline
-        Full extraction & 157 \\ \hline
-        Length limitation & 23 \\ \hline
+        Full extraction & 100000 \\ \hline
         Themes filtering & 14 \\ \hline
-        Reviews & 14 \\ \hline
         Common words & 14 \\ \hline
+        Length limitation &  \\ \hline
+        Reviews & 14 \\ \hline
     \end{tabular}
     \caption*{Source: Author}
     \label{tab:filtering}
