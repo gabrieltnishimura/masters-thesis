@@ -455,7 +455,7 @@ Refer to Appendix \ref{appendix:user-interface-design} for the remaining impleme
 \subsection{Phrase Selection}
 \label{sec:app-phrase-selection}
 
-One of the key aspects of the Fale Alguma Coisa application is the ability of explaining science-related trivia. In the process of recording, the contributor may learn small facts about the chosen topic by reading a group of scientific phrases. The following sections will detail (1) the anatomy of a theme, (2) the requirements for selecting a phrase, (3) the source for an initial list of phrases, along with (4) the filtering process.
+One of the key aspects of the Fale Alguma Coisa application is the ability of explaining science-related trivia. In the process of recording, the contributor may learn small facts about the chosen topic by reading a group of scientific phrases. The following sections will detail (1) the anatomy of a theme, (2) the requirements for selecting a phrase, (3) the source for an initial list of phrases, along with (4) the filtering process. Then, (5) images are selected for each theme, and lastly (5) the phrases and images are inputted to the application. Except for the last step integrating with the application, the specified process is fully automated by a Jupyter Notebook in Python 3, and the complete source code is available on GitHub at \url{https://github.com/gabrieltnishimura/cv-sentence-extractor}.
 
 \subsubsection{Theme Anatomy}
 
@@ -477,9 +477,9 @@ Each group of phrases is entitled "theme". By specification (\ref{srs:uc12} and 
     \label{fig:falealgumacoisa-phrase-skip}
 \end{figure}
 
-\subsubsection{Selection Process}
+\subsubsection{Filtering Criteria}
 
-In addition to the number of phrases per group, the selection process of each phrase must be further detailed. This section specifies such process, requiring the phrases to adhere to some criteria. Such phrase:
+In addition to the number of phrases per group, the selection process of each phrase must be further detailed. This section specifies such characterizations, requiring the phrases to adhere to some criteria. Such phrase:
 
 \begin{enumerate}
     \item must start with a capital letter and end with a period, so that it is selfcontained;
@@ -493,36 +493,50 @@ In addition to the number of phrases per group, the selection process of each ph
 
 \subsubsection{Phrases Source}
 
-To extract phrases with such requirements, the source of phrases must be vast. Fortunately, Wikipedia has a monthly backup dump that contains all pages in text format. The latest version of the Portuguese backup is also available in \url{https://dumps.wikimedia.org/ptwiki/20210120/}, generated in 01/20/2021.
+To extract phrases with such requirements, the source of phrases must be vast. Fortunately, Wikipedia has a monthly backup dump that contains all pages in text format. The latest version of the Portuguese backup is also available in \url{https://dumps.wikimedia.org/ptwiki/20210120/}, and was generated in 01/20/2021.
 
-To download this extraction use the following command:
+This extraction was downloaded using the following command \ref{lst:download}:
 
-\begin{lstlisting} [language=Bash, caption={Download and extraction of the Portuguese Wikipedia latest extraction}, captionpos=t, source={Author}]
+\begin{lstlisting} [language=Bash, caption={Download and extraction of the Portuguese Wikipedia latest extraction}, captionpos=t, source={Author}, label={lst:download}]
 wget https://dumps.wikimedia.org/ptwiki/20210120/ptwiki-20210120-pages-articles-multistream.xml.bz2 bzip2 -d
 ptwiki-20210120-pages-articles-multistream.xml.bz2
 \end{lstlisting}
 
+To set a baseline for comparison, the initial extraction (formatted in xml) was filtered to separate phrases (list of strings) from all pages. The definition of a phrase in the context of this work is simple: "string that starts with a capital letter and ends with a period". This extraction yielded 100.000.000 phrases distributed in a wide range of pages (29999): places, historical moments, people, concepts, animals, etc.
+
 \subsubsection{Phrases Filtering}
+
+However, the list still needs further filtering, since many criteria are still not satisfied.
 
 \begin{table}[h]
     \centering
-    \caption{SLR - Filtering of results}
+    \caption{Phrases Filtering Results of the Portuguese Wikipedia (extracted 01/20/2021)}
+    \label{tab:filtering}
     \begin{tabular}{|c|c|}
         \hline Step & Results \\ \hline
         Full extraction & 100000 \\ \hline
-        Themes filtering & 14 \\ \hline
+        Themes filtering & 900000 \\ \hline
         Common words & 14 \\ \hline
         Length limitation &  \\ \hline
         Reviews & 14 \\ \hline
     \end{tabular}
     \caption*{Source: Author}
-    \label{tab:filtering}
 \end{table}
+
+\subsubsection{Image Selection}
+
+With the filtering done, a list of themes with the minimum threshold of phrases was generated. According to \ref{uc:20}, themes need an image to be displayed in two pages: the dashboard and the recording page. This section specifies the selection of such images, but since they are going to be used directly in the user interface, they need to be selected with more care. Factors such as resolution, size, format, and license must be taken into consideration.
+
+Each theme was selected using the Pexels, a website for stock photo and video, distributing images that can be downloaded and used for free. Pexels has a simple license allowing users to download, use without attribution, and edit the media without permission, ideal for the Fale Alguma Coisa app, that would display these images.
+
+\subsubsection{Application Input}
+
+With the filtering and image selection done, the themes can be inputted in the application, so that users view the themes in the dashboard and recording page. According to use case \ref{uc:40}, a REST API will expose the insertion of themes functionality.
 
 \subsection{Development}
 \label{sec:app-development}
 
-This section details the development process of the Fale Alguma Coisa app.
+This section details the development process of the Fale Alguma Coisa app. 
 
 \subsubsection{Web app}
 
