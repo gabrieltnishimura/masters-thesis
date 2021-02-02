@@ -464,7 +464,7 @@ Each group of phrases is entitled "theme". By specification (\ref{srs:uc12} and 
 \begin{figure}[h]
     \centering
     \caption{Selected phrases of a theme. Out of 8, only 6 are shown to the user.}
-    \includegraphics[width=\linewidth]{images/sw-req-spec/phrase-all.png}
+    \includegraphics[width=\linewidth]{images/phrase-selection/phrase-all.png}
     \caption*{Source: Author}
     \label{fig:falealgumacoisa-phrase-all}
 \end{figure}
@@ -472,7 +472,7 @@ Each group of phrases is entitled "theme". By specification (\ref{srs:uc12} and 
 \begin{figure}[h]
     \centering
     \caption{Recorded theme example. The sixth phrase was skipped, thus allowing the recording of the seventh phrase.}
-    \includegraphics[width=\linewidth]{images/sw-req-spec/phrase-skip.png}
+    \includegraphics[width=\linewidth]{images/phrase-selection/phrase-skip.png}
     \caption*{Source: Author}
     \label{fig:falealgumacoisa-phrase-skip}
 \end{figure}
@@ -502,11 +502,63 @@ wget https://dumps.wikimedia.org/ptwiki/20210120/ptwiki-20210120-pages-articles-
 ptwiki-20210120-pages-articles-multistream.xml.bz2
 \end{lstlisting}
 
-To set a baseline for comparison, the initial extraction (formatted in xml) was filtered to separate phrases (list of strings) from all pages. The definition of a phrase in the context of this work is simple: "string that starts with a capital letter and ends with a period". This extraction yielded 100.000.000 phrases distributed in a wide range of pages (29999): places, historical moments, people, concepts, animals, etc.
+To set a baseline for comparison, the initial extraction (formatted in xml) was filtered to separate phrases (list of strings) from all pages. The definition of a phrase in the context of this work is simple: "string that starts with a capital letter and ends with a period". This extraction yielded 100.000.000.000 phrases distributed in a wide range of pages (1.000.000): places, historical moments, people, concepts, animals, etc.
 
 \subsubsection{Phrases Filtering}
 
-However, the list still needs further filtering, since many criteria are still not satisfied.
+However, the list still needs further filtering, since many criteria are still not satisfied. The figure \ref{fig:phrase-selection-pyramid} illustrates the process of applying criteria, such as removal of less common words, filtering of themes and finally length limitation.
+
+\begin{figure}[h]
+    \centering
+    \caption{Filtering process for obtaining phrases for the Fale Alguma Coisa WebApp}
+    \includegraphics[width=0.5\linewidth]{images/phrase-selection/filtering-pyramid.png}
+    \caption*{Source: Author}
+    \label{fig:phrase-selection-pyramid}
+\end{figure}
+
+The extraction of a list of common words is based on the more frequent words. To identify these words, the script at \url{https://github.com/gabrieltnishimura/cv-sentence-extractor} \footnote{Based on \url{https://github.com/dabinat/cvtools/}, \url{https://github.com/common-voice/cv-sentence-extractor}, and \url{https://github.com/attardi/wikiextractor.git}} was used as follow:
+
+\begin{lstlisting} [language=Bash, caption={Download and extraction of word frequency list}, captionpos=t, source={Author}, label={lst:word-frequency-script}]
+# download script
+git clone https://github.com/gabrieltnishimura/cv-sentence-extractor
+# extraction of phrases
+python3 WikiExtractor.py --json ptwiki-latest-pages-articles-multistream.xml
+cargo run -- extract -l en -d text/ --no_check >> wiki.pt.all.txt
+# creation of frequency list
+python3 word_usage.py -i wiki.pt.all.txt >> word_usage.pt.txt
+\end{lstlisting}
+
+The result of the script is a file with the tuple \texttt{<word, frequency>}, and one simplified example is available at listing \ref{lst:word-frequency-example}.
+
+\begin{lstlisting} [caption={Word frequency extraction example from the Portuguese Wikipedia (word_usage.pt.txt)}, captionpos=t, source={Author}, label={lst:word-frequency-example}]
+de 172609
+a 159800
+o 135680
+e 109532
+do 63474
+...
+volta 1694
+exemplo 1685
+faz 1680
+vai 1673
+dentro 1668
+...
+trabalhavam 49
+transações 49
+turística 49
+unem 49
+vela 49
+...
+op 9
+opaco 9
+ophelia 9
+orbitam 9
+orchestra 9
+\end{lstlisting}
+
+With the frequency list, it is possible to decide what words are the most common in this extraction.
+
+The next step in filtering is the application of 
 
 \begin{table}[h]
     \centering
@@ -515,10 +567,9 @@ However, the list still needs further filtering, since many criteria are still n
     \begin{tabular}{|c|c|}
         \hline Step & Results \\ \hline
         Full extraction & 100000 \\ \hline
-        Themes filtering & 900000 \\ \hline
         Common words & 14 \\ \hline
+        Themes filtering & 900000 \\ \hline
         Length limitation &  \\ \hline
-        Reviews & 14 \\ \hline
     \end{tabular}
     \caption*{Source: Author}
 \end{table}
@@ -527,11 +578,11 @@ However, the list still needs further filtering, since many criteria are still n
 
 With the filtering done, a list of themes with the minimum threshold of phrases was generated. According to \ref{uc:20}, themes need an image to be displayed in two pages: the dashboard and the recording page. This section specifies the selection of such images, but since they are going to be used directly in the user interface, they need to be selected with more care. Factors such as resolution, size, format, and license must be taken into consideration.
 
-Each theme was selected using the Pexels, a website for stock photo and video, distributing images that can be downloaded and used for free. Pexels has a simple license allowing users to download, use without attribution, and edit the media without permission, ideal for the Fale Alguma Coisa app, that would display these images.
+Each theme was selected using the Pexels, a website for stock photo and videos, distributing images that can be downloaded and used for free. Pexels has a simple license allowing users to download, use without attribution, and edit the media without permission. This would be ideal for the Fale Alguma Coisa app that would display these images.
 
 \subsubsection{Application Input}
 
-With the filtering and image selection done, the themes can be inputted in the application, so that users view the themes in the dashboard and recording page. According to use case \ref{uc:40}, a REST API will expose the insertion of themes functionality.
+With the filtering and image selection done, the themes can be inputted in the application, so that users view the themes in the dashboard and recording page. According to use case \ref{uc:40}, a REST API will expose the insertion of theme functionality.  
 
 \subsection{Development}
 \label{sec:app-development}
@@ -546,23 +597,58 @@ To allow easier access to the voice recording app, a web-based application will 
 
 The design will use a mobile first approach, to ensure the user flow will be optimized when he is using a mobile device. The desktop flow will be designed and developed afterwards.
 
+\subsubsection{Data Storage}
+
+To allow for further modifications of the data structure defined in the Domain Model in the Appendix (\ref{appendix:srs:domain-model}), a NoSQL database will be chosen.
+
+\subsubsection{Architecture}
+
+The figure \ref{fig:webapp-architecture} illustrates a simple architecture diagram. The citizen scientist will access the application webapp, which will make requests to the backend. This backend will in turn translate these requests into a database query, retrieving or altering data.
+
+\begin{figure}[h]
+    \centering
+    \caption{Architecture diagram for the proposed WebApp}
+    \label{fig:webapp-architecture}
+    \includegraphics[width=\linewidth]{images/sw-req-spec/architecture.png}
+    \caption*{Source: Author}
+\end{figure}
+
 \subsubsection{Tools Selection}
 
 To develop the application, a selection of tools was made. The table \ref{tab:tools-selection} details the selected tools and explains each choice.
 
 \begin{table}[h]
     \centering
-    \begin{tabular}{|c|c|c|}
-        \hline Category & Selection & Explanation \\
-        \hline Design & Zeplin & Easy sharing  \\ 
-        \hline Design &  & access \\ 
-        \hline  & access & access \\ 
-        \hline Christmas Audubom Birdwatch & access & access \\ \hline 
-    \end{tabular}
-    \caption{Contribution for online citizen science projects}
+    \caption{Tools Selected to help the development of the Fale Alguma Coisa app.}
     \label{tab:tools-selection}
+    \begin{tabular}{|p{5cm}|p{2.5cm}|p{7cm}|}
+        \hline Category & Selection & Description \\
+        \hline Design & Zeplin & Collaboration tool for sharing layouts \\ 
+        \hline Version Control System (VCS) & GitHub & Open-source repository storage \\
+        \hline Continuous Integration (CI) & Circle CI & Automated Pipeline providing testing and building capabilities \\ 
+        \hline Continuous Delivery (CD) & Heroku & Platform as a Service to provide the application an cloud environment for testing \\ 
+        \hline Integrated Development Environment (IDE) & Visual Studio Code & Simple IDE to develop applications \\ \hline 
+    \end{tabular}
+    \caption*{Source: Author}
 \end{table}
 
+\subsubsection{Frameworks Selection}
+
+Within the wide range of frameworks to develop a web application, back-end, and database, the selection at table \ref{tab:frameworks-selection} was made based on familiarity with the Javascript ecossystem.
+
+\begin{table}[h]
+    \centering
+    \caption{Frameworks Selected to help the development of the Fale Alguma Coisa app.}
+    \label{tab:frameworks-selection}
+    \begin{tabular}{|c|c|}
+        \hline Category & Selection \\
+        \hline Web & ReactJS \\ 
+        \hline Backend & NestJS \\ 
+        \hline Database & MongoDB \\ 
+        \hline Testing & Jest \\ \hline 
+    \end{tabular}
+    \caption*{Source: Author}
+\end{table}
 
 \section{General Public Submission}
 \label{sec:proposal-public-submission}
