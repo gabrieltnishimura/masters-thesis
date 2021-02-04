@@ -553,20 +553,22 @@ orbitam 9
 orchestra 9
 \end{lstlisting}
 
-With the frequency list, it is possible to decide what words are the most common in this extraction.
+With the frequency list, it is possible to decide what words are the most common in this extraction. According to Mozilla (\url{https://github.com/common-voice/cv-sentence-extractor}), words with 80-60 repetitions are considered infrequent, and should be removed. Applying this rule, the list is reduced to 90.000.000 phrases.
 
-The next step in filtering is the application of 
+The next step in filtering is the separation of themes that do not teach a concept. These are places and people. This removal is done by verifying some characteristics in the Wikipedia page metadata, such as latitude or date of birth. After this removal, the extraction yielded 30.000.000 phrases.
+
+Finally, these valid pages with more common words must be filtered by length, to fit inside the phrase box in the user interface. This results into a list of 100.000 phrases, that can be used to populate the application.
 
 \begin{table}[h]
     \centering
     \caption{Phrases Filtering Results of the Portuguese Wikipedia (extracted 01/20/2021)}
     \label{tab:filtering}
-    \begin{tabular}{|c|c|}
-        \hline Step & Results \\ \hline
-        Full extraction & 100000 \\ \hline
-        Common words & 14 \\ \hline
-        Themes filtering & 900000 \\ \hline
-        Length limitation &  \\ \hline
+    \begin{tabular}{|p{5cm}|p{3cm}|p{3cm}|}
+        \hline Step & Pages (Themes) & Phrases \\ \hline
+        Full extraction & 1.000.000 & 1.000.000.000 \\ \hline
+        Common words & 3.000.000 & 90.000.000 \\ \hline
+        Themes filtering & 100.000 & 30.000.000 \\ \hline
+        Length limitation & 20.000 & 100.000 \\ \hline
     \end{tabular}
     \caption*{Source: Author}
 \end{table}
