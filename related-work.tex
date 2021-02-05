@@ -1,18 +1,18 @@
 \chapter[Related Work]{Related Work}
 \label{chap:related-work}
 
-In this section, we discuss how the literature has treated speech corpora creation, as well as the various conditions and variables considered in the process. Speech Corpus crafting itself is well established in the literature by TIMIT \cite{Lamel1992timmit} and SWITCHBOARD \cite{godfrey1992switchboard}. TIMIT creates a dataset of 6300 utterances by 630 speakers from different regions of the United States. The sentences were crafted to fit in one of the three categories: 1) dialect "shibboleth", 2) phonemically compact, and 3) phonetically diverse, but the selection itself was not well defined. Nevertheless, it is a very robust dataset with a time-aligned transcription and a usage guide to automatic speech recognition applications.
+In this section, we discuss how the literature has approached speech corpora creation, as well as the various conditions and variables considered in the process. Speech Corpus crafting itself is well established in the literature by TIMIT \cite{Lamel1992timmit} and SWITCHBOARD \cite{godfrey1992switchboard}. TIMIT creates a dataset of 6300 utterances by 630 speakers from different regions of the United States. The sentences were crafted to fit in one of the three categories: 1) dialect "shibboleth", 2) phonemically compact, and 3) phonetically diverse, but the selection itself was not well defined. Nevertheless, it is a very robust dataset with a time-aligned transcription and a usage guide to automatic speech recognition applications.
 
-The CHiME articles \cite{christensen2010chime} \cite{barker2013pascal}, \cite{barker2018fifth} (and more), are also source of structured speech corpora creation, challenging researchers to better recognize speech within a everyday listening environment using multiple distant microphones. Since the focus of these works lies on nonoptimal recording conditions, detailed information on the noise background, noise level, recording style and speech material has been provided, as well as comprehensive postprocessing work.
+The CHiME articles \cite{christensen2010chime} \cite{barker2013pascal}, \cite{barker2018fifth} (and more), are also source of structured speech corpora creation, challenging researchers to better recognize speech within an everyday listening environment using multiple distant microphones. Since the focus of these works lies on nonoptimal recording conditions, detailed information on the noise background, noise level, recording style and speech material has been provided, as well as comprehensive postprocessing work.
 
 A more recent work by \cite{chanchaochai2018globaltimit} attempts to extend the TIMIT functionality to other languages, by providing a method to create "TIMIT-like" datasets. These datasets are caracterized by having 1) Multiple (anonymously) identified speakers, 2) Wide range of phonetically representative inputs, 3) Wideband recordings with good acoustic quality, 4) Time-aligned lexical and phonemic transcripts and 5) Easily availability to anyone. The authors detail the speakers and sessions, the text corpus selection process, the recording procedures, as well as the transcription and alignment methods. At the moment, there have been five datasets created, with more planned or in progress.
 
-As for crowdfunding speech corpora, VoxForge \cite{voxforge} is a viable alternative to contribute speech. Besides being a free speech corpus repository under GPL licence, VoxForge also incorporates an acoustic model archive for open source speech recognition engines. This corpus has over 132h, 39h, 20h, 57h of recorded English, French, Italian, and German \footnote{As of January 20th of 2021, per metric from \url{http://www.voxforge.org/en/Downloads}, \url{http://www.voxforge.org/fr/Downloads}, \url{http://www.voxforge.org/de/Downloads}, and \url{http://www.voxforge.org/de/Downloads}, respectively.}, as well a variety of acoustic models for CMU Sphinx, Julius and HTK. The VoxForge platform presents itself as an alternative to closed source speech recognition engines, since many corpora must be purchased under restrictive licenses. This contribution tool has, however, a very limited user interface and a not a well-defined recording validation process, which could invalidate the corpus robustness.
+As for crowdfunding speech corpora, one viable alternative to contribute speech is VoxForge \cite{voxforge}. Besides being a free speech corpus repository under GPL licence, VoxForge also incorporates an acoustic model archive for open source speech recognition engines. This corpus has over 132h, 39h, 20h, 57h of recorded English, French, Italian, and German \footnote{As of January 20th of 2021, per metric from \url{http://www.voxforge.org/en/Downloads}, \url{http://www.voxforge.org/fr/Downloads}, \url{http://www.voxforge.org/de/Downloads}, and \url{http://www.voxforge.org/de/Downloads}, respectively.}, as well a variety of acoustic models for CMU Sphinx, Julius and HTK. The VoxForge platform presents itself as an alternative to closed source speech recognition engines, since many corpora must be purchased under restrictive licenses. This contribution tool has, however, a very limited user interface and a not a well-defined recording validation process, which could invalidate the corpus robustness.
 
 Common Voice \cite{ardila2019common} is a more recent platform for recording and listening to speech. It is a multilingual speech corpus, containing, as of 11th of December of 2020\footnote{Common Voice Corpus 6.1 accessible on  \url{https://commonvoice.mozilla.org/en/datasets}}, 1,686h of validated speech in English, and over 50h of validated Portuguese speech, in addition to other 27 languages. The main feature of this platform is the crowdsourced validation process, which all recordings must go through so that they are included in the validated corpus. All speech data is free and available under CC-0, the most permissive of licenses, and some recordings contain speaker demographics. One caveat though, is the lack of statistical analysis of the validated data, to ensure it is able to provide a quality dataset for speech recognition services. Nevertheless, the corpus was empirically tested through Mozilla’s DeepSpeech Speech-to-Text, achieving an average Character Error Rate improvement of 5.99 ± 5.48 for twelve target languages (German, French, Italian, Turkish, Catalan, Slovenian, Welsh, Irish, Breton, Tatar, Chuvash, and Kabyle), proving its effectiveness.
 
 \section*{Sistematic Literature Review}
-Finally, to identify the characteristics of a speech corpus, a systematic literature was performed \cite{kitchenham2009systematic}.
+Finally, to identify the characteristics of a speech corpus, a systematic literature review was performed \cite{kitchenham2009systematic}.
 
 The search was executed on August 1st, 2019 and the electronic database used was Web of Science. Since corpora are also presented at conferences, all article types were considered in the search, not limited by publication date. The whole process to choose relevant papers is defined below:
 
@@ -218,7 +218,7 @@ Each of our findings is discussed in the following subsections.
 
 \subsection{Publications by country and year}
 
-A simple analysis on table \ref{tab:country-analysis} infers that the research on speech corpus creation was stable until 2018, which had its last article published. This can be explained by the limited number of "Open Access" articles found and the small number of databases searched (Web Of Science only). A more permissive literature review should be able to better understand the conditions on which non-open articles are being released, as well as enhance coverage of the state-of-the-art in this field.
+A simple analysis on table \ref{tab:country-analysis} infers that the research on speech corpus creation was stable until 2018, year in which its last article was published. This can be explained by the limited number of "Open Access" articles found and the small number of databases searched (Web Of Science only). A more permissive literature review should enable to better understand the conditions on which non-open articles are being released, as well as enhance coverage of the state-of-the-art in this field.
 
 The table also categorizes the countries research quota. More developed countries such as United States and Japan have created more corpora over the years.
 
@@ -232,7 +232,7 @@ Table \ref{tab:content-analysis} contains the content-analysis for the works in 
 
 \subsubsection{Application Area}
 
-Most of the corpora found in the articles were a Read Speech Corpus (\cite{almeman2018building}, \cite{ruilan2016improving}, \cite{klessa2013paralingua}, \cite{clopper2006nationwide}), revealing the lack of structured language documentation in the current research. This can be explained by the type of its content: a scripted content, with less bias from the speakers when compared to spontaneous corpora. Three of these works (\cite{ng2017shefce}, \cite{mansikkaniemi2017automatic} and \cite{nagino2008building}) worked on automating corpus creation by automatically aligning words, detecting syllables and phonemes, and even enhancing corpora, as currently most recording and alignment work is done manually.
+Most of the corpora found in the articles were a Read Speech Corpus (\cite{almeman2018building}, \cite{ruilan2016improving}, \cite{klessa2013paralingua}, \cite{clopper2006nationwide}), revealing the lack of structured language documentation in the current research. This can be explained by the type of its content: a scripted content, with less bias from the speakers when compared to spontaneous corpora. Three of these studies (\cite{ng2017shefce}, \cite{mansikkaniemi2017automatic} and \cite{nagino2008building}) worked on automating corpus creation by automatically aligning words, detecting syllables and phonemes, and even enhancing corpora, as most recording and alignment work is currently done manually.
 
 \subsubsection{Languages}
 
@@ -245,7 +245,7 @@ current speech corpus creation characteristics used in the literature, each disc
 
 \subsubsection{Scenario}
 
-Almost all corpora specified the scenario at which the recordings were executed. A meeting room (\cite{liu2016sheffield}, \cite{moore2017sheffield}); a anechoic booth (\cite{goldman2016siwis}); a quiet room inside a laboratory (\cite{ramli2017first}), etc. Although, each corpus is not limited to one scenario. For instance, \cite{almeman2018building} recorded in four different scenarios: inside the home, in a moving car, in a public place, and in a quiet place. Such characteristic is critical to corpus creation.
+Almost all corpora specified the scenario in which the recordings were executed. A meeting room (\cite{liu2016sheffield}, \cite{moore2017sheffield}); a anechoic booth (\cite{goldman2016siwis}); a quiet room inside a laboratory (\cite{ramli2017first}), etc. Although, each corpus is not limited to one scenario. For instance, \cite{almeman2018building} recorded in four different scenarios: inside the home, in a moving car, in a public place, and in a quiet place. Such characteristic is critical to corpus creation.
 
 \subsubsection{Total duration}
 
@@ -253,7 +253,7 @@ Almost all corpora specified the scenario at which the recordings were executed.
 
 \subsubsection{Sampling Rate}
 
-The sampling rate is major to the corpus creation. It is cited in 11 out of the 14 works read. The reason it has so much importance lies on the corpus main usage: automatic speech recognition software. Knowing the frequency at which the recordings are done, the computer is able to better recognize subtleties in a more sampled audio, as well as simplify processing in a lower frequency sample rate.
+The sampling rate is major to the corpus creation. It is cited in 11 out of the 14 works read. The reason it has so much importance lies in the corpus main usage: automatic speech recognition software. Knowing the frequency at which the recordings are undertaken, the computer is able to better recognize subtleties in a more sampled audio, as well as simplify processing in a lower frequency sample rate.
 
 \subsubsection{Noisy microphones}
 
@@ -265,7 +265,7 @@ When recording accent (\cite{moore2017sheffield}), dialect (\cite{almeman2018bui
 
 \subsubsection{Transcription and time alignment}
 
-In the context of automatic speech recognition, a speech corpus containing  transcription and time alignment (additional to the recordings) enable computers and speech recognition specialists a more faithful analysis. Its importance can be verified by 85\% of the works evaluated.
+In the context of automatic speech recognition, a speech corpus containing  transcription and time alignment (additional to the recordings) enable computers and speech recognition specialists a more faithful analysis. Its importance can be verified in 85\% of the works evaluated.
 
 %\subsubsection{Open access}
 
