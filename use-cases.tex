@@ -1,0 +1,152 @@
+\subsubsection{UC01 - View Home}
+
+\begin{table}[h]
+\centering
+\caption{UC01 - View Home}
+\label{uc:01}
+\begin{tabular}{|p{3cm}|p{1cm}|p{5cm}|p{5cm}|}
+\hline
+Use Case:       & \multicolumn{3}{p{11cm}|}{View Home} \\ \hline
+Use Case ID     & \multicolumn{3}{p{11cm}|}{UC01} \\ \hline
+Description     & \multicolumn{3}{p{11cm}|}{After entering the application, the unregistered citizen is shown an quick animated introductory screen (splash). After the splash, the homepage is displayed with information on the Fale Alguma Coisa citizen science project, as well as statistics on the progress of the recordings and contributors.} \\ \hline
+Rationale       & \multicolumn{3}{p{11cm}|}{So that they feel more inside a native app and know more about the initiative} \\ \hline
+Precondition    & \multicolumn{3}{p{11cm}|}{None} \\ \hline
+Post-condition  & \multicolumn{3}{p{11cm}|}{Application shows the home page} \\ \hline
+Actor           & \multicolumn{3}{p{11cm}|}{Unregistered citizen} \\ \hline
+Trigger         & \multicolumn{3}{p{11cm}|}{Enters the application} \\ \hline
+Main flow of events & Step  & User action & System response \\ \hline
+                    & 1     & User enters the application & A full screen image with the logo, title and description of the app is shown \\ \hline
+                    & 2     & User waits for a short period of time (<200ms) & The homepage is displayed, with informations and statistics \\ \hline
+Exceptions      & \multicolumn{3}{p{11cm}|}{None} \\ \hline
+\end{tabular}
+\caption*{Source: Author}
+\end{table}
+
+\subsubsection{UC02 - Read Home Terms or Privacy}
+
+\begin{table}[h]
+\centering
+\caption{UC02 - Read Home Terms or Privacy}
+\label{uc:02}
+\begin{tabular}{|p{3cm}|p{1cm}|p{5cm}|p{5cm}|}
+\hline
+Use Case:       & \multicolumn{3}{p{11cm}|}{Read Home Terms or Privacy} \\ \hline
+Use Case ID     & \multicolumn{3}{p{11cm}|}{UC02} \\ \hline
+Description     & \multicolumn{3}{p{11cm}|}{In the homepage, should the user want to read the terms of service or privacy policy of the Fale Alguma Coisa app, a simple link in the footer is displayed.} \\ \hline
+Rationale       & \multicolumn{3}{p{11cm}|}{The user understands what he is being subjected when using the service, as well how his data is being used} \\ \hline
+Precondition    & \multicolumn{3}{p{11cm}|}{None} \\ \hline
+Post-condition  & \multicolumn{3}{p{11cm}|}{Terms of service or privacy policy is shown} \\ \hline
+Actor           & \multicolumn{3}{p{11cm}|}{Citizen, not necessarily logged} \\ \hline
+Trigger         & \multicolumn{3}{p{11cm}|}{Clicks the footer link} \\ \hline
+Main flow of events & Step  & User action & System response \\ \hline
+                    & 1     & User enters the application & Splash animation is shown \\ \hline
+                    & 2     & User waits for animation & Home page is displayed \\ \hline
+                    & 3     & User clicks on the "Terms of Service" or "Privacy Policy" link in the footer & Page is displayed with information\\ \hline
+Exceptions      & \multicolumn{3}{p{11cm}|}{None} \\ \hline
+\end{tabular}
+\caption*{Source: Author}
+\end{table}
+
+
+\subsubsection{UC03 - Navigate Login}
+
+\begin{table}[h]
+\centering
+\caption{UC03 - Navigate Login}
+\label{uc:03}
+\begin{tabular}{|p{3cm}|p{1cm}|p{5cm}|p{5cm}|}
+\hline
+Use Case:       & \multicolumn{3}{p{11cm}|}{Navigate Login} \\ \hline
+Use Case ID     & \multicolumn{3}{p{11cm}|}{UC03} \\ \hline
+Description     & \multicolumn{3}{p{11cm}|}{A registered citizen wants to navigates from the home-page to the sign-in page, so that they login (or register) to their account} \\ \hline
+Rationale       & \multicolumn{3}{p{11cm}|}{Access to the registered application} \\ \hline
+Precondition    & \multicolumn{3}{p{11cm}|}{User is registered to the Fale Alguma Coisa app} \\ \hline
+Post-condition  & \multicolumn{3}{p{11cm}|}{User reaches login page} \\ \hline
+Actor           & \multicolumn{3}{p{11cm}|}{Registered citizen} \\ \hline
+Trigger         & \multicolumn{3}{p{11cm}|}{Enters the application} \\ \hline
+Main flow of events & Step  & User action & System response \\ \hline
+                    & 1     & User enters the application & Splash animation is shown \\ \hline
+                    & 2     & User clicks the login button in the header & Login page is displayed \\ \hline
+Exceptions      & \multicolumn{3}{p{11cm}|}{None} \\ \hline
+\end{tabular}
+\caption*{Source: Author}
+\end{table}
+
+
+\subsubsection{UC10 - Accept Terms}
+
+\begin{table}[h]
+\centering
+\caption{UC10 - Accept Terms}
+\label{uc:10}
+\begin{tabular}{|p{3cm}|p{1cm}|p{5cm}|p{5cm}|}
+\hline
+Use Case:       & \multicolumn{3}{p{11cm}|}{Accept Terms} \\ \hline
+Use Case ID     & \multicolumn{3}{p{11cm}|}{UC10} \\ \hline
+Description     & \multicolumn{3}{p{11cm}|}{An unregistered citizen would like to view and accept the terms of service before recording, so that he understands how his data is being used.} \\ \hline
+Rationale       & \multicolumn{3}{p{11cm}|}{Transparency for the user} \\ \hline
+Precondition    & \multicolumn{3}{p{11cm}|}{User is in the homepage and has not accepted the terms of service} \\ \hline
+Post-condition  & \multicolumn{3}{p{11cm}|}{Acceptance of terms is recorded} \\ \hline
+Actor           & \multicolumn{3}{p{11cm}|}{Unregistered citizen} \\ \hline
+Trigger         & \multicolumn{3}{p{11cm}|}{Clicks the record button} \\ \hline
+Main flow of events & Step  & User action & System response \\ \hline
+                    & 1     & User clicks the record button & Terms of service page is displayed \\ \hline
+                    & 2     & User reads and accepts the Terms of Service & Acceptance is recorded and the user is redirected to the next step of the recording flow \\ \hline
+Exceptions      & \multicolumn{3}{p{11cm}|}{If the user does not accept the terms, they are redirected back to the homepage.} \\ \hline
+\end{tabular}
+\caption*{Source: Author}
+\end{table}
+
+
+
+\subsubsection{UC11 - Configure Microphone}
+
+\begin{table}[h]
+\centering
+\caption{UC11 - Configure Microphone}
+\label{uc:11}
+\begin{tabular}{|p{3cm}|p{1cm}|p{5cm}|p{5cm}|}
+\hline
+Use Case:       & \multicolumn{3}{p{11cm}|}{Configure Microphone} \\ \hline
+Use Case ID     & \multicolumn{3}{p{11cm}|}{UC11} \\ \hline
+Description     & \multicolumn{3}{p{11cm}|}{An unregistered citizen would like to properly configure my microphone before recording, so that he can record without interruption.} \\ \hline
+Rationale       & \multicolumn{3}{p{11cm}|}{Proper configuration of the microphone before the recording flow is started.} \\ \hline
+Precondition    & \multicolumn{3}{p{11cm}|}{User has accepted the terms of service and has not yet allowed the microphone in the browser} \\ \hline
+Post-condition  & \multicolumn{3}{p{11cm}|}{User redirected to the recording page} \\ \hline
+Actor           & \multicolumn{3}{p{11cm}|}{Unregistered citizen} \\ \hline
+Trigger         & \multicolumn{3}{p{11cm}|}{Clicks the record button} \\ \hline
+Main flow of events & Step  & User action & System response \\ \hline
+                    & 1     & User clicks the record button in the homepage & Configure microphone page is displayed, with explanation on how to allow it \\ \hline
+                    & 2     & User user clicks to continue & System prompt for the microphone to be allowed \\ \hline
+                    & 3     & User allows the usage of the microphone & User is redirected to. the recording page \\ \hline
+Exceptions      & \multicolumn{3}{p{11cm}|}{If the user does not allow the microphone, they are redirected to a page detailing the app has no access to the mic} \\ \hline
+\end{tabular}
+\caption*{Source: Author}
+\end{table}
+
+\subsubsection{UC12 - Record Phrases From Homepage}
+
+\begin{table}[h]
+\centering
+\caption{UC12 - Record Phrases From Homepage}
+\label{uc:12}
+\begin{tabular}{|p{3cm}|p{1cm}|p{5cm}|p{5cm}|}
+\hline
+Use Case:       & \multicolumn{3}{p{11cm}|}{Record Phrases From Homepage} \\ \hline
+Use Case ID     & \multicolumn{3}{p{11cm}|}{UC12} \\ \hline
+Description     & \multicolumn{3}{p{11cm}|}{A citizen would like to read science phrases with definitions and curiosities, so that he learns about subjects a she is contributing.} \\ \hline
+Rationale       & \multicolumn{3}{p{11cm}|}{Contributing to science and learning topics} \\ \hline
+Precondition    & \multicolumn{3}{p{11cm}|}{Accepted the terms of service, allowed the microphone, is in the homepage} \\ \hline
+Post-condition  & \multicolumn{3}{p{11cm}|}{Phrase is recorded} \\ \hline
+Actor           & \multicolumn{3}{p{11cm}|}{Unregistered citizen} \\ \hline
+Trigger         & \multicolumn{3}{p{11cm}|}{Clicks the record button} \\ \hline
+Main flow of events & Step  & User action & System response \\ \hline
+                    & 1     & User clicks the record button in the homepage & Recording page is displayed, as well as a tutorial explanation on how to record \\ \hline
+                    & 2     & User clicks and holds the red recording button & The tutorial message is changed and the page focuses on the phrase to be read \\ \hline
+                    & 3     & User speaks the phrase and releases the red recording button & The phrase is locally recorded and a confirmation is shown \\ \hline
+                    & 4     & User clicks on the play button & Recording is played back \\ \hline
+                    & 5     & User confirms that the recording is ok & Next phrase is shown \\ \hline
+Exceptions      & \multicolumn{3}{p{11cm}|}{The user may not find the recording correct. If so, he may reject the recording at step 4 and record again.} \\ \hline
+\end{tabular}
+\caption*{Source: Author}
+\end{table}
