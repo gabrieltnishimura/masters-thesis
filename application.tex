@@ -44,22 +44,21 @@ This table presents the artefacts to be produced, and their respective locations
 \begin{tabular}{|p{3.5cm}|p{2.5cm}|p{9cm}|}
     \hline 
     Artefact & Location & Description \\ \hline 
-    Purpose & Appendix \ref{appendix:purpose} & Defines the purpose of the Software Requirements Specification documentation \\ \hline
-    Scope & Appendix \ref{appendix:scope} & Artefacts, Objectives, Out of Scope \\ \hline
-    System Overview & Appendix \ref{appendix:system-overview} & Project perspective, System Context, General Constraints, Assumptions and Dependencies \\ \hline
-    Actor List & Appendix \ref{appendix:actor-list} & List of actors involved with the system \\ \hline 
-    Simplified Requirements & Section \ref{sec-simplified-use-cases} & Simplified use cases \\ \hline
-    Scenario-based Models & Appendix \ref{appendix:scenario-based-model} & Detailed use cases \\ \hline
-    Class Models & Appendix \ref{appendix:domain-model} & Class diagrams to model the domain of the system, mapping relationship and collaboration \\ \hline
-    Behavior Models & Appendix \ref{appendix:behavior-model} & State and sequence diagrams to fully document specific and more complex behavior \\ \hline
-    Non-Function Requirements & Appendix \ref{appendix:non-fuctional-requirements} & i.e.: Usability, Performance, Security, Legal, Requirements, etc. \\ \hline
-    Interface Requirements & Appendix \ref{appendix:interface-requirements} & Machine and External Systems interfaces \\ \hline
-    Navigation Design & Appendix \ref{appendix:navigation-design} & Navigation Semantic Units \\ \hline
-    User Interface Design & Appendix \ref{appendix:user-interface-design} & For each use case, a user interface will be developed and documented \\ \hline
-    Application Architecture & Appendix \ref{appendix:architecture} & Before WebApp must have  \\ \hline
-    Tools and Frameworks Selection & Appendix \ref{appendix:tools-selection} & To develop the documented application, a set of tools and frameworks shall be selected \\ \hline
-    FaleAlgumaCoisa WebApp & Appendix \ref{appendix:webapp} & Description of developed web application \\ \hline
-    FaleAlgumaCoisa Backend & Appendix \ref{appendix:backend} & Description of developed backend application \\ \hline
+    Purpose & Appendix \ref{appendix:srs:purpose} & Defines the purpose of the Software Requirements Specification documentation \\ \hline
+    Scope & Appendix \ref{appendix:srs:scope} & Artefacts, Objectives, Out of Scope \\ \hline
+    System Overview & Appendix \ref{appendix:srs:system-overview} & Project perspective, System Context, General Constraints, Assumptions and Dependencies \\ \hline
+    Actor List & Table \ref{tab:actor-list} & List of actors involved with the system \\ \hline 
+    Simplified Requirements & Section \ref{sec:simplified-use-cases} & Simplified use cases \\ \hline
+    Scenario-based Models & Appendix \ref{appendix:srs:scenario-based-models} & Detailed use cases \\ \hline
+    Class Models & Appendix \ref{appendix:srs:domain-model} & Class diagrams to model the domain of the system, mapping relationship and collaboration \\ \hline
+    Behavior Models & Appendix \ref{appendix:srs:behavioral-models} & State and sequence diagrams to fully document specific and more complex behavior \\ \hline
+    Non-Function Requirements & Appendix \ref{appendix:srs:nonfunctional-requirements} & i.e.: Usability, Performance, Security, Legal, Requirements, etc. \\ \hline
+    Navigation Design & Section \ref{sec:navigation-design} & Navigation Semantic Units \\ \hline
+    User Interface Design & Section \ref{sec:app-user-interface} & For each use case, a user interface will be developed and documented \\ \hline
+    Tools and Frameworks Selection & Table \ref{tab:tools-selection} & To develop the documented application, a set of tools and frameworks shall be selected \\ \hline
+    Application Architecture & Section \ref{sec:app-architecture} & Before WebApp must have  \\ \hline
+    FaleAlgumaCoisa WebApp & Section \ref{sec:webapp-implementation} & Description of developed web application \\ \hline
+    FaleAlgumaCoisa Backend & Section \ref{sec:backend-implementation} & Description of developed backend application \\ \hline
 \end{tabular}
 \caption*{Source: Author}
 \end{table}
@@ -68,7 +67,7 @@ This table presents the artefacts to be produced, and their respective locations
 \section{Use Cases}
 \label{sec:simplified-use-cases}
 
-A simplified list of use cases is reproduced in the following tables (\ref{tab:falealgumacoisa-simplified-home}, \ref{tab:falealgumacoisa-simplified-recording}, \ref{tab:falealgumacoisa-simplified-dashboard}, \ref{tab:falealgumacoisa-simplified-social}, \ref{tab:falealgumacoisa-simplified-gamification}, \ref{tab:falealgumacoisa-simplified-login-and-registration}) below, separated by feature set. To a more complete specification, refer to section \ref{appendix:use-cases} in the Appendix.
+A simplified list of use cases is reproduced in the following tables (\ref{tab:falealgumacoisa-simplified-home}, \ref{tab:falealgumacoisa-simplified-recording}, \ref{tab:falealgumacoisa-simplified-dashboard}, \ref{tab:falealgumacoisa-simplified-social}, \ref{tab:falealgumacoisa-simplified-gamification}, \ref{tab:falealgumacoisa-simplified-login-and-registration}) below, separated by feature set. To a more complete specification, refer to section \ref{appendix:srs:scenario-based-models} in the Appendix.
 
 \subsection{Home}
 
@@ -82,7 +81,6 @@ In table \ref{tab:falealgumacoisa-simplified-home}, use cases affecting the home
 \hline
     Code & Use Case Name & Description \\ \hline
     UC01 & View Home Splash & An unregistered citizen wants to view an animated introductory screen (splash) when entering the application, so that he feels more inside a native app. \\ \hline
-    UC02 & View Home Description & An unregistered citizen wants to check the initiative description, so that he understands more about the Fale Alguma Coisa citizen science project. \\ \hline
     UC03 & Navigate Home Login & A registered citizen wants to navigates from the homepage to the sign-in page, so that he logins (or register) to his account. \\ \hline
     UC04 & Navigate Home Recording & An unregistered citizen wants to easily navigate from the homepage to the recording page, so that he can contribute his voice. \\ \hline
     UC05 & Read Home Terms & An unregistered citizen wants to reads the terms of service (and privacy policy) of Fale Alguma Coisa, so that he understands better what the service has to offer and what kind of data will be recorded. \\ \hline
@@ -90,10 +88,9 @@ In table \ref{tab:falealgumacoisa-simplified-home}, use cases affecting the home
 \caption*{Source: Author}
 \end{table}
 
-\clearpage
 \subsection{Recording}
 
-Represents the most important feature in the application, as the citizen will use it to record his voice. It also provides supporting features, such as skipping phrases and resuming the recording session. The list of simplified use cases is listed in table \ref{tab:falealgumacoisa-simplified-recording}; with the complete version available in Appendix \ref{appendix:scenario-based-model}
+Represents the most important feature in the application, as the citizen will use it to record his voice. It also provides supporting features, such as skipping phrases and resuming the recording session. The list of simplified use cases is listed in table \ref{tab:falealgumacoisa-simplified-recording}; with the complete version available in Appendix \ref{appendix:srs:scenario-based-models}
 
 \begin{table}[h]
 \caption{Simplified Recording Use Cases for the Fale Alguma Coisa WebApp}
@@ -106,15 +103,12 @@ Represents the most important feature in the application, as the citizen will us
     UC11 & Configure Microphone & An unregistered citizen would like to properly configure my microphone before recording, so that he can record without interruption. \\ \hline
     UC12 & Record Phrases & A citizen would like to read science phrases with definitions and curiosities, so that he learns about subjects as he is contributing. \\ \hline
     UC13 & Group Phrases & A citizen would like to read phrases grouped by theme, so that he can learn more from each subject as he is contributing. To finish a theme, the citizen must read 6 phrases. \\ \hline
-    UC14 & Read Tutorial & A citizen would like to read a tutorial explaining how to record, so that he learns how to properly record phrases. \\ \hline
-    UC15 & Watch Recording Animations & A citizen would like to see animations on each step of the recording (enter the page, start the recording, stop the recording), so that he feels more engaged with the application. \\ \hline
     UC16 & Skip Phrase & A citizen would like to skip a phrase when he (1) does not know how to pronounce, or (2) finds a foreign word, or (3) finds another specified reason, so that he only speaks the correct phrases. A maximum of 2 skips are allowed. \\ \hline
     UC17 & Stop Recording Session & A citizen would like to stop this recording session by clicking the logo and confirming the exit, so that he can resume it afterwards. \\ \hline
 \end{tabular}
 \caption*{Source: Author}
 \end{table}
 
-\clearpage
 \subsection{Dashboard}
 
 Table \ref{tab:falealgumacoisa-simplified-dashboard} lists all user stories related to the dashboard page, such as where the user will be able to choose themes to record, open the menu, check his level, etc.
@@ -126,12 +120,8 @@ Table \ref{tab:falealgumacoisa-simplified-dashboard} lists all user stories rela
 \begin{tabular}{|p{1cm}|p{3cm}|p{10cm}|}
 \hline
     Code & Use Case Name & Description \\ \hline
-    US20 & Navigate Register & An unregistered citizen would like to easily register his data through a button click, so that he can enjoy all features of the logged area. \\ \hline
-    US21 & View Actions & A registered citizen would like to see his actions in a dashboard after logging in, so that he can better contribute to the project. \\ \hline
-    US22 & Recommend Themes & A registered citizen would like to see a list of recommended themes to speak, so that he can choose one from the list. \\ \hline
-    US23 & View Progress Level & A registered citizen would like to view my progress level, so that he know how far have he  progressed in my contributions. \\ \hline
-    US24 & Open Menu & A registered citizen would like to open the menu, so that he knows which are his possible actions in the app. \\ \hline
-    US25 & View Notifications & A registered citizen would like to check notifications, so that he understands what happened while he was gone. \\ \hline
+    US21 & Recommend Themes & A registered citizen would like to see his actions in a dashboard after logging in, so that he can better contribute to the project. \\ \hline
+    US25 & View Dashboard Menu & A registered citizen would like to check notifications, so that he understands what happened while he was gone. \\ \hline
 \end{tabular}
 \caption*{Source: Author}
 \end{table}
@@ -149,8 +139,7 @@ To allow the social interaction with other users, the table \ref{tab:falealgumac
     Code & Use Case Name & Description \\ \hline
     US30 & Add Friend & A registered citizen would like to add a friend, so that he can check them in the friends leaderboard afterwards. \\ \hline
     US31 & View Notifications & A registered citizen would like to check notifications, so that he can know what happened when he was away. \\ \hline
-    US32 & Receive Notifications & A registered citizen would like to know when someone added him through notifications, so that he can add them back later. \\ \hline
-    US33 & Refer Friends & A registered citizen would like to refer friends to the application, so that he can play with them afterwards. \\ \hline
+    US32 & Refer Friends & A registered citizen would like to refer friends to the application, so that he can play with them afterwards. \\ \hline
 \end{tabular}
 \caption*{Source: Author}
 \end{table}
@@ -166,13 +155,11 @@ Table \ref{tab:falealgumacoisa-simplified-gamification} details the engagement c
 \begin{tabular}{|p{1cm}|p{3cm}|p{10cm}|}
 \hline
     Code & Use Case Name & Description \\ \hline
-    US40 & Earn First Recording & A registered citizen would like to get 100 points when he records his first phrase, so that he can engage better in the application. \\ \hline
-    US41 & Earn First Theme & A registered citizen would like to get 400 points when he records his first theme, so that he can engage better in the application. \\ \hline
-    US42 & Earn Theme & A registered citizen would like to get 300 points when he records subsequent themes, so that he can engage better in the application. \\ \hline
-    US43 & Earn Registration & A registered citizen would like to get 500 points when he registers his speaker data, so that he can better engage with the application. \\ \hline
-    US44 & Calculate Level & A registered citizen would like to measure his points through a level, so that he can more easily compare himself with other users. \\ \hline
-    US45 & Compete Top Players & A registered citizen would like to know who are the top contributors in the space and where he is in the list, so that he can compete against them. \\ \hline
-    US46 & Compete Friends & A registered citizen would like to know where his friends are in the friends leaderboard, so that he can compete against them. \\ \hline
+    US40 & Earn First Recordings & A registered citizen would like to get 100 points when he records his first phrase, so that he can engage better in the application. \\ \hline
+    US41 & Earn Theme & A registered citizen would like to get 300 points when he records subsequent themes, so that he can engage better in the application. \\ \hline
+    US42 & Earn Registration & A registered citizen would like to get 500 points when he registers his speaker data, so that he can better engage with the application. \\ \hline
+    US43 & Calculate Level & A registered citizen would like to measure his points through a level, so that he can more easily compare himself with other users. \\ \hline
+    US44 & Competition & A registered citizen would like to know who are the top contributors in the space and where he is in the list, so that he can compete against them. \\ \hline
 \end{tabular}
 \caption*{Source: Author}
 \end{table}
@@ -188,15 +175,13 @@ The application should provide user authentication to enable data management and
 \begin{tabular}{|p{1cm}|p{3cm}|p{10cm}|}
 \hline
     Code & Use Case Name & Description \\ \hline
-    US50 & Login Social & An unregistered citizen would like to login (using social login - Facebook / Google) on the app, so that he can login later and save my progress. \\ \hline
-    US51 & Register Metadata & A unregistered citizen would like to register his anonymous data on his first login, so that he can provide better metadata to my recordings afterwards. \\ \hline
-    US52 & Update Account & A registered citizen would like to update his account data, so that he can provide accurate metadata on the recordings. \\ \hline
-    US53 & Delete Account & A registered citizen would like to remove his account data (and his recordings, if necessary), so that he can remove my metadata from this application. \\ \hline
+    US50 & Login Social & An unregistered citizen would like to login (using social login - Facebook / Google) on the app, so that they can login later and save my progress. \\ \hline
+    US51 & Update Account & A registered citizen would like to update his account data, so that they can provide accurate metadata on the recordings. \\ \hline
+    US52 & Delete Account & A registered citizen would like to remove his account data (and their recordings, if wanted), so that they can remove my metadata from this application. \\ \hline
 \end{tabular}
 \caption*{Source: Author}
 \end{table}
 
-\clearpage
 \section{Navigation Design}
 \label{sec:navigation-design}
 
@@ -368,7 +353,7 @@ The ability to add and track (follow) friends is possible with the layouts descr
 
 \subsection{Refer Friends}
 
-To earn more contribution points, the citizen scientist can also refer new friends using the Refer friends page. Clicking a button alows the user to share a like. The link shared redirects to a registration page, and both users get 100 points after the registration of the referred user. More details on \ref{appendix:sec:refer-a-friend}.
+To earn more contribution points, the citizen scientist can also refer new friends using the Refer friends page. Clicking a button alows the user to share a like. The link shared redirects to a registration page, and both users get 100 points after the registration of the referred user. More details on Appendix \ref{uc:32}.
 
 \subsection{Login and Registration}
 
@@ -456,22 +441,22 @@ Except for the last step of integrating with the application, this process is fu
 
 \subsection{Theme Anatomy}
 
-Each group of phrases is entitled "theme". By specification (\ref{srs:uc12} and \ref{srs:uc16}), a theme is composed of 8 phrases, 6 of which must be recorded to finish a theme; allowing up to 2 skips. Figure \ref{fig:falealgumacoisa-phrase-all} illustrates this structure and figure \ref{phrase-skip} displays what happens to a recording group when a phrase is skipped.
+Each group of phrases is entitled "theme". By specification (\ref{uc:14} and \ref{uc:15}), a theme is composed of 8 phrases, 6 of which must be recorded to finish a theme; allowing up to 2 skips. Figure \ref{fig:falealgumacoisa-phrase-all} illustrates this structure and figure \ref{fig:falealgumacoisa-phrase-skip} displays what happens to a recording group when a phrase is skipped.
 
 \begin{figure}[h]
     \centering
     \caption{Selected phrases of a theme. Out of 8, only 6 are shown to the user.}
+    \label{fig:falealgumacoisa-phrase-all}
     \includegraphics[width=\linewidth]{images/phrase-selection/phrase-all.png}
     \caption*{Source: Author}
-    \label{fig:falealgumacoisa-phrase-all}
 \end{figure}
 
 \begin{figure}[h]
     \centering
     \caption{Recorded theme example. The sixth phrase was skipped, thus allowing the recording of the seventh phrase.}
+    \label{fig:falealgumacoisa-phrase-skip}
     \includegraphics[width=\linewidth]{images/phrase-selection/phrase-skip.png}
     \caption*{Source: Author}
-    \label{fig:falealgumacoisa-phrase-skip}
 \end{figure}
 
 \subsection{Filtering Criteria}
@@ -589,6 +574,7 @@ With the filtering and image selection done, the themes can be inputted in the a
 The previous sections in this chapter had detailed explanations of non-technical characteristics of the application. These characteristics help understand the "what" that compromises the voice recording WebApp, detailing functionality and behavior through use cases, navigation semantics and user interface. The development section hereby details the "how", delving into the technical particularities involved when creating this kind of application. The sections below detail three different perspectives on specifying the development: (1) architectural model, and (2) development model.
 
 \subsection{Architecture Model}
+\label{sec:app-architecture}
 
 In the architecture model, it is necessary to define each component of the system, specifying their responsibility in the business process. The figure \ref{fig:webapp-architecture} illustrates a simple architecture diagram. The citizen scientist will access the application WebApp, which will make requests to the Backend. This backend will in turn translate these requests into a database query, retrieving or altering data.
 
@@ -603,12 +589,14 @@ In the architecture model, it is necessary to define each component of the syste
 These three components are defined below:
 
 \subsubsection{WebApp}
+\label{sec:backend-implementation}
 
 To allow easier access to the voice recording app, a web-based application will be developed. This factor positively influences the capacity of the app to update over time, when compared to an application developed in a native environment. It also enables users over mobile and desktop to access the same application, and although the layout may have to be redesigned, most logic is reused. 
 
 This application performs most of the user interface logic in the web browser, communicating with the Backend to fetch or persist data, for example. This kind of WebApp is called Single Page Application (SPA), and communicates with the Backend primarily using web APIs.
 
 \subsubsection{Backend}
+\label{sec:webapp-implementation}
 
 To separate the visual interface of the SPA with the necessary data interactions, it is common to provide such functionality through a Backend. The Backend is a separate component that serves an integration point between the WebApp and the persistence layer (database). It encapsulates many business rules (for example, in the Fale Alguma Coisa Backend, whenever the user records a theme, he receives a set number of points), processing them as requested.
 
@@ -657,6 +645,8 @@ Within the wide range of frameworks to develop a web application, back-end, and 
     \end{tabular}
     \caption*{Source: Author}
 \end{table}
+
+
 
 \subsubsection{Repositories}
 
