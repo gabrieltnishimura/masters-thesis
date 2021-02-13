@@ -22,14 +22,14 @@ Towards researching \textbf{scientists}, the Fale Alguma Coisa app should provid
 
 Directed towards anyone interested in learning and contributing to science.
 
-\section{Outside scope}
+\section{Scope Limitations}
 
-However, some elements are outside of the scope of this system. These elements are clarified in this section, as Fale Alguma Coisa should \textbf{not}:
+Some elements are outside of the scope of this system. These elements are clarified in this section, as Fale Alguma Coisa should \textbf{not}:
 \begin{itemize}
-    \item allow for association of recording data and personal identification data (name, email);
-    \item support internationalization in the WebApp;
-    \item convert audio data into another format;
-    \item support offline recording.
+    \item allow for association of recording data and personal identification data (name, email), to prevent speaker inadequate information disclosure;
+    \item support internationalization in the WebApp, since this is a study focused on the Portuguese language;
+    \item convert audio data into another format, to reduce the loss of audio quality in conversions;
+    \item support offline recording, as this .
 \end{itemize}
 
 \section{Artefacts}
@@ -201,7 +201,7 @@ A NSU is composed of a set of navigation elements called \textit{ways of navigat
 
 In figure \ref{fig:app-nsu-example}, the navigation behavior to record a phrase of an unregistered user is illustrated. As the unregistered user enters the homepage, he clicks the start recording button. However, since he has neither accepted the terms of service nor enabled his microphone permission, he must go through these pages. If he denies the terms or microphone permission, he is redirected to the homepage. If the user allows both, he will enter the recording page, where he is able to record phrases and donate his voice.
 
-This is only one example of the more complex user Ways of Navigations. Refer to appendix \ref{appendix:navigation-design} to a more complete list of NSUs.
+% This is only one example of the more complex user Ways of Navigations. Refer to appendix \ref{sec:navigation-design} to a more complete list of NSUs.
 
 \section{Aesthetic Design}
 \label{sec:aesthetic-design}
@@ -512,7 +512,7 @@ python3 word_usage.py -i wiki.pt.all.txt >> word_usage.pt.txt
 
 The result of the script is a file with the tuple \texttt{<word, frequency>}, and one simplified example is available at listing \ref{lst:word-frequency-example}.
 
-\begin{lstlisting} [caption={Word frequency extraction example from the Portuguese Wikipedia (word_usage.pt.txt)}, captionpos=t, source={Author}, label={lst:word-frequency-example}]
+\begin{lstlisting} [caption={Word frequency extraction example from the Portuguese Wikipedia}, captionpos=t, source={Author}, label={lst:word-frequency-example}]
 de 172609
 a 159800
 o 135680

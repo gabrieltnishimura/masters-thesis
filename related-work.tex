@@ -35,14 +35,14 @@ The first step in the process is searching for papers in the specified database.
 
 To filter relevant results, we define the criteria to include or exclude the articles based on each abstract read:
 
-\subsection{Inclusion Criteria}
+\subsection*{Inclusion Criteria}
 
 \begin{itemize}
     \item Creates a speech corpus
     \item Define or discuss speech corpus creation
 \end{itemize}
 
-\subsection{Exclusion Criteria}
+\subsection*{Exclusion Criteria}
 
 \begin{itemize}
     \item Full text not available in the electronic document
@@ -53,7 +53,7 @@ This step reduced the number of articles to 14.
 
 \section{Article Analysis}
 
-After applying the proper filtering as defined in the previous section, the remaining articles can be fully read to find the results. The whole filtering process is summarized in \ref{tab:filtering}.
+After applying the proper filtering as defined in the previous section, the remaining articles can be fully read to find the results. The whole filtering process is summarized in \ref{tab:slr-filtering}.
 
 \begin{table}[h]
     \centering
@@ -65,7 +65,7 @@ After applying the proper filtering as defined in the previous section, the rema
         Abstract reading & 14 \\ \hline
     \end{tabular}
     \caption*{Source: Author}
-    \label{tab:filtering}
+    \label{tab:slr-filtering}
 \end{table}
 
 \section{Findings}
@@ -132,11 +132,11 @@ As for publication types, they have almost been equally divided: 46.7\% for arti
 In table \ref{tab:results-categorization}, each article is categorized according to table \ref{tab:content-analysis} definitions. The analysis is done afterwards in section \ref{sec:discussion}.
 
 \begin{landscape}
+\centering
 \begin{longtable}{|p{2cm}|p{4.5cm}|p{10cm}|p{4.5cm}|}
-\caption{Findings organized by speech corpus categorization as per table \ref{tab:content-analysis}}
-\label{tab:results-categorization}
-    \hline 
-    Authors & Application area & Context & Language \\ \hline
+    \caption{Findings organized by speech corpus categorization as per table \ref{tab:content-analysis}}
+    \label{tab:results-categorization}\\
+    \hline Authors & Application area & Context & Language \\ \hline
     \cite{almeman2018building} & Read Corpus & Multi-dialect Arabic corpora is scarce and not generated on mobile & Arabic \\ \hline
     \cite{dwivedi2017documenting} & Language Documentation & Revitalization of endangered languages through corpus creation & Kanauji of Kanpur \\ \hline
     \cite{bougrine2017altruistic} & Crowdsourcing & Crowdsourcing is a emerging and collaborative approach and can be effectively used to annotate linguistic resources & Arabic Algerian Dialects \\ \hline
@@ -156,13 +156,11 @@ In table \ref{tab:results-categorization}, each article is categorized according
 \end{landscape}
 
 \begin{landscape}
-
-\begin{table*}[h]
 \centering
-\caption{Speech corpora characteristics defined in table \ref{tab:speech-analysis}}
-\begin{tabular}{|p{4cm}|p{5cm}|p{7cm}|p{3.5cm}|}
-\hline
-Category & Characteristic & Work(s) & Quantity (out of 14)  \\ \hline
+\begin{longtable}{|p{4cm}|p{5cm}|p{7cm}|p{3.5cm}|}
+    \caption{Speech corpora characteristics defined in table \ref{tab:speech-analysis}}
+    \label{tab:results-attributes}\\
+    \hline Category & Characteristic & Work(s) & Quantity (out of 14)  \\ \hline
 \multirow{7}{*}{General attributes} 
     & Scenario & 
     \cite{almeman2018building}, \cite{dwivedi2017documenting}, \cite{bougrine2017altruistic}, \cite{bougrine2017altruistic}, \cite{moore2017sheffield}, \cite{ramli2017first}, \cite{goldman2016siwis}, \cite{liu2016sheffield}, \cite{ruilan2016improving}, \cite{klessa2013paralingua}, \cite{nagino2008building},  \cite{clopper2006nationwide}, \cite{zhang2008improved} & 13
@@ -201,20 +199,14 @@ Category & Characteristic & Work(s) & Quantity (out of 14)  \\ \hline
     \\ \cline{2-4} & Speaker location and orientation &
     \cite{bougrine2017altruistic}, \cite{moore2017sheffield}, \cite{ramli2017first}, \cite{liu2016sheffield} & 4
     \\ \cline{2-4} & Paralinguistic attributes &
-    \cite{klessa2013paralingua} & 1
-    \\ \cline{2-4} & Noise events & 
-    \cite{ramli2017first} & 1
-    \\ \hline
-\end{tabular}
+    \cite{klessa2013paralingua} & 1 \\ \cline{2-4} & Noise events & 
+    \cite{ramli2017first} & 1 \\ \hline
 \caption*{Source: Author}
-\label{tab:results-attributes}
-\end{table*}
+\end{longtable}
 \end{landscape}
 
 \section{Discussion}
 \label{sec:discussion}
-
-Each of our findings is discussed in the following subsections.
 
 \subsection{Publications by country and year}
 

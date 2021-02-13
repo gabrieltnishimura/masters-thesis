@@ -55,7 +55,11 @@
   basicstyle=\ttfamily,
   columns=fullflexible,
   breaklines=true,
+  inputencoding=utf8,
+  extendedchars=true,
+  literate={á}{{\'a}}1 {ã}{{\~a}}1 {é}{{\'e}}1,
 }
+
 \makeatletter
 
 \lst@Key{source}{}{\def\lst@source{#1}}
@@ -111,7 +115,8 @@
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{Fale Alguma Coisa - a citizen science collected brazilian portuguese speech corpus}
+% \titulo{Fale Alguma Coisa - a citizen science collected brazilian portuguese speech corpus}
+\titulo{Fale Alguma Coisa - A Brazilian Portuguese Speech Corpus Constructed through Citizen Science and Gamification}
 \autor{Gabriel Takaoka Nishimura}
 \local{São Paulo}
 \data{2021}
@@ -199,6 +204,8 @@
     Ricardo Tiburcio Humaytá, for the stupendous work done in the implementation of the user interface of the Fale Alguma Coisa app. Thanks to you, this has turned into something else. All the discussions were worth all the time! Moreover, thank you for the CSS tips, aligning and layering is hard.
     
     Daniel Noriaki Kurosawa, for directly helping me develop some of the features, namely the home and login page! Sorry for the harsh code reviews...
+    
+    My two awesome text reviewers, Caique Bernardes Magalhães Queiroz and Carolina Ribeiro Minchin.
 
     My family (including our 4 dogs), for supporting me in these trying times. Helping me in ways I could not even fathom possible.
     
@@ -292,8 +299,9 @@
 	\include{data-analysis}
 	\include{data-publication}
 	\apendices
-	\include{ten-principles}
 	\include{sw-req-spec}
+	\anexos
+	\include{ten-principles}
 % 	% ----------------------------------------------------------
 
 
