@@ -37,7 +37,7 @@ Some elements are outside of the scope of this system. These elements are clarif
 
 This table presents the artefacts to be produced, and their respective locations in this work.
 
-\begin{table}[h]
+\begin{table}[ht]
 \centering
 \caption{Artefacts produced by the specification and their respective locations}
 \label{tab:artifact-locations}
@@ -73,7 +73,7 @@ A simplified list of use cases is reproduced in the following tables (\ref{tab:f
 
 In table \ref{tab:falealgumacoisa-simplified-home}, use cases affecting the homepage are listed, such as the splash screen, project description, navigation, and terms of service.
 
-\begin{table}[h]
+\begin{table}[ht]
 \caption{Simplified Home Use Cases for the Fale Alguma Coisa WebApp}
 \label{tab:falealgumacoisa-simplified-home}
 \centering
@@ -92,7 +92,7 @@ In table \ref{tab:falealgumacoisa-simplified-home}, use cases affecting the home
 
 Represents the most important feature in the application, as the citizen will use it to record his voice. It also provides supporting features, such as skipping phrases and resuming the recording session. The list of simplified use cases is listed in table \ref{tab:falealgumacoisa-simplified-recording}; with the complete version available in Appendix \ref{appendix:srs:scenario-based-models}
 
-\begin{table}[h]
+\begin{table}[ht]
 \caption{Simplified Recording Use Cases for the Fale Alguma Coisa WebApp}
 \label{tab:falealgumacoisa-simplified-recording}
 \centering
@@ -113,7 +113,7 @@ Represents the most important feature in the application, as the citizen will us
 
 Table \ref{tab:falealgumacoisa-simplified-dashboard} lists all user stories related to the dashboard page, such as where the user will be able to choose themes to record, open the menu, check his level, etc.
 
-\begin{table}[h]
+\begin{table}[ht]
 \caption{Simplified Dashboard Use Cases for the Fale Alguma Coisa WebApp}
 \label{tab:falealgumacoisa-simplified-dashboard}
 \centering
@@ -130,7 +130,7 @@ Table \ref{tab:falealgumacoisa-simplified-dashboard} lists all user stories rela
 
 To allow the social interaction with other users, the table \ref{tab:falealgumacoisa-simplified-social} lists social use cases to be added to the application. Not all social interaction is listed in this feature, as there are some elements in gamification, such as competition.
 
-\begin{table}[h]
+\begin{table}[ht]
 \caption{Simplified Social Use Cases for the Fale Alguma Coisa WebApp}
 \label{tab:falealgumacoisa-simplified-social}
 \centering
@@ -148,7 +148,7 @@ To allow the social interaction with other users, the table \ref{tab:falealgumac
 
 Table \ref{tab:falealgumacoisa-simplified-gamification} details the engagement component of the application. Elements such as leaderboards, points and levels are described. They add competition and a sense of progress to the user experience, supporting the core need of this system, which is phrase recording.
 
-\begin{table}[h]
+\begin{table}[ht]
 \caption{Simplified Gamification Use Cases for the Fale Alguma Coisa WebApp}
 \label{tab:falealgumacoisa-simplified-gamification}
 \centering
@@ -168,7 +168,7 @@ Table \ref{tab:falealgumacoisa-simplified-gamification} details the engagement c
 
 The application should provide user authentication to enable data management and progress saving. Table \ref{tab:falealgumacoisa-simplified-login-and-registration} lists all use cases referring to this feature, and is the key to generating recordings with speaker metadata.
 
-\begin{table}[h]
+\begin{table}[ht]
 \caption{User Stories categorized to the login and registration epic for the Fale Alguma Coisa WebApp}
 \label{tab:falealgumacoisa-simplified-login-and-registration}
 \centering
@@ -191,7 +191,7 @@ Ensuring a robust navigation design for the user enables him to access the WebAp
 
 A NSU is composed of a set of navigation elements called \textit{ways of navigating} (WoN). A WoN represents the the best navigation pathway to achieve a navigational goal for a specific type of user. Each WoN is organized as a set of \textit{navigational nodes} (NN) that are connected by navigational links. An example of NSU is given below in figure \ref{fig:app-nsu-example}.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \caption{Navigation Semantic Unit for an Unregistered User Recording}
     \label{fig:app-nsu-example}
@@ -220,7 +220,7 @@ To reference some aesthetic design guidelines from \cite{pressman2014software}:
 
 In color theory, colors are used to communicate meaning, but also affect mood, and perception \cite{agoston2013color}. The design color scheme defines a color palette to choose from when designing new visual elements. Applying this concept, a colorful color scheme was chosen to lighten the mood of the application, as shown in figure \ref{fig:falealgumacoisa-color-scheme}.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \caption{Fale Alguma Coisa color scheme}
      \includegraphics[width=.5\linewidth]{images/app/colors.png}
@@ -233,7 +233,7 @@ In color theory, colors are used to communicate meaning, but also affect mood, a
 
 To ensure an effective development of the user interface, an iterative analysis and design approach was taken \cite{pressman2014software}. This design process is illustrated in figure \ref{fig:user-interface-design-process}, and emcompasses four distinct framework activities: (1) interface analysis and modeling, (2) interface design, (3) interface construction, and (4) interface validation. The spire implies that each of these tasks will occur more than once, with each pass around the spiral representing an additional elaboration of requirements and the resultant design. The user interface hereby implemented is the outcome of many of these iterations, with each major use case implemented into a finalized artefact. For an extensive list, refer to the Appendix \ref{appendix:user-interface-design}.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \caption{The user interface design process}
     \label{fig:user-interface-design-process}
@@ -332,7 +332,7 @@ The leaderboard layouts feature two visualizations, depending on the desired sco
 
 The ability to add and track (follow) friends is possible with the layouts described below. If the contributor knows the nickname of his friend, he can search for his friends using the Search Friends page (seen in figure \ref{fig:falealgumacoisa-friends-page-design-search}). The results return in the same page below the search input field (figure \ref{fig:falealgumacoisa-friends-page-design-results}), as a list of users. To add a friend, it is as simple as clicking the "Seguir" button in the right corner of the result list. This click toggles the button with a "Seguindo" text. If this new state is clicked, the friend is removed.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \caption{Fale Alguma Coisa Friends Page designs}
     \begin{subfigure}{.5\textwidth}
@@ -359,7 +359,7 @@ To earn more contribution points, the citizen scientist can also refer new frien
 
 The login and registration pages include essential features to the application: the ability to identify the user and maintain a history of recordings. The figure in \ref{fig:falealgumacoisa-login-page-design} represents a login flow possible to the contributor - using a username and password. It is also possible to use the "social login" through Facebook and Google, identifiable by the respective buttons in the layout.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \caption{Fale Alguma Coisa Login Page designs}
     \begin{subfigure}{.5\textwidth}
@@ -385,7 +385,7 @@ To register with the Fale Alguma Coisa app, the user must choose his \textit{pen
     \item Using a manual registration button ("Quero me cadastrar"). In addition to the name and demographics, the user must also provide his email and password as a last step (figure \ref{fig:falealgumacoisa-registration-page-design-email-password}).
 \end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \caption{Fale Alguma Coisa Registration steps designs}
     \begin{subfigure}{.5\textwidth}
@@ -408,7 +408,7 @@ To register with the Fale Alguma Coisa app, the user must choose his \textit{pen
 
 If necessary, the user should be able to delete its user data, while still contributing his voice to the speech corpus. The following figures (\ref{fig:falealgumacoisa-delete-user-data-page-design-1} and \ref{fig:falealgumacoisa-delete-user-data-page-design-2}) include the design of the layout for this deletion flow.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \caption{Fale Alguma Coisa Delete User Data steps designs}
     \begin{subfigure}{.5\textwidth}
@@ -443,7 +443,7 @@ Except for the last step of integrating with the application, this process is fu
 
 Each group of phrases is entitled "theme". By specification (\ref{uc:14} and \ref{uc:15}), a theme is composed of 8 phrases, 6 of which must be recorded to finish a theme; allowing up to 2 skips. Figure \ref{fig:falealgumacoisa-phrase-all} illustrates this structure and figure \ref{fig:falealgumacoisa-phrase-skip} displays what happens to a recording group when a phrase is skipped.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \caption{Selected phrases of a theme. Out of 8, only 6 are shown to the user.}
     \label{fig:falealgumacoisa-phrase-all}
@@ -451,7 +451,7 @@ Each group of phrases is entitled "theme". By specification (\ref{uc:14} and \re
     \caption*{Source: Author}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \caption{Recorded theme example. The sixth phrase was skipped, thus allowing the recording of the seventh phrase.}
     \label{fig:falealgumacoisa-phrase-skip}
@@ -475,22 +475,21 @@ In addition to the number of phrases per group, the selection process of each ph
 
 \subsection{Phrases Source}
 
-To extract phrases with such requirements, the source of phrases must be vast. Fortunately, Wikipedia has a monthly backup dump that contains all pages in text format. The latest version of the Portuguese backup is also available in \url{https://dumps.wikimedia.org/ptwiki/20210120/}, and was generated in 01/20/2021.
+To extract phrases with such requirements, the source of phrases must be vast. Fortunately, Wikipedia has a monthly backup dump that contains all pages in text format. The latest version of the Portuguese backup is also available in \url{https://dumps.wikimedia.org/ptwiki/20210120/}, and was generated in 01/20/2021, containing \texttt{8.45 GB} of text and metadata.
 
-This extraction was downloaded using the following command \ref{lst:download}:
+This dump was downloaded and extracted using the following command \ref{lst:download}:
 
 \begin{lstlisting} [language=Bash, caption={Download and extraction of the Portuguese Wikipedia latest extraction}, captionpos=t, source={Author}, label={lst:download}]
-wget https://dumps.wikimedia.org/ptwiki/20210120/ptwiki-20210120-pages-articles-multistream.xml.bz2 bzip2 -d
-ptwiki-20210120-pages-articles-multistream.xml.bz2
+wget https://dumps.wikimedia.org/ptwiki/20210120/ptwiki-20210120-pages-articles-multistream.xml.bz2 && bzip2 -d ptwiki-20210120-pages-articles-multistream.xml.bz2
 \end{lstlisting}
 
-To set a baseline for comparison, the initial extraction (formatted in xml) was filtered to separate phrases (list of strings) from all pages. The definition of a phrase in the context of this work is simple: "string that starts with a capital letter and ends with a period". This extraction yielded 100.000.000.000 phrases distributed in a wide range of pages (1.000.000): places, historical moments, people, concepts, animals, etc.
+To set a baseline for comparison, the initial extraction (formatted in xml) was filtered to separate phrases (list of strings) from all pages. The definition of a phrase in the context of this work is simple: "\textit{string that starts with a capital letter and ends with a period}". This extraction yielded 13.509.982 phrases distributed in a wide range of pages (1.053.085): places, historical moments, people, concepts, animals, etc.
 
 \subsection{Phrases Filtering}
 
 However, the list still needs further filtering, since many criteria are still not satisfied. The figure \ref{fig:phrase-selection-pyramid} illustrates the process of applying criteria, such as removal of less common words, filtering of themes and finally length limitation.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \caption{Filtering process for obtaining phrases for the Fale Alguma Coisa WebApp}
     \includegraphics[width=0.5\linewidth]{images/phrase-selection/filtering-pyramid.png}
@@ -504,7 +503,7 @@ The extraction of a list of common words is based on the more frequent words. To
 # download script
 git clone https://github.com/gabrieltnishimura/cv-sentence-extractor
 # extraction of phrases
-python3 WikiExtractor.py --json ptwiki-latest-pages-articles-multistream.xml
+python3 WikiExtractor.py --json ptwiki-20210120-pages-articles-multistream.xml
 cargo run -- extract -l en -d text/ --no_check >> wiki.pt.all.txt
 # creation of frequency list
 python3 word_usage.py -i wiki.pt.all.txt >> word_usage.pt.txt
@@ -525,11 +524,11 @@ faz 1680
 vai 1673
 dentro 1668
 ...
-trabalhavam 49
-transações 49
-turística 49
-unem 49
-vela 49
+lagoas 50
+leo 50
+leonard 50
+manchester 50
+mandado 50
 ...
 op 9
 opaco 9
@@ -540,20 +539,20 @@ orchestra 9
 
 With the frequency list, it is possible to decide what words are the most common in this extraction. According to Mozilla (\url{https://github.com/common-voice/cv-sentence-extractor}), words with 80-60 repetitions are considered infrequent, and should be removed. Applying this rule, the list is reduced to 90.000.000 phrases.
 
-The next step in filtering is the separation of themes that do not teach a concept. These are places and people. This removal is done by verifying some characteristics in the Wikipedia page metadata, such as latitude or date of birth. After this removal, the extraction yielded 30.000.000 phrases.
+The next step in filtering is the separation of themes that do not teach a concept. These are places and people. This removal is done by verifying some characteristics in the Wikipedia page metadata, such as latitude or date of birth. After this removal, the extraction yielded TBD phrases.
 
-Finally, these valid pages with more common words must be filtered by length, to fit inside the phrase box in the user interface. This results into a list of 100.000 phrases, that can be used to populate the application.
+Finally, these valid pages with more common words must be filtered by length, to fit inside the phrase box in the user interface. This results into a list of phrases, that can be used to populate the application.
 
-\begin{table}[h]
+\begin{table}[ht]
     \centering
     \caption{Phrases Filtering Results of the Portuguese Wikipedia (extracted 01/20/2021)}
     \label{tab:filtering}
     \begin{tabular}{|p{5cm}|p{3cm}|p{3cm}|}
         \hline Step & Pages (Themes) & Phrases \\ \hline
-        Full extraction & 1.000.000 & 1.000.000.000 \\ \hline
-        Common words & 3.000.000 & 90.000.000 \\ \hline
-        Themes filtering & 100.000 & 30.000.000 \\ \hline
-        Length limitation & 20.000 & 100.000 \\ \hline
+        Full extraction & 754.505 & 5.360.245 \\ \hline
+        Common words & 662.218 & 3.305.466 \\ \hline
+        Themes filtering & 748.911 & 2.543.591 \\ \hline
+        Length limitation & TBD & TBD \\ \hline
     \end{tabular}
     \caption*{Source: Author}
 \end{table}
@@ -578,7 +577,7 @@ The previous sections in this chapter had detailed explanations of non-technical
 
 In the architecture model, it is necessary to define each component of the system, specifying their responsibility in the business process. The figure \ref{fig:webapp-architecture} illustrates a simple architecture diagram. The citizen scientist will access the application WebApp, which will make requests to the Backend. This backend will in turn translate these requests into a database query, retrieving or altering data.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \caption{Architecture diagram for the proposed WebApp}
     \label{fig:webapp-architecture}
@@ -588,19 +587,19 @@ In the architecture model, it is necessary to define each component of the syste
 
 These three components are defined below:
 
-\subsubsection{WebApp}
+\subsubsection*{WebApp}
 \label{sec:backend-implementation}
 
 To allow easier access to the voice recording app, a web-based application will be developed. This factor positively influences the capacity of the app to update over time, when compared to an application developed in a native environment. It also enables users over mobile and desktop to access the same application, and although the layout may have to be redesigned, most logic is reused. 
 
 This application performs most of the user interface logic in the web browser, communicating with the Backend to fetch or persist data, for example. This kind of WebApp is called Single Page Application (SPA), and communicates with the Backend primarily using web APIs.
 
-\subsubsection{Backend}
+\subsubsection*{Backend}
 \label{sec:webapp-implementation}
 
 To separate the visual interface of the SPA with the necessary data interactions, it is common to provide such functionality through a Backend. The Backend is a separate component that serves an integration point between the WebApp and the persistence layer (database). It encapsulates many business rules (for example, in the Fale Alguma Coisa Backend, whenever the user records a theme, he receives a set number of points), processing them as requested.
 
-\subsubsection{Database}
+\subsubsection*{Database}
 
 To persist voice recordings, user scoring, friend list, etc, it is necessary to provide a database. To allow for further modifications of the data structure defined in the Domain Model in the Appendix (\ref{appendix:srs:domain-model}), a NoSQL database will be chosen.
 
@@ -608,11 +607,11 @@ To persist voice recordings, user scoring, friend list, etc, it is necessary to 
 
 The development model specifies the tools and frameworks selected to execute the implementation. Each selection below will have a respective explanation, albeit simplified. The topics of discussion are presented below.
 
-\subsubsection{Tools Selection}
+\subsubsection*{Tools Selection}
 
 To develop the application, a selection of tools was made. The table \ref{tab:tools-selection} details the selected tools and explains each choice.
 
-\begin{table}[h]
+\begin{table}[ht]
     \centering
     \caption{Tools Selected to help the development of the Fale Alguma Coisa app.}
     \label{tab:tools-selection}
@@ -628,11 +627,11 @@ To develop the application, a selection of tools was made. The table \ref{tab:to
     \caption*{Source: Author}
 \end{table}
 
-\subsubsection{Frameworks Selection}
+\subsubsection*{Frameworks Selection}
 
 Within the wide range of frameworks to develop a web application, back-end, and database, the selection at table \ref{tab:frameworks-selection} was made based on familiarity with the Javascript ecossystem.
 
-\begin{table}[h]
+\begin{table}[ht]
     \centering
     \caption{Frameworks Selected to help the development of the Fale Alguma Coisa app.}
     \label{tab:frameworks-selection}
@@ -646,9 +645,7 @@ Within the wide range of frameworks to develop a web application, back-end, and 
     \caption*{Source: Author}
 \end{table}
 
-
-
-\subsubsection{Repositories}
+\subsubsection*{Repositories}
 
 The development for this application was mainly made in two repositories:
 

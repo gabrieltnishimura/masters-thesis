@@ -39,6 +39,7 @@
 \usepackage{subcaption}
 \usepackage{threeparttable}
 \usepackage{libs/tikz-uml}
+\usepackage{makecell}
 
 \graphicspath{ {images/} }
 
@@ -46,6 +47,7 @@
 \usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações
 \usepackage[alf,num,abnt-url-package=url]{abntex2cite}	% Citações padrão ABNT
 
+\pgfplotsset{compat=1.17}
 % ---
 % CONFIGURAÇÕES DE PACOTES
 % ---
@@ -82,7 +84,6 @@
 \makeatother
 \lstset{backgroundcolor=\color{lightgray}}
 
-
 % ---
 % Configurações do pacote
 \newenvironment{spmatrix}[1]{
@@ -110,6 +111,7 @@
 	\else
 	Cited #1 times in pages #2.%
 	\fi}%
+
 
 % ---
 % ---
@@ -291,17 +293,17 @@
 % 	% ----------------------------------------------------------
 % 	% Metodologia
 % 	% ----------------------------------------------------------
-	\include{background}
+	% \include{background}
 	\include{related-work}
-	\include{proposal}
-	\include{application}
-	\include{general-public}
-	\include{data-analysis}
-	\include{data-publication}
-	\apendices
-	\include{sw-req-spec}
-	\anexos
-	\include{ten-principles}
+	% \include{proposal}
+	% \include{application}
+	% \include{general-public}
+	% \include{data-analysis}
+	% \include{data-publication}
+	% \apendices
+	% \include{sw-req-spec}
+	% \anexos
+	% \include{ten-principles}
 % 	% ----------------------------------------------------------
 
 
