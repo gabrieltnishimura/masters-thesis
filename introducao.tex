@@ -10,44 +10,47 @@ Citizen science is not new, as it has formally existed for more than one century
 
 \pgfplotstableread[row sep=\\,col sep=&]{
     year & publications \\
-    2010 & 2810 \\
-    2011 & 2750 \\
-    2012 & 5220 \\
-    2013 & 6990 \\
-    2014 & 9330 \\
-    2015 & 11900 \\
-    2016 & 14500 \\
-    2017 & 15800 \\
-    2018 & 20200 \\
-    2019 & 18300 \\
+    2012 & 3670 \\
+    2013 & 5100 \\
+    2014 & 6360 \\
+    2015 & 9360 \\
+    2016 & 12100 \\
+    2017 & 14800 \\
+    2018 & 16100 \\
+    2019 & 21300 \\
+    2020 & 17800 \\
+    2021 & 29000 \\
+    2022 & 17900 \\
 }\publicationdata
 
 \pgfplotstableread[row sep=\\,col sep=&]{
     year & initiatives \\
-    1900- & 11 \\
-    2000- & 22 \\
-    2010- & 59 \\
-    2014- & 113 \\
-    2015 & 34 \\
-    2016 & 167 \\
-    2017 & 16 \\
-    2018 & 4 \\
-    2019 & 5 \\
-    2020 & 1 \\
+    2000- & 38 \\
+    2013- & 137 \\
+    2014 & 44 \\
+    2015 & 40 \\
+    2016 & 173 \\
+    2017 & 18 \\
+    2018 & 16 \\
+    2019 & 14 \\
+    2020 & 7 \\
+    2021 & 7 \\
+    2022 & 1 \\
 }\citizensciencegovextraction
 
 \pgfplotstableread[row sep=\\,col sep=&]{
     year & initiatives \\
-    1900- & 0 \\
     2000- & 0 \\
-    2010- & 0 \\
-    2014- & 0 \\
-    2015 & 59 \\
-    2016 & 51 \\
-    2017 & 77 \\
-    2018 & 63 \\
-    2019 & 71 \\
-    2020 & 66 \\
+    2013- & 15 \\
+    2014 & 7 \\
+    2015 & 16 \\
+    2016 & 23 \\
+    2017 & 45 \\
+    2018 & 51 \\
+    2019 & 79 \\
+    2020 & 72 \\
+    2021 & 68 \\
+    2022 & 44 \\
 }\zooniverseextraction
 
 \begin{figure}[ht]
@@ -62,7 +65,7 @@ Citizen science is not new, as it has formally existed for more than one century
                 height=.35\textwidth,
                 % legend style={at={(0.8,0.9)}, anchor=north,legend columns=1,legend rows=2,legend cell align=left},
                 legend style={at={(0.5,-0.25)}, anchor=north,legend columns=-1},
-                symbolic x coords={1900-,2000-,2010-,2014-,2015,2016,2017,2018,2019,2020},
+                symbolic x coords={2000-,2013-,2014,2015,2016,2017,2018,2019,2020,2021,2022},
                 xtick=data,
                 nodes near coords,
                 nodes near coords align={vertical},
@@ -81,7 +84,7 @@ Citizen science is not new, as it has formally existed for more than one century
 
 \begin{figure}[ht]
     \centering
-    \caption{Growth of published articles on citizen science from 2010 to 2019}
+    \caption{Growth of published articles on citizen science from 2012 to 2022}
     \label{fig:growth-publications}
     \begin{tikzpicture}
         \begin{axis}[
@@ -90,11 +93,11 @@ Citizen science is not new, as it has formally existed for more than one century
                 width=.9\textwidth,
                 height=.35\textwidth,
                 legend style={at={(0.5,-0.25)}, anchor=north,legend columns=-1},
-                symbolic x coords={2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020},
+                symbolic x coords={2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022},
                 xtick=data,
                 nodes near coords,
                 nodes near coords align={vertical},
-                ymin=0,ymax=25000,
+                ymin=0,ymax=35000,
                 ylabel={publications},
                 xlabel={years},
             ]
@@ -102,7 +105,7 @@ Citizen science is not new, as it has formally existed for more than one century
             \addlegendentry{Google Scholar}
         \end{axis}
     \end{tikzpicture}
-    \caption*{Source: Author}
+    \caption*{Source: Author. Scholar Google search done in 11/13/2022 with query String: "citizen science", filtered by one year intervals (i.e.: 2012 filter is 2011\~2012)}
 \end{figure}
 
 This research field could be classified into three categories, based on volunteer involvement \cite{follett2015analysis}: (1) Contributory, where participants contribute to data collection and sometimes help analyze and disseminate results \cite{bonney2009citizen}, (2) Collaborative, where citizens also analyze samples, design the study, interpret the data, draw conclusions and disseminate results \cite{faridani2009networked} and (3) Co-created, where they participate in all stages of the project, including defining questions, developing the hypotheses, drawing conclusions, discussing results and answering new questions \cite{hill2012notes}.
