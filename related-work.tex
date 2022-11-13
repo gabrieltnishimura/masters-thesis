@@ -7,42 +7,26 @@ The CHiME articles \cite{christensen2010chime} \cite{barker2013pascal}, \cite{ba
 
 A more recent work by \cite{chanchaochai2018globaltimit} attempts to extend the TIMIT functionality to other languages, by providing a method to create "TIMIT-like" datasets. These datasets are caracterized by having 1) Multiple (anonymously) identified speakers, 2) Wide range of phonetically representative inputs, 3) Wideband recordings with good acoustic quality, 4) Time-aligned lexical and phonemic transcripts and 5) Easily availability to anyone. The authors detail the speakers and sessions, the text corpus selection process, the recording procedures, as well as the transcription and alignment methods. At the moment, there have been five datasets created, with more planned or in progress.
 
-As for crowdfunding speech corpora, one viable alternative to contribute speech is VoxForge \cite{voxforge}. Besides being a free speech corpus repository under GPL licence, VoxForge also incorporates an acoustic model archive for open source speech recognition engines. This corpus has over 132h, 39h, 20h, 57h of recorded English, French, Italian, and German \footnote{As of January 20th of 2021, per metric from \url{http://www.voxforge.org/en/Downloads}, \url{http://www.voxforge.org/fr/Downloads}, \url{http://www.voxforge.org/de/Downloads}, and \url{http://www.voxforge.org/de/Downloads}, respectively.}, as well a variety of acoustic models for CMU Sphinx, Julius and HTK. The VoxForge platform presents itself as an alternative to closed source speech recognition engines, since many corpora must be purchased under restrictive licenses. This contribution tool has, however, a very limited user interface and a not a well-defined recording validation process, which could invalidate the corpus robustness.
+As for crowdfunding speech corpora, one viable alternative to contribute speech is VoxForge \cite{voxforge}. Besides being a free speech corpus repository under GPL licence, VoxForge also incorporates an acoustic model archive for open source speech recognition engines. This corpus has over 132h, 39h, 20h, 57h of recorded English, French, Italian, and German \footnote{As of November 13th of 2022, per metric from \url{http://www.voxforge.org/home/downloads/metrics}, \url{http://www.voxforge.org/fr/Downloads}, \url{http://www.voxforge.org/it/Downloads}, and \url{http://www.voxforge.org/de/Downloads}, respectively.}, as well a variety of acoustic models for CMU Sphinx, Julius and HTK. The VoxForge platform presents itself as an alternative to closed source speech recognition engines, since many corpora must be purchased under restrictive licenses. This contribution tool has, however, a very limited user interface and a not a well-defined recording validation process, which could invalidate the corpus robustness.
 
-Common Voice \cite{ardila2019common} is a more recent platform for recording and listening to speech. It is a multilingual speech corpus, containing, as of 11th of December of 2020\footnote{Common Voice Corpus 6.1 accessible on  \url{https://commonvoice.mozilla.org/en/datasets}}, 1,686h of validated speech in English, and over 50h of validated Portuguese speech, in addition to other 27 languages. The main feature of this platform is the crowdsourced validation process, which all recordings must go through so that they are included in the validated corpus. All speech data is free and available under CC-0, the most permissive of licenses, and some recordings contain speaker demographics. One caveat though, is the lack of statistical analysis of the validated data, to ensure it is able to provide a quality dataset for speech recognition services. Nevertheless, the corpus was empirically tested through Mozilla’s DeepSpeech Speech-to-Text, achieving an average Character Error Rate improvement of 5.99 ± 5.48 for twelve target languages (German, French, Italian, Turkish, Catalan, Slovenian, Welsh, Irish, Breton, Tatar, Chuvash, and Kabyle), proving its effectiveness.
+Common Voice \cite{ardila2019common} is a more recent platform for recording and listening to speech. It is a multilingual speech corpus, containing, as of 13th of November of 2022\footnote{Common Voice Corpus 6.1 accessible on  \url{https://commonvoice.mozilla.org/en/datasets}}, 2,320h of validated speech in English, and over 126h of validated Portuguese speech, in addition to other 100 languages. The main feature of this platform is the crowdsourced validation process, which all recordings must go through so that they are included in the validated corpus. All speech data is free and available under CC-0, the most permissive of licenses, and some recordings contain speaker demographics. One caveat is the lack of statistical analysis of the validated data, to ensure it is able to provide a quality dataset for speech recognition services. Nevertheless, the corpus was empirically tested through Mozilla’s DeepSpeech Speech-to-Text, achieving an average Character Error Rate improvement of 5.99 ± 5.48 for twelve target languages (German, French, Italian, Turkish, Catalan, Slovenian, Welsh, Irish, Breton, Tatar, Chuvash, and Kabyle), proving its effectiveness.
 
 \section*{Sistematic Literature Review}
 Finally, to identify the characteristics of a speech corpus, a systematic literature review was performed \cite{kitchenham2009systematic}.
 
-Searches were done on two electronic databases: 1) Web of Science and 2) Scopus. The process for choosing relevant papers is defined below and can be applied to both of the electronic databases.
+The search was executed on August 1st, 2019 and the electronic database used was Web of Science. Since corpora are also presented at conferences, all article types were considered in the search, not limited by publication date. The whole process to choose relevant papers is defined below:
 
 \section{Search in papers database}
 
-The first step in the process is searching for papers in the specified database (1). To allow reproducibility, the search query is presented in table \ref{tab:search-terms}. These results are filtered down by Open Access criteria, publication data (2020~2023) and language (English) (2) - such filter will ensure the most recent accessible publications. Due to corpora being present at conferences, all article types were considered in this search. From this reduced set, results got filtered by title and keywords (3), and afterwards, by abstract (4).
+The first step in the process is searching for papers in the specified database. To allow reproducibility, the search query is presented in table \ref{tab:search-terms}. No criteria were applied in the search, therefore considering the title, abstract, keywords, and the entire paper for indexing. It is also noted that conference proceedings are also included in this search. In this step, 157 results were yielded. This result was further filtered to 23, which contained the terms in the title.
 
-\begin{table}[ht]
+\begin{table}[h]
     \centering
-    \caption{Search query used in the SLR}
-    \begin{threeparttable}
-      \begin{tabular}{|l|l|}
-        \hline
-        Digital Library & Search Terms \\ \hline
-        Web of Science & TOPIC: ("speech corpus" OR "speech corpora")\tnote{1} \\ \hline
-        Scopus & 
-        \makecell[l]{TITLE-ABS-KEY ( "speech corpus"  OR  "speech corpora" ) AND \\
-(  LIMIT-TO ( OA ,  "all" ) ) AND \\
-( LIMIT-TO ( PUBYEAR ,  2023 ) OR \\
-LIMIT-TO ( PUBYEAR ,  2022 ) OR \\
-LIMIT-TO ( PUBYEAR ,  2021 ) OR \\
-LIMIT-TO ( PUBYEAR ,  2020 ) OR \\
-( LIMIT-TO ( LANGUAGE ,  "English" ) )\tnote{2}} \\ \hline
-      \end{tabular}
-      \begin{tablenotes}
-        \footnotesize
-        \item[1] Query link for Web Of Science Search: \url{https://www.webofscience.com/wos/woscc/summary/ae3cf854-30d2-4ea5-9b4e-ef7ecd11f7d5-557004b8/relevance/1}
-        \item[2] Query link for Scopus Search: \url{https://www.scopus.com/results/results.uri?sort=plf-f&src=s&st1=%22speech+corpus%22+or+%22speech+corpora%22&nlo=&nlr=&nls=&sid=e9a2f20f7a443e09d21386133a8507e6&sot=b&sdt=cl&cluster=scofreetoread%2c%22all%22%2ct%2bscopubyr%2c%222023%22%2ct%2c%222022%22%2ct%2c%222021%22%2ct%2c%222020%22%2ct%2bscolang%2c%22English%22%2ct&sl=50&s=TITLE-ABS-KEY%28%22speech+corpus%22+or+%22speech+corpora%22%29&origin=resultslist&zone=leftSideBar&editSaveSearch=&txGid=791148437ed7352983d84d53a94d120}
-      \end{tablenotes}
-    \end{threeparttable}
+    \caption{Search terms used in the SLR}
+    \begin{tabular}{|c|c|}
+        \hline Digital Library & Search terms \\ \hline
+        Web of Science & TOPIC: ("speech corpus" OR "speech corpora")  \\ \hline
+    \end{tabular}
     \caption*{Source: Author}
     \label{tab:search-terms}
 \end{table}
@@ -56,8 +40,6 @@ To filter relevant results, we define the criteria to include or exclude the art
 \begin{itemize}
     \item Creates a speech corpus
     \item Define or discuss speech corpus creation
-    \item Publication date from 2020 to 2023
-    \item Published in English
 \end{itemize}
 
 \subsection*{Exclusion Criteria}
@@ -67,28 +49,28 @@ To filter relevant results, we define the criteria to include or exclude the art
     \item Does not contain "speech corpus" or "speech corpora" strings in title, abstract, or keywords.
 \end{itemize}
 
+This step reduced the number of articles to 14.
+
 \section{Article Analysis}
 
 After applying the proper filtering as defined in the previous section, the remaining articles can be fully read to find the results. The whole filtering process is summarized in \ref{tab:slr-filtering}.
 
-\begin{table}[ht]
+\begin{table}[h]
     \centering
     \caption{SLR - Filtering of results}
-    \begin{tabular}{|c|c|c|c|}
-        \hline 
-        Step & Description & Web Of Science Results & Scopus Results \\ \hline
-        1 & Initial search & 2,445 & 3,721 \\ \hline
-        2 & Initial Filter & 119 & 215 \\ \hline
-        3 & Title filtering & 25 & AAA\\ \hline
-        4 & Abstract reading & CCC & BBB \\ \hline
+    \begin{tabular}{|c|c|}
+        \hline Step & Results \\ \hline
+        Initial search & 157 \\ \hline
+        Title filtering & 23 \\ \hline
+        Abstract reading & 14 \\ \hline
     \end{tabular}
-    \caption*{Source: Author - Executed October 12th 2022. Initial filter reduces set by filtering Open Access, publication date, and language.}
+    \caption*{Source: Author}
     \label{tab:slr-filtering}
 \end{table}
 
 \section{Findings}
 
-To analytically organize our findings, a content-analysis approach was used. To choose the categories in which the content analysis is applied, we adapted the work from \cite{queiroz2019blockchain}, resulting in table \ref{tab:content-analysis}. As for the corpus categories, we sought a comparison work from  \cite{LeRouxVincent2014TRdatasets}, in which a comprehensive table was provided and adapted to fit our categorization needs.
+To analytically organize our findings, a content-analysis approach was used. To choose the categories in which the content analysis is applied, we adapted the work from \cite{queiroz2019blockchain}, resulting in table \ref{tab:content-analysis}. As for the corpus categories, we sought a comparison work from \cite{LeRouxVincent2014TRdatasets}, in which a comprehensive table was provided and adapted to fit our categorization needs.
 
 \begin{table}[ht]
     \centering
